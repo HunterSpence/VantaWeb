@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" fill="none">
+  <!-- Lightbulb + Book -->
+  <!-- Book base -->
+  <path d="M30 75 L50 65 L70 75 L70 95 L50 85 L30 95 Z" fill="none" stroke="#1e40af" stroke-width="1.5"/>
+  <line x1="50" y1="65" x2="50" y2="85" stroke="#1e40af" stroke-width="1"/>
+  <!-- Lightbulb above book -->
+  <circle cx="50" cy="38" r="18" fill="#f59e0b" opacity="0.15"/>
+  <path d="M40 42 Q40 22, 50 18 Q60 22, 60 42 Q58 48, 55 50 L45 50 Q42 48, 40 42 Z" fill="none" stroke="#f59e0b" stroke-width="2"/>
+  <line x1="44" y1="54" x2="56" y2="54" stroke="#f59e0b" stroke-width="1.5"/>
+  <line x1="45" y1="58" x2="55" y2="58" stroke="#f59e0b" stroke-width="1.5"/>
+  <!-- Filament -->
+  <path d="M47 38 Q50 32, 53 38" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
+  <!-- Light rays -->
+  <line x1="50" y1="15" x2="50" y2="8" stroke="#f59e0b" stroke-width="1" opacity="0.5"/>
+  <line x1="30" y1="25" x2="25" y2="20" stroke="#f59e0b" stroke-width="1" opacity="0.5"/>
+  <line x1="70" y1="25" x2="75" y2="20" stroke="#f59e0b" stroke-width="1" opacity="0.5"/>
+  <line x1="25" y1="42" x2="18" y2="42" stroke="#f59e0b" stroke-width="1" opacity="0.5"/>
+  <line x1="75" y1="42" x2="82" y2="42" stroke="#f59e0b" stroke-width="1" opacity="0.5"/>
+  <!-- Text -->
+  <text x="100" y="42" font-family="'Nunito', sans-serif" font-size="24" font-weight="800" fill="#1e40af" letter-spacing="1">BRIGHT MINDS</text>
+  <text x="100" y="70" font-family="'Nunito', sans-serif" font-size="14" fill="#f59e0b" letter-spacing="5">ACADEMY</text>
+</svg>

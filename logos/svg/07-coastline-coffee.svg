@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" fill="none">
+  <!-- Coffee cup with wave -->
+  <path d="M25 45 L25 85 Q25 95, 35 95 L65 95 Q75 95, 75 85 L75 45 Z" fill="none" stroke="#6b4226" stroke-width="2"/>
+  <!-- Handle -->
+  <path d="M75 52 Q90 52, 90 65 Q90 78, 75 78" fill="none" stroke="#6b4226" stroke-width="2"/>
+  <!-- Steam waves -->
+  <path d="M38 38 Q42 28, 38 20" fill="none" stroke="#d4a574" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M50 35 Q54 25, 50 17" fill="none" stroke="#d4a574" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M62 38 Q66 28, 62 20" fill="none" stroke="#d4a574" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Wave in cup -->
+  <path d="M30 60 Q40 54, 50 60 Q60 66, 70 60" fill="none" stroke="#d4a574" stroke-width="1.5"/>
+  <!-- Text -->
+  <text x="108" y="52" font-family="'Caveat', cursive" font-size="34" fill="#6b4226">Coastline</text>
+  <text x="108" y="82" font-family="'Caveat', cursive" font-size="20" fill="#d4a574" letter-spacing="4">COFFEE</text>
+</svg>

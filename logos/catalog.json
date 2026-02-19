@@ -1,0 +1,26 @@
+{
+  "brand": "VantaWeb",
+  "totalLogos": 20,
+  "logos": [
+    {"id": 1, "name": "Ember & Oak", "industry": "Restaurant", "style": "Elegant wordmark + flame icon", "colors": ["#1a1a1a", "#c9a84c", "#f5f0e8"], "font": "Playfair Display"},
+    {"id": 2, "name": "Steele & Associates", "industry": "Law", "style": "Classic serif monogram S&A", "colors": ["#1b2a4a", "#b8860b", "#ffffff"], "font": "Cormorant Garamond"},
+    {"id": 3, "name": "APEX Athletics", "industry": "Fitness", "style": "Bold geometric triangle", "colors": ["#0d0d0d", "#c4f538", "#ffffff"], "font": "Bebas Neue"},
+    {"id": 4, "name": "Meridian Properties", "industry": "Real Estate", "style": "Minimal compass/house mark", "colors": ["#2d2d2d", "#c5a47e", "#ffffff"], "font": "Tenor Sans"},
+    {"id": 5, "name": "FlowStack", "industry": "SaaS/Tech", "style": "Modern abstract lettermark", "colors": ["#6c3ce9", "#3b82f6", "#ffffff"], "font": "Plus Jakarta Sans"},
+    {"id": 6, "name": "Clarity Health", "industry": "Medical", "style": "Clean cross/leaf combo", "colors": ["#4ecdc4", "#2c3e50", "#ffffff"], "font": "DM Sans"},
+    {"id": 7, "name": "Coastline Coffee", "industry": "Café", "style": "Hand-drawn artisan cup + wave", "colors": ["#6b4226", "#d4a574", "#f5ebe0"], "font": "Caveat"},
+    {"id": 8, "name": "TrueNorth Financial", "industry": "Finance", "style": "Shield + compass rose", "colors": ["#1a3a5c", "#c9a84c", "#ffffff"], "font": "Libre Baskerville"},
+    {"id": 9, "name": "Pawprint Pet Care", "industry": "Veterinary", "style": "Playful paw heart mascot", "colors": ["#e85d75", "#4a90d9", "#ffffff"], "font": "Quicksand"},
+    {"id": 10, "name": "Verde Landscaping", "industry": "Landscaping", "style": "Organic leaf circle", "colors": ["#2d6a4f", "#95d5b2", "#ffffff"], "font": "Montserrat"},
+    {"id": 11, "name": "Pixel & Frame", "industry": "Photography", "style": "Camera aperture minimal", "colors": ["#2b2b2b", "#e63946", "#ffffff"], "font": "Poppins"},
+    {"id": 12, "name": "Summit Construction", "industry": "Construction", "style": "Mountain/building geometric", "colors": ["#2c3e50", "#e67e22", "#ffffff"], "font": "Oswald"},
+    {"id": 13, "name": "Bloom Boutique", "industry": "Fashion/Retail", "style": "Elegant floral script", "colors": ["#d4a5a5", "#3d3d3d", "#ffffff"], "font": "Dancing Script"},
+    {"id": 14, "name": "Circuit Labs", "industry": "Electronics", "style": "Tech circuit board abstract", "colors": ["#00b4d8", "#0d1b2a", "#ffffff"], "font": "Space Grotesk"},
+    {"id": 15, "name": "Harbor Insurance", "industry": "Insurance", "style": "Lighthouse + shield", "colors": ["#1b4965", "#cae9ff", "#ffffff"], "font": "Merriweather"},
+    {"id": 16, "name": "Wildcraft Brewing", "industry": "Brewery", "style": "Vintage craft badge/crest", "colors": ["#8b4513", "#daa520", "#1a1a1a"], "font": "Bitter"},
+    {"id": 17, "name": "Nimbus Cloud Services", "industry": "Cloud/IT", "style": "Abstract cloud flowing", "colors": ["#5b21b6", "#06b6d4", "#ffffff"], "font": "Outfit"},
+    {"id": 18, "name": "Sage & Stone Spa", "industry": "Wellness/Spa", "style": "Zen minimal stone stack", "colors": ["#8b9d83", "#d4c5a9", "#ffffff"], "font": "Cormorant"},
+    {"id": 19, "name": "Atlas Logistics", "industry": "Shipping/Logistics", "style": "Globe + arrow dynamic", "colors": ["#dc2626", "#1e3a5f", "#ffffff"], "font": "Barlow"},
+    {"id": 20, "name": "Bright Minds Academy", "industry": "Education", "style": "Lightbulb + open book", "colors": ["#f59e0b", "#1e40af", "#ffffff"], "font": "Nunito"}
+  ]
+}

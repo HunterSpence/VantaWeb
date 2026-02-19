@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+backups/*.zip
+outreach/leads.csv
+.env

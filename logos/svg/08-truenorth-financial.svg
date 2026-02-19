@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" fill="none">
+  <!-- Shield -->
+  <path d="M50 15 L80 28 L80 65 Q80 90, 50 100 Q20 90, 20 65 L20 28 Z" fill="none" stroke="#1a3a5c" stroke-width="2"/>
+  <path d="M50 22 L74 33 L74 63 Q74 85, 50 93 Q26 85, 26 63 L26 33 Z" fill="#1a3a5c" opacity="0.05"/>
+  <!-- Compass needle inside -->
+  <line x1="50" y1="35" x2="50" y2="80" stroke="#c9a84c" stroke-width="1"/>
+  <line x1="35" y1="57" x2="65" y2="57" stroke="#c9a84c" stroke-width="1"/>
+  <polygon points="50,35 46,52 54,52" fill="#c9a84c"/>
+  <polygon points="50,80 46,62 54,62" fill="#1a3a5c"/>
+  <!-- Text -->
+  <text x="100" y="48" font-family="'Libre Baskerville', Georgia, serif" font-size="24" font-weight="700" fill="#1a3a5c" letter-spacing="2">TRUENORTH</text>
+  <line x1="100" y1="56" x2="360" y2="56" stroke="#c9a84c" stroke-width="0.8"/>
+  <text x="100" y="78" font-family="'Libre Baskerville', serif" font-size="13" fill="#1a3a5c" letter-spacing="6">FINANCIAL</text>
+</svg>

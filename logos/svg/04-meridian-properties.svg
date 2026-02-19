@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" fill="none">
+  <!-- Compass/House Mark -->
+  <circle cx="50" cy="55" r="35" fill="none" stroke="#c5a47e" stroke-width="1.5"/>
+  <circle cx="50" cy="55" r="28" fill="none" stroke="#2d2d2d" stroke-width="0.5"/>
+  <!-- House silhouette inside compass -->
+  <path d="M50 30 L30 48 L30 72 L70 72 L70 48 Z" fill="none" stroke="#2d2d2d" stroke-width="1.5"/>
+  <rect x="42" y="58" width="16" height="14" fill="none" stroke="#c5a47e" stroke-width="1"/>
+  <!-- Compass points -->
+  <line x1="50" y1="18" x2="50" y2="25" stroke="#c5a47e" stroke-width="1.5"/>
+  <line x1="50" y1="85" x2="50" y2="92" stroke="#c5a47e" stroke-width="1"/>
+  <line x1="13" y1="55" x2="20" y2="55" stroke="#c5a47e" stroke-width="1"/>
+  <line x1="80" y1="55" x2="87" y2="55" stroke="#c5a47e" stroke-width="1"/>
+  <!-- Text -->
+  <text x="105" y="48" font-family="'Tenor Sans', sans-serif" font-size="28" fill="#2d2d2d" letter-spacing="4">MERIDIAN</text>
+  <line x1="105" y1="56" x2="350" y2="56" stroke="#c5a47e" stroke-width="0.8"/>
+  <text x="105" y="78" font-family="'Nunito Sans', sans-serif" font-size="13" fill="#8b9d83" letter-spacing="7">PROPERTIES</text>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" fill="none">
+  <!-- Lighthouse -->
+  <polygon points="50,12 38,85 62,85" fill="none" stroke="#1b4965" stroke-width="2"/>
+  <!-- Lighthouse stripes -->
+  <line x1="42" y1="40" x2="58" y2="40" stroke="#1b4965" stroke-width="1"/>
+  <rect x="43" y="40" width="14" height="12" fill="#1b4965" opacity="0.15"/>
+  <line x1="40" y1="60" x2="60" y2="60" stroke="#1b4965" stroke-width="1"/>
+  <rect x="41" y="60" width="18" height="12" fill="#1b4965" opacity="0.15"/>
+  <!-- Light beacon -->
+  <circle cx="50" cy="16" r="6" fill="#cae9ff" opacity="0.5"/>
+  <circle cx="50" cy="16" r="3" fill="#1b4965"/>
+  <!-- Light rays -->
+  <line x1="35" y1="10" x2="28" y2="5" stroke="#cae9ff" stroke-width="1" opacity="0.6"/>
+  <line x1="65" y1="10" x2="72" y2="5" stroke="#cae9ff" stroke-width="1" opacity="0.6"/>
+  <line x1="33" y1="20" x2="25" y2="22" stroke="#cae9ff" stroke-width="1" opacity="0.6"/>
+  <line x1="67" y1="20" x2="75" y2="22" stroke="#cae9ff" stroke-width="1" opacity="0.6"/>
+  <!-- Base/waves -->
+  <path d="M25 90 Q37 82, 50 90 Q63 98, 75 90" fill="none" stroke="#cae9ff" stroke-width="1.5"/>
+  <!-- Text -->
+  <text x="100" y="48" font-family="'Merriweather', Georgia, serif" font-size="24" font-weight="700" fill="#1b4965" letter-spacing="1">HARBOR</text>
+  <line x1="100" y1="56" x2="310" y2="56" stroke="#cae9ff" stroke-width="1.5"/>
+  <text x="100" y="78" font-family="'Merriweather', serif" font-size="13" fill="#1b4965" letter-spacing="5">INSURANCE</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" fill="none">
+  <!-- Monogram Shield -->
+  <rect x="15" y="15" width="70" height="90" rx="3" fill="none" stroke="#b8860b" stroke-width="2"/>
+  <rect x="20" y="20" width="60" height="80" rx="2" fill="none" stroke="#1b2a4a" stroke-width="1"/>
+  <text x="50" y="62" font-family="'Cormorant Garamond', Georgia, serif" font-size="32" font-weight="700" fill="#1b2a4a" text-anchor="middle">S</text>
+  <text x="50" y="62" font-family="'Cormorant Garamond', Georgia, serif" font-size="18" font-weight="600" fill="#b8860b" text-anchor="middle" dy="20">&amp;A</text>
+  <!-- Firm Name -->
+  <text x="105" y="48" font-family="'Cormorant Garamond', Georgia, serif" font-size="30" font-weight="700" fill="#1b2a4a" letter-spacing="2">STEELE</text>
+  <line x1="105" y1="56" x2="380" y2="56" stroke="#b8860b" stroke-width="1"/>
+  <text x="105" y="75" font-family="'Source Sans Pro', sans-serif" font-size="14" fill="#1b2a4a" letter-spacing="5">&amp; ASSOCIATES</text>
+  <!-- Tagline -->
+  <text x="105" y="95" font-family="'Source Sans Pro', sans-serif" font-size="10" fill="#888" letter-spacing="4">ATTORNEYS AT LAW</text>
+</svg>

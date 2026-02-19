@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" fill="none">
+  <defs>
+    <linearGradient id="techgrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6c3ce9"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+  <!-- Stacked flow layers -->
+  <rect x="20" y="30" width="50" height="12" rx="6" fill="url(#techgrad)" opacity="0.4"/>
+  <rect x="15" y="48" width="60" height="12" rx="6" fill="url(#techgrad)" opacity="0.7"/>
+  <rect x="10" y="66" width="70" height="12" rx="6" fill="url(#techgrad)" opacity="1"/>
+  <!-- Flow arrow -->
+  <path d="M45 85 L45 95 L55 90 Z" fill="#3b82f6"/>
+  <!-- Text -->
+  <text x="100" y="58" font-family="'Plus Jakarta Sans', sans-serif" font-size="36" font-weight="700" fill="#0f0f23" letter-spacing="1">Flow</text>
+  <text x="220" y="58" font-family="'Plus Jakarta Sans', sans-serif" font-size="36" font-weight="700" fill="url(#techgrad)" letter-spacing="1">Stack</text>
+  <!-- Tagline -->
+  <text x="100" y="80" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#6c3ce9" letter-spacing="3">SHIP FASTER. SCALE SMARTER.</text>
+</svg>
