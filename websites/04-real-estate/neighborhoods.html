@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Neighborhoods Guide | Meridian Properties NYC</title>
+    <meta name="description" content="Discover NYC's most prestigious neighborhoods. From Manhattan penthouses to Brooklyn brownstones, explore luxury living in the city's finest areas.">
+    <meta name="keywords" content="NYC neighborhoods, Manhattan luxury areas, Brooklyn premium districts, Queens upscale communities, luxury neighborhoods NYC">
+    <meta name="author" content="Meridian Properties">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Luxury Neighborhoods Guide | Meridian Properties NYC">
+    <meta property="og:description" content="Discover NYC's most prestigious neighborhoods and luxury living areas.">
+    <meta property="og:image" content="https://picsum.photos/1200/630?random=60&auto=format&fit=crop&w=1200&h=630">
+    <meta property="og:url" content="https://meridianproperties.com/neighborhoods">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Luxury Neighborhoods Guide | Meridian Properties NYC">
+    <meta name="twitter:description" content="Discover NYC's most prestigious neighborhoods and luxury living areas.">
+    <meta name="twitter:image" content="https://picsum.photos/1200/630?random=60&auto=format&fit=crop&w=1200&h=630">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏢</text></svg>">
+    
+    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans:wght@400&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "NYC Luxury Neighborhoods Guide",
+        "description": "Comprehensive guide to New York City's most prestigious neighborhoods for luxury living",
+        "url": "https://meridianproperties.com/neighborhoods",
+        "itemListElement": [
+            {
+                "@type": "Place",
+                "name": "TriBeCa",
+                "description": "Manhattan's most exclusive neighborhood with cobblestone streets and celebrity residents",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Manhattan",
+                    "addressRegion": "NY"
+                }
+            },
+            {
+                "@type": "Place",
+                "name": "Upper East Side",
+                "description": "Classic luxury living with world-class museums and Central Park access",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Manhattan",
+                    "addressRegion": "NY"
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html" aria-label="Meridian Properties Home">
+                        Meridian <span>Properties</span>
+                    </a>
+                </div>
+                
+                <nav class="nav-main" role="navigation" aria-label="Main navigation">
+                    <a href="index.html">Home</a>
+                    <a href="listings.html">Listings</a>
+                    <a href="neighborhoods.html" class="active">Neighborhoods</a>
+                    <a href="agents.html">Our Agents</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="section-sm" style="background: linear-gradient(135deg, var(--color-charcoal), var(--color-sage)); color: var(--color-white); margin-top: 80px;">
+        <div class="container text-center">
+            <h1>Discover NYC's Luxury Neighborhoods</h1>
+            <p class="text-large">From Manhattan's prestigious districts to Brooklyn's trendy enclaves, find your perfect community</p>
+        </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section class="section-sm" style="background: var(--color-cream);">
+        <div class="container">
+            <div class="grid grid-4 gap-lg text-center">
+                <div class="animate-on-scroll">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-gold); margin-bottom: var(--spacing-xs);">50+</div>
+                    <p>Luxury Neighborhoods</p>
+                </div>
+                <div class="animate-on-scroll">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-gold); margin-bottom: var(--spacing-xs);">$4.2M</div>
+                    <p>Average Home Price</p>
+                </div>
+                <div class="animate-on-scroll">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-gold); margin-bottom: var(--spacing-xs);">95%</div>
+                    <p>Walk Score Average</p>
+                </div>
+                <div class="animate-on-scroll">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-gold); margin-bottom: var(--spacing-xs);">24/7</div>
+                    <p>City That Never Sleeps</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Neighborhoods -->
+    <main class="section" role="main" aria-labelledby="neighborhoods-heading">
+        <div class="container">
+            <h2 id="neighborhoods-heading" class="text-center mb-xl">Premier Luxury Communities</h2>
+            
+            <div class="grid gap-xl">
+                <!-- TriBeCa -->
+                <article class="neighborhood-card animate-on-scroll" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xl); background: var(--color-white); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-md); overflow: hidden;">
+                    <div class="neighborhood-image" style="position: relative; min-height: 400px;">
+                        <img src="https://picsum.photos/600/400?random=60&auto=format&fit=crop&w=600&h=400" 
+                             alt="TriBeCa cobblestone streets and luxury buildings" 
+                             style="width: 100%; height: 100%; object-fit: cover;">
+                        <div style="position: absolute; top: var(--spacing-sm); right: var(--spacing-sm); background: rgba(197, 164, 126, 0.9); color: var(--color-white); padding: var(--spacing-xs) var(--spacing-sm); border-radius: var(--border-radius); font-weight: 700;">
+                            Avg: $6.8M
+                        </div>
+                    </div>
+                    <div style="padding: var(--spacing-lg);">
+                        <h3 style="color: var(--color-gold); margin-bottom: var(--spacing-sm);">TriBeCa</h3>
+                        <p class="text-large" style="margin-bottom: var(--spacing-md);">
+                            Manhattan's most exclusive neighborhood, where cobblestone streets meet modern luxury. Home to A-list celebrities and global business leaders.
+                        </p>
+                        
+                        <div style="margin-bottom: var(--spacing-lg);">
+                            <h4 style="margin-bottom: var(--spacing-sm);">Neighborhood Highlights</h4>
+                            <ul style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xs);">
+                                <li>🏛️ Historic Cast-Iron Architecture</li>
+                                <li>🌟 Celebrity Residences</li>
+                                <li>🍷 World-Class Restaurants</li>
+                                <li>🎨 Acclaimed Art Galleries</li>
+                                <li>🏢 Luxury Loft Living</li>
+                                <li>🚇 Prime Transit Access</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="neighborhood-stats" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-sm); margin-bottom: var(--spacing-md); padding: var(--spacing-sm); background: var(--color-cream); border-radius: var(--border-radius);">
+                            <div class="text-center">
+                                <strong style="color: var(--color-gold);">98</strong>
+                                <div class="text-small">Walk Score</div>
+                            </div>
+                            <div class="text-center">
+                                <strong style="color: var(--color-gold);">15 min</strong>
+                                <div class="text-small">to Wall Street</div>
+                            </div>
+                            <div class="text-center">
+                                <strong style="color: var(--color-gold);">$45/sqft</strong>
+                                <div class="text-small">Average Rent</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-sm">
+                            <a href="listings.html?location=tribeca" class="btn btn-primary">View Properties</a>
+                            <button class="btn btn-outline" onclick="openNeighborhoodModal('tribeca')">Learn More</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Upper East Side -->
+                <article class="neighborhood-card animate-on-scroll" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xl); background: var(--color-white); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-md); overflow: hidden;">
+                    <div style="padding: var(--spacing-lg);">
+                        <h3 style="color: var(--color-gold); margin-bottom: var(--spacing-sm);">Upper East Side</h3>
+                        <p class="text-large" style="margin-bottom: var(--spacing-md);">
+                            Classic luxury living with world-renowned museums, Central Park access, and the finest shopping on Madison Avenue.
+                        </p>
+                        
+                        <div style="margin-bottom: var(--spacing-lg);">
+                            <h4 style="margin-bottom: var(--spacing-sm);">Neighborhood Highlights</h4>
+                            <ul style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xs);">
+                                <li>🎭 Museum Mile</li>
+                                <li>🌳 Central Park Access</li>
+                                <li>🛍️ Madison Avenue Shopping</li>
+                                <li>🏫 Elite Private Schools</li>
+                                <li>🏛️ Pre-War Architecture</li>
+                                <li>🍾 Exclusive Social Clubs</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="neighborhood-stats" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-sm); margin-bottom: var(--spacing-md); padding: var(--spacing-sm); background: var(--color-cream); border-radius: var(--border-radius);">
+                            <div class="text-center">
+                                <strong style="color: var(--color-gold);">89</strong>
+                                <div class="text-small">Walk Score</div>
+                            </div>
+                            <div class="text-center">
+                                <strong style="color: var(--color-gold);">3 blocks</strong>
+                                <div class="text-small">to Central Park</div>
+                            </div>
+                            <div class="text-center">
+                                <strong style="color: var(--color-gold);">$38/sqft</strong>
+                                <div class="text-small">Average Rent</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-sm">
+                            <a href="listings.html?location=upper-east-side" class="btn btn-primary">View Properties</a>
+                            <button class="btn btn-outline" onclick="openNeighborhoodModal('ues')">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="neighborhood-image" style="position: relative; min-height: 400px;">
+                        <img src="https://picsum.photos/600/400?random=61&auto=format&fit=crop&w=600&h=400" 
+                             alt="Upper East Side elegant buildings and tree-lined streets" 
+                             style="width: 100%; height: 100%; object-fit: cover;">
+                        <div style="position: absolute; top: var(--spacing-sm); right: var(--spacing-sm); background: rgba(197, 164, 126, 0.9); color: var(--color-white); padding: var(--spacing-xs) var(--spacing-sm); border-radius: var(--border-radius); font-weight: 700;">
+                            Avg: $4.2M
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Brooklyn Heights -->
+                <article class="neighborhood-card animate-on-scroll" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xl); background: var(--color-white); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-md); overflow: hidden;">
+                    <div class="neighborhood-image" style="position: relative; min-height: 400px;">
+                        <img src="https://picsum.photos/600/400?random=62&auto=format&fit=crop&w=600&h=400" 
+                             alt="Brooklyn Heights waterfront promenade with Manhattan skyline views" 
+                             style="width: 100%; height: 100%; object-fit: cover;">
+                        <div style="position: absolute; top: var(--spacing-sm); right: var(--spacing-sm); background: rgba(197, 164, 126, 0.9); color: var(--color-white); padding: var(--spacing-xs) var(--spacing-sm); border-radius: var(--border-radius); font-weight: 700;">
+                            Avg: $2.8M
+                        </div>
+                    </div>
+                    <div style="padding: var(--spacing-lg);">
+                        <h3 style="color: var(--color-gold); margin-bottom: var(--spacing-sm);">Brooklyn Heights</h3>
+                        <p class="text-large" style="margin-bottom: var(--spacing-md);">
+                            Historic charm meets modern luxury with stunning Manhattan skyline views from the iconic Brooklyn Heights Promenade.
+                        </p>
+                        
+                        <div style="margin-bottom: var(--spacing-lg);">
+                            <h4 style="margin-bottom: var(--spacing-sm);">Neighborhood Highlights</h4>
+                            <ul style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xs);">
+                                <li>🌉 Promenade Views</li>
+                                <li>🏛️ Historic Brownstones</li>
+                                <li>🎵 Brooklyn Academy of Music</li>
+                                <li>🍕 Artisanal Food Scene</li>
+                                <li>⛪ Historic Architecture</li>
+                                <li>🚇 Multiple Train Lines</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="neighborhood-stats" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-sm); margin-bottom: var(--spacing-md); padding: var(--spacing-sm); background: var(--color-cream); border-radius: var(--border-radius);">
+                            <div class="text-center">
+                                <strong style="color: var(--color-gold);">94</strong>
+                                <div class="text-small">Walk Score</div>
+                            </div>
+                            <div class="text-center">
+                                <strong style="color: var(--color-gold);">20 min</strong>
+                                <div class="text-small">to Manhattan</div>
+                            </div>
+                            <div class="text-center">
+                                <strong style="color: var(--color-gold);">$28/sqft</strong>
+                                <div class="text-small">Average Rent</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-sm">
+                            <a href="listings.html?location=brooklyn-heights" class="btn btn-primary">View Properties</a>
+                            <button class="btn btn-outline" onclick="openNeighborhoodModal('brooklyn-heights')">Learn More</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- SoHo -->
+                <article class="neighborhood-card animate-on-scroll" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xl); background: var(--color-white); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-md); overflow: hidden;">
+                    <div style="padding: var(--spacing-lg);">
+                        <h3 style="color: var(--color-gold); margin-bottom: var(--spacing-sm);">SoHo</h3>
+                        <p class="text-large" style="margin-bottom: var(--spacing-md);">
+                            The epicenter of luxury shopping and artistic culture, featuring converted industrial lofts and designer boutiques.
+                        </p>
+                        
+                        <div style="margin-bottom: var(--spacing-lg);">
+                            <h4 style="margin-bottom: var(--spacing-sm);">Neighborhood Highlights</h4>
+                            <ul style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xs);">
+                                <li>🎨 Art Galleries Galore</li>
+                                <li>🛍️ Designer Shopping</li>
+                                <li>🏭 Historic Cast Iron</li>
+                                <li>☕ Trendy Cafes</li>
+                                <li>🏢 Luxury Lofts</li>
+                                <li>📸 Instagram Worthy</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="neighborhood-stats" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-sm); margin-bottom: var(--spacing-md); padding: var(--spacing-sm); background: var(--color-cream); border-radius: var(--border-radius);">
+                            <div class="text-center">
+                                <strong style="color: var(--color-gold);">100</strong>
+                                <div class="text-small">Walk Score</div>
+                            </div>
+                            <div class="text-center">
+                                <strong style="color: var(--color-gold);">10 min</strong>
+                                <div class="text-small">to Wall Street</div>
+                            </div>
+                            <div class="text-center">
+                                <strong style="color: var(--color-gold);">$42/sqft</strong>
+                                <div class="text-small">Average Rent</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-sm">
+                            <a href="listings.html?location=soho" class="btn btn-primary">View Properties</a>
+                            <button class="btn btn-outline" onclick="openNeighborhoodModal('soho')">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="neighborhood-image" style="position: relative; min-height: 400px;">
+                        <img src="https://picsum.photos/600/400?random=63&auto=format&fit=crop&w=600&h=400" 
+                             alt="SoHo cast iron buildings and luxury shopping streets" 
+                             style="width: 100%; height: 100%; object-fit: cover;">
+                        <div style="position: absolute; top: var(--spacing-sm); right: var(--spacing-sm); background: rgba(197, 164, 126, 0.9); color: var(--color-white); padding: var(--spacing-xs) var(--spacing-sm); border-radius: var(--border-radius); font-weight: 700;">
+                            Avg: $5.1M
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Long Island City -->
+                <article class="neighborhood-card animate-on-scroll" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xl); background: var(--color-white); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-md); overflow: hidden;">
+                    <div class="neighborhood-image" style="position: relative; min-height: 400px;">
+                        <img src="https://picsum.photos/600/400?random=64&auto=format&fit=crop&w=600&h=400" 
+                             alt="Long Island City modern luxury towers with Manhattan views" 
+                             style="width: 100%; height: 100%; object-fit: cover;">
+                        <div style="position: absolute; top: var(--spacing-sm); right: var(--spacing-sm); background: rgba(197, 164, 126, 0.9); color: var(--color-white); padding: var(--spacing-xs) var(--spacing-sm); border-radius: var(--border-radius); font-weight: 700;">
+                            Avg: $1.8M
+                        </div>
+                    </div>
+                    <div style="padding: var(--spacing-lg);">
+                        <h3 style="color: var(--color-gold); margin-bottom: var(--spacing-sm);">Long Island City</h3>
+                        <p class="text-large" style="margin-bottom: var(--spacing-md);">
+                            Queens' luxury boom destination with stunning Manhattan views, modern high-rises, and excellent value for sophisticated living.
+                        </p>
+                        
+                        <div style="margin-bottom: var(--spacing-lg);">
+                            <h4 style="margin-bottom: var(--spacing-sm);">Neighborhood Highlights</h4>
+                            <ul style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xs);">
+                                <li>🏙️ Manhattan Skyline Views</li>
+                                <li>🏗️ New Construction</li>
+                                <li>🎨 MoMA PS1</li>
+                                <li>🍽️ Diverse Dining</li>
+                                <li>🏊 Luxury Amenities</li>
+                                <li>💰 Great Value</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="neighborhood-stats" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-sm); margin-bottom: var(--spacing-md); padding: var(--spacing-sm); background: var(--color-cream); border-radius: var(--border-radius);">
+                            <div class="text-center">
+                                <strong style="color: var(--color-gold);">92</strong>
+                                <div class="text-small">Walk Score</div>
+                            </div>
+                            <div class="text-center">
+                                <strong style="color: var(--color-gold);">15 min</strong>
+                                <div class="text-small">to Midtown</div>
+                            </div>
+                            <div class="text-center">
+                                <strong style="color: var(--color-gold);">$22/sqft</strong>
+                                <div class="text-small">Average Rent</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-sm">
+                            <a href="listings.html?location=long-island-city" class="btn btn-primary">View Properties</a>
+                            <button class="btn btn-outline" onclick="openNeighborhoodModal('lic')">Learn More</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- West Village -->
+                <article class="neighborhood-card animate-on-scroll" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xl); background: var(--color-white); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-md); overflow: hidden;">
+                    <div style="padding: var(--spacing-lg);">
+                        <h3 style="color: var(--color-gold); margin-bottom: var(--spacing-sm);">West Village</h3>
+                        <p class="text-large" style="margin-bottom: var(--spacing-md);">
+                            Charming cobblestone streets, historic townhouses, and intimate jazz clubs create Manhattan's most romantic neighborhood.
+                        </p>
+                        
+                        <div style="margin-bottom: var(--spacing-lg);">
+                            <h4 style="margin-bottom: var(--spacing-sm);">Neighborhood Highlights</h4>
+                            <ul style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xs);">
+                                <li>🎷 Jazz Scene Legacy</li>
+                                <li>🏘️ Historic Townhouses</li>
+                                <li>☕ Quaint Cafes</li>
+                                <li>🌳 Tree-Lined Streets</li>
+                                <li>🎭 Off-Broadway Theaters</li>
+                                <li>💕 Romantic Atmosphere</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="neighborhood-stats" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-sm); margin-bottom: var(--spacing-md); padding: var(--spacing-sm); background: var(--color-cream); border-radius: var(--border-radius);">
+                            <div class="text-center">
+                                <strong style="color: var(--color-gold);">100</strong>
+                                <div class="text-small">Walk Score</div>
+                            </div>
+                            <div class="text-center">
+                                <strong style="color: var(--color-gold);">5 min</strong>
+                                <div class="text-small">to Hudson River</div>
+                            </div>
+                            <div class="text-center">
+                                <strong style="color: var(--color-gold);">$55/sqft</strong>
+                                <div class="text-small">Average Rent</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-sm">
+                            <a href="listings.html?location=west-village" class="btn btn-primary">View Properties</a>
+                            <button class="btn btn-outline" onclick="openNeighborhoodModal('west-village')">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="neighborhood-image" style="position: relative; min-height: 400px;">
+                        <img src="https://picsum.photos/600/400?random=65&auto=format&fit=crop&w=600&h=400" 
+                             alt="West Village charming cobblestone streets and historic buildings" 
+                             style="width: 100%; height: 100%; object-fit: cover;">
+                        <div style="position: absolute; top: var(--spacing-sm); right: var(--spacing-sm); background: rgba(197, 164, 126, 0.9); color: var(--color-white); padding: var(--spacing-xs) var(--spacing-sm); border-radius: var(--border-radius); font-weight: 700;">
+                            Avg: $7.2M
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- Neighborhood Comparison -->
+    <section class="section" style="background: var(--color-cream);" aria-labelledby="comparison-heading">
+        <div class="container">
+            <h2 id="comparison-heading" class="text-center mb-xl">Neighborhood Comparison</h2>
+            
+            <div style="overflow-x: auto; background: var(--color-white); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-md);">
+                <table style="width: 100%; border-collapse: collapse; min-width: 800px;">
+                    <thead>
+                        <tr style="background: var(--color-charcoal); color: var(--color-white);">
+                            <th style="padding: var(--spacing-md); text-align: left; border-bottom: 1px solid #ddd;">Neighborhood</th>
+                            <th style="padding: var(--spacing-md); text-align: center; border-bottom: 1px solid #ddd;">Avg Price</th>
+                            <th style="padding: var(--spacing-md); text-align: center; border-bottom: 1px solid #ddd;">Walk Score</th>
+                            <th style="padding: var(--spacing-md); text-align: center; border-bottom: 1px solid #ddd;">Best For</th>
+                            <th style="padding: var(--spacing-md); text-align: center; border-bottom: 1px solid #ddd;">Transit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: var(--spacing-sm) var(--spacing-md); font-weight: 600; color: var(--color-gold);">TriBeCa</td>
+                            <td style="padding: var(--spacing-sm) var(--spacing-md); text-align: center;">$6.8M</td>
+                            <td style="padding: var(--spacing-sm) var(--spacing-md); text-align: center;">98</td>
+                            <td style="padding: var(--spacing-sm) var(--spacing-md); text-align: center;">Celebrity Living</td>
+                            <td style="padding: var(--spacing-sm) var(--spacing-md); text-align: center;">⭐⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: var(--spacing-sm) var(--spacing-md); font-weight: 600; color: var(--color-gold);">Upper East Side</td>
+                            <td style="padding: var(--spacing-sm) var(--spacing-md); text-align: center;">$4.2M</td>
+                            <td style="padding: var(--spacing-sm) var(--spacing-md); text-align: center;">89</td>
+                            <td style="padding: var(--spacing-sm) var(--spacing-md); text-align: center;">Families & Culture</td>
+                            <td style="padding: var(--spacing-sm) var(--spacing-md); text-align: center;">⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: var(--spacing-sm) var(--spacing-md); font-weight: 600; color: var(--color-gold);">Brooklyn Heights</td>
+                            <td style="padding: var(--spacing-sm) var(--spacing-md); text-align: center;">$2.8M</td>
+                            <td style="padding: var(--spacing-sm) var(--spacing-md); text-align: center;">94</td>
+                            <td style="padding: var(--spacing-sm) var(--spacing-md); text-align: center;">Historic Charm</td>
+                            <td style="padding: var(--spacing-sm) var(--spacing-md); text-align: center;">⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: var(--spacing-sm) var(--spacing-md); font-weight: 600; color: var(--color-gold);">SoHo</td>
+                            <td style="padding: var(--spacing-sm) var(--spacing-md); text-align: center;">$5.1M</td>
+                            <td style="padding: var(--spacing-sm) var(--spacing-md); text-align: center;">100</td>
+                            <td style="padding: var(--spacing-sm) var(--spacing-md); text-align: center;">Shopping & Art</td>
+                            <td style="padding: var(--spacing-sm) var(--spacing-md); text-align: center;">⭐⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: var(--spacing-sm) var(--spacing-md); font-weight: 600; color: var(--color-gold);">Long Island City</td>
+                            <td style="padding: var(--spacing-sm) var(--spacing-md); text-align: center;">$1.8M</td>
+                            <td style="padding: var(--spacing-sm) var(--spacing-md); text-align: center;">92</td>
+                            <td style="padding: var(--spacing-sm) var(--spacing-md); text-align: center;">Value & Views</td>
+                            <td style="padding: var(--spacing-sm) var(--spacing-md); text-align: center;">⭐⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: var(--spacing-sm) var(--spacing-md); font-weight: 600; color: var(--color-gold);">West Village</td>
+                            <td style="padding: var(--spacing-sm) var(--spacing-md); text-align: center;">$7.2M</td>
+                            <td style="padding: var(--spacing-sm) var(--spacing-md); text-align: center;">100</td>
+                            <td style="padding: var(--spacing-sm) var(--spacing-md); text-align: center;">Romance & Culture</td>
+                            <td style="padding: var(--spacing-sm) var(--spacing-md); text-align: center;">⭐⭐⭐⭐</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section-sm">
+        <div class="container text-center">
+            <h2>Ready to Explore Your Dream Neighborhood?</h2>
+            <p class="text-large mb-lg">Let our local experts guide you through NYC's luxury communities and find your perfect match.</p>
+            
+            <div class="flex-center gap-md" style="flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-primary btn-lg">Schedule a Tour</a>
+                <a href="listings.html" class="btn btn-outline btn-lg">Browse Properties</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Neighborhood Modal (Hidden by default) -->
+    <div id="neighborhood-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 2000; align-items: center; justify-content: center; padding: var(--spacing-md);" onclick="closeNeighborhoodModal()">
+        <div style="background: white; max-width: 900px; max-height: 90vh; overflow-y: auto; border-radius: var(--border-radius-lg); width: 100%;" onclick="event.stopPropagation()">
+            <div style="padding: var(--spacing-lg);">
+                <div class="flex-between mb-lg">
+                    <h2 id="modal-neighborhood-name">Neighborhood Name</h2>
+                    <button onclick="closeNeighborhoodModal()" style="background: none; border: none; font-size: 2rem; cursor: pointer;" aria-label="Close modal">&times;</button>
+                </div>
+                <div id="modal-neighborhood-content">
+                    <!-- Content will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo" style="margin-bottom: var(--spacing-sm);">
+                        Meridian <span style="color: var(--color-gold);">Properties</span>
+                    </div>
+                    <p>Luxury real estate in Manhattan, Brooklyn, and Queens. Your extraordinary property awaits.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Manhattan</h4>
+                    <ul>
+                        <li><a href="listings.html?location=tribeca">TriBeCa</a></li>
+                        <li><a href="listings.html?location=upper-east-side">Upper East Side</a></li>
+                        <li><a href="listings.html?location=soho">SoHo</a></li>
+                        <li><a href="listings.html?location=west-village">West Village</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Brooklyn</h4>
+                    <ul>
+                        <li><a href="listings.html?location=brooklyn-heights">Brooklyn Heights</a></li>
+                        <li><a href="listings.html?location=dumbo">DUMBO</a></li>
+                        <li><a href="listings.html?location=park-slope">Park Slope</a></li>
+                        <li><a href="listings.html?location=williamsburg">Williamsburg</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Queens</h4>
+                    <ul>
+                        <li><a href="listings.html?location=long-island-city">Long Island City</a></li>
+                        <li><a href="listings.html?location=astoria">Astoria</a></li>
+                        <li><a href="listings.html?location=forest-hills">Forest Hills</a></li>
+                        <li><a href="listings.html?location=flushing">Flushing</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Meridian Properties. All rights reserved. | 
+                   <a href="#">Privacy Policy</a> | 
+                   <a href="#">Terms of Service</a>
+                </p>
+                <p class="text-small" style="margin-top: var(--spacing-xs);">
+                    Licensed Real Estate Broker. Equal Housing Opportunity.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    
+    <!-- Neighborhood Modal JavaScript -->
+    <script>
+        const neighborhoodGuides = {
+            tribeca: {
+                name: "TriBeCa",
+                content: `
+                    <div style="margin-bottom: var(--spacing-lg);">
+                        <img src="https://picsum.photos/800/400?random=60&auto=format&fit=crop&w=800&h=400" 
+                             alt="TriBeCa neighborhood" 
+                             style="width: 100%; height: 300px; object-fit: cover; border-radius: var(--border-radius);">
+                    </div>
+                    
+                    <h3>About TriBeCa</h3>
+                    <p>The Triangle Below Canal Street (TriBeCa) is Manhattan's most exclusive neighborhood, where cobblestone streets and converted industrial buildings create an intimate village atmosphere in the heart of the city. Home to A-list celebrities, business moguls, and creative professionals, TriBeCa offers unparalleled luxury living.</p>
+                    
+                    <h4 style="margin-top: var(--spacing-lg);">Living in TriBeCa</h4>
+                    <p>TriBeCa's converted industrial lofts and luxury condominiums offer soaring ceilings, massive windows, and spacious layouts rarely found elsewhere in Manhattan. The neighborhood's quiet, residential feel contrasts beautifully with its proximity to Wall Street and the bustling energy of lower Manhattan.</p>
+                    
+                    <h4 style="margin-top: var(--spacing-lg);">Dining & Entertainment</h4>
+                    <ul>
+                        <li>🍾 <strong>Locanda Verde:</strong> Upscale Italian dining</li>
+                        <li>🥩 <strong>The Odeon:</strong> Classic French brasserie</li>
+                        <li>🍸 <strong>Brandy Library:</strong> Premium spirits and cocktails</li>
+                        <li>🎭 <strong>TriBeCa Film Festival:</strong> Annual cultural celebration</li>
+                    </ul>
+                    
+                    <h4 style="margin-top: var(--spacing-lg);">Transportation</h4>
+                    <p>Multiple subway lines including 1, 2, 3, 4, 5, 6, A, C, E, N, Q, R, W provide excellent connectivity to all of Manhattan and beyond. Walking distance to Wall Street and easy access to Brooklyn via multiple bridges.</p>
+                    
+                    <div style="margin-top: var(--spacing-lg); text-align: center;">
+                        <a href="listings.html?location=tribeca" class="btn btn-primary">View TriBeCa Properties</a>
+                    </div>
+                `
+            },
+            ues: {
+                name: "Upper East Side",
+                content: `
+                    <div style="margin-bottom: var(--spacing-lg);">
+                        <img src="https://picsum.photos/800/400?random=61&auto=format&fit=crop&w=800&h=400" 
+                             alt="Upper East Side neighborhood" 
+                             style="width: 100%; height: 300px; object-fit: cover; border-radius: var(--border-radius);">
+                    </div>
+                    
+                    <h3>About Upper East Side</h3>
+                    <p>The Upper East Side represents classic Manhattan luxury living at its finest. Home to world-renowned museums, designer boutiques, and some of the city's most prestigious addresses, this neighborhood combines cultural sophistication with residential elegance.</p>
+                    
+                    <h4 style="margin-top: var(--spacing-lg);">Cultural Attractions</h4>
+                    <ul>
+                        <li>🎨 <strong>Metropolitan Museum of Art:</strong> World's largest art museum</li>
+                        <li>🏛️ <strong>Guggenheim Museum:</strong> Iconic Frank Lloyd Wright architecture</li>
+                        <li>🦕 <strong>American Museum of Natural History:</strong> Science and discovery</li>
+                        <li>🎭 <strong>92nd Street Y:</strong> Cultural programming and events</li>
+                    </ul>
+                    
+                    <h4 style="margin-top: var(--spacing-lg);">Shopping & Dining</h4>
+                    <p>Madison Avenue offers world-class luxury shopping from Hermès to Barneys, while the neighborhood's restaurant scene ranges from classic establishments like Daniel and The Mark to trendy newcomers.</p>
+                    
+                    <h4 style="margin-top: var(--spacing-lg);">Education</h4>
+                    <p>Home to some of NYC's most prestigious private schools including Chapin, Spence, and Dalton, making it ideal for families seeking top-tier education opportunities.</p>
+                    
+                    <div style="margin-top: var(--spacing-lg); text-align: center;">
+                        <a href="listings.html?location=upper-east-side" class="btn btn-primary">View UES Properties</a>
+                    </div>
+                `
+            }
+            // Add more neighborhood guides as needed...
+        };
+
+        function openNeighborhoodModal(neighborhoodKey) {
+            const modal = document.getElementById('neighborhood-modal');
+            const nameEl = document.getElementById('modal-neighborhood-name');
+            const contentEl = document.getElementById('modal-neighborhood-content');
+            
+            const neighborhood = neighborhoodGuides[neighborhoodKey];
+            if (neighborhood) {
+                nameEl.textContent = neighborhood.name;
+                contentEl.innerHTML = neighborhood.content;
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            } else {
+                // Fallback content for neighborhoods without detailed guides
+                nameEl.textContent = 'Neighborhood Guide';
+                contentEl.innerHTML = `
+                    <p>Detailed neighborhood guide coming soon. Contact our agents for personalized insights about this area.</p>
+                    <div style="text-align: center; margin-top: var(--spacing-lg);">
+                        <a href="contact.html" class="btn btn-primary">Contact an Agent</a>
+                    </div>
+                `;
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeNeighborhoodModal() {
+            const modal = document.getElementById('neighborhood-modal');
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeNeighborhoodModal();
+            }
+        });
+    </script>
+</body>
+</html>

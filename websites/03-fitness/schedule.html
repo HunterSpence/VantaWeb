@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Schedule - APEX Athletics | Weekly Fitness Class Timetable</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="View the complete APEX Athletics class schedule. Find HIIT, CrossFit, Boxing, Yoga, Spin, and more classes throughout the week with expert instructors.">
+    <meta name="keywords" content="class schedule, fitness timetable, gym schedule, HIIT classes, CrossFit schedule, boxing classes, yoga times">
+    <meta name="author" content="APEX Athletics">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Class Schedule - APEX Athletics">
+    <meta property="og:description" content="Complete weekly schedule of high-intensity fitness classes with expert instructors.">
+    <meta property="og:image" content="https://picsum.photos/1200/630?random=gym-schedule">
+    <meta property="og:url" content="https://apexathletics.com/schedule">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Class Schedule - APEX Athletics">
+    <meta name="twitter:description" content="Complete weekly schedule of high-intensity fitness classes.">
+    <meta name="twitter:image" content="https://picsum.photos/1200/630?random=gym-schedule">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💪</text></svg>">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .schedule-legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--dark-gray);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .legend-color {
+            width: 15px;
+            height: 15px;
+            border-radius: 3px;
+        }
+        
+        .time-filter {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .time-filter button {
+            padding: 0.8rem 1.5rem;
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--dark-gray);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            font-weight: 500;
+        }
+        
+        .time-filter button.active,
+        .time-filter button:hover {
+            background: var(--electric-lime);
+            color: var(--jet-black);
+            border-color: var(--electric-lime);
+        }
+        
+        .schedule-container {
+            background: var(--dark-gray);
+            border-radius: 15px;
+            overflow: hidden;
+            margin-top: 2rem;
+        }
+        
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .schedule-table th {
+            background: var(--electric-lime);
+            color: var(--jet-black);
+            padding: 1rem 0.5rem;
+            text-align: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .schedule-table td {
+            padding: 0.5rem;
+            text-align: center;
+            vertical-align: top;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            min-height: 80px;
+        }
+        
+        .time-slot {
+            background: rgba(26, 26, 26, 0.8);
+            font-weight: 600;
+            color: var(--electric-lime);
+            font-size: 0.9rem;
+            padding: 1rem 0.5rem;
+        }
+        
+        .class-slot {
+            background: rgba(196, 245, 56, 0.2);
+            color: var(--white);
+            padding: 0.5rem;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin: 0.2rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            border: 2px solid transparent;
+            display: block;
+            text-decoration: none;
+        }
+        
+        .class-slot:hover {
+            transform: translateY(-2px);
+            border-color: var(--electric-lime);
+            box-shadow: 0 5px 15px rgba(196, 245, 56, 0.3);
+        }
+        
+        .class-name {
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            line-height: 1.2;
+        }
+        
+        .instructor-name {
+            font-size: 0.7rem;
+            opacity: 0.9;
+            margin-top: 0.2rem;
+        }
+        
+        .duration {
+            font-size: 0.7rem;
+            opacity: 0.8;
+            margin-top: 0.2rem;
+        }
+        
+        /* Class type colors */
+        .class-hiit { background: rgba(255, 51, 51, 0.3); border-left: 4px solid #ff3333; }
+        .class-crossfit { background: rgba(255, 165, 0, 0.3); border-left: 4px solid #ffa500; }
+        .class-boxing { background: rgba(255, 0, 255, 0.3); border-left: 4px solid #ff00ff; }
+        .class-yoga { background: rgba(0, 255, 127, 0.3); border-left: 4px solid #00ff7f; }
+        .class-spin { background: rgba(0, 191, 255, 0.3); border-left: 4px solid #00bfff; }
+        .class-strength { background: rgba(255, 215, 0, 0.3); border-left: 4px solid #ffd700; }
+        .class-pilates { background: rgba(221, 160, 221, 0.3); border-left: 4px solid #dda0dd; }
+        .class-mma { background: rgba(128, 0, 0, 0.3); border-left: 4px solid #800000; }
+        .class-metabolic { background: rgba(255, 69, 0, 0.3); border-left: 4px solid #ff4500; }
+        .class-recovery { background: rgba(70, 130, 180, 0.3); border-left: 4px solid #4682b4; }
+        .class-bootcamp { background: rgba(34, 139, 34, 0.3); border-left: 4px solid #228b22; }
+        
+        .mobile-schedule {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .schedule-table {
+                display: none;
+            }
+            
+            .mobile-schedule {
+                display: block;
+            }
+            
+            .day-schedule {
+                background: var(--dark-gray);
+                border-radius: 10px;
+                margin-bottom: 1rem;
+                overflow: hidden;
+            }
+            
+            .day-header {
+                background: var(--electric-lime);
+                color: var(--jet-black);
+                padding: 1rem;
+                font-weight: 700;
+                font-size: 1.1rem;
+                text-align: center;
+                text-transform: uppercase;
+            }
+            
+            .day-classes {
+                padding: 1rem;
+            }
+            
+            .mobile-class-slot {
+                background: var(--jet-black);
+                border-radius: 8px;
+                padding: 1rem;
+                margin-bottom: 0.8rem;
+                border: 2px solid transparent;
+                transition: var(--transition-smooth);
+            }
+            
+            .mobile-class-slot:hover {
+                border-color: var(--electric-lime);
+                transform: translateY(-2px);
+            }
+            
+            .mobile-class-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 0.5rem;
+            }
+            
+            .mobile-class-time {
+                color: var(--electric-lime);
+                font-weight: 700;
+                font-size: 0.9rem;
+            }
+            
+            .mobile-class-duration {
+                color: rgba(255, 255, 255, 0.7);
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="APEX Athletics Home">APEX</a>
+            
+            <nav class="nav-menu" role="navigation" aria-label="Main Navigation">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="classes.html" class="nav-link">Classes</a>
+                <a href="trainers.html" class="nav-link">Trainers</a>
+                <a href="membership.html" class="nav-link">Membership</a>
+                <a href="schedule.html" class="nav-link active" aria-current="page">Schedule</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            
+            <button class="mobile-toggle" aria-label="Toggle mobile menu" aria-expanded="false">☰</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 50vh; background: linear-gradient(135deg, var(--jet-black) 0%, var(--dark-gray) 100%);">
+        <div class="hero-content">
+            <h1>WEEKLY <span class="highlight">SCHEDULE</span></h1>
+            <p class="text-large">
+                Plan your path to greatness. Every class, every time slot, every opportunity to push your limits.
+            </p>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="section">
+        <div class="section-header">
+            <h2 class="section-title">CLASS TIMETABLE</h2>
+            <p class="section-subtitle">
+                Find your perfect workout time and join the APEX community
+            </p>
+        </div>
+
+        <!-- Legend -->
+        <div class="schedule-legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background: #ff3333;"></div>
+                <span>HIIT</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #ffa500;"></div>
+                <span>CrossFit</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #ff00ff;"></div>
+                <span>Boxing</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #00ff7f;"></div>
+                <span>Yoga</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #00bfff;"></div>
+                <span>Spin</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #ffd700;"></div>
+                <span>Strength</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #dda0dd;"></div>
+                <span>Pilates</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #800000;"></div>
+                <span>MMA</span>
+            </div>
+        </div>
+
+        <!-- Time Filter -->
+        <div class="time-filter">
+            <button class="active" data-time="all">ALL TIMES</button>
+            <button data-time="morning">MORNING (5AM-12PM)</button>
+            <button data-time="afternoon">AFTERNOON (12PM-6PM)</button>
+            <button data-time="evening">EVENING (6PM-11PM)</button>
+        </div>
+
+        <!-- Desktop Schedule Table -->
+        <div class="schedule-container">
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th style="width: 12%;">TIME</th>
+                        <th>MONDAY</th>
+                        <th>TUESDAY</th>
+                        <th>WEDNESDAY</th>
+                        <th>THURSDAY</th>
+                        <th>FRIDAY</th>
+                        <th>SATURDAY</th>
+                        <th>SUNDAY</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 5:00 AM -->
+                    <tr data-time-slot="morning">
+                        <td class="time-slot">5:00 AM</td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-crossfit">
+                                <div class="class-name">CrossFit Fury</div>
+                                <div class="instructor-name">Sarah Rage</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-strength">
+                                <div class="class-name">Strength Dom</div>
+                                <div class="instructor-name">Rex Iron</div>
+                                <div class="duration">75 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-crossfit">
+                                <div class="class-name">CrossFit Fury</div>
+                                <div class="instructor-name">Sarah Rage</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-strength">
+                                <div class="class-name">Strength Dom</div>
+                                <div class="instructor-name">Rex Iron</div>
+                                <div class="duration">75 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-crossfit">
+                                <div class="class-name">CrossFit Fury</div>
+                                <div class="instructor-name">Sarah Rage</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-crossfit">
+                                <div class="class-name">CrossFit Fury</div>
+                                <div class="instructor-name">Sarah Rage</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                        </td>
+                        <td></td>
+                    </tr>
+
+                    <!-- 6:00 AM -->
+                    <tr data-time-slot="morning">
+                        <td class="time-slot">6:00 AM</td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-hiit">
+                                <div class="class-name">HIIT Blast</div>
+                                <div class="instructor-name">Marcus Steel</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                            <a href="contact.html" class="class-slot class-spin">
+                                <div class="class-name">Spin Fury</div>
+                                <div class="instructor-name">Jake Lightning</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-boxing">
+                                <div class="class-name">Boxing Mayhem</div>
+                                <div class="instructor-name">Tony Punch</div>
+                                <div class="duration">50 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-hiit">
+                                <div class="class-name">HIIT Blast</div>
+                                <div class="instructor-name">Marcus Steel</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                            <a href="contact.html" class="class-slot class-spin">
+                                <div class="class-name">Spin Fury</div>
+                                <div class="instructor-name">Jake Lightning</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-boxing">
+                                <div class="class-name">Boxing Mayhem</div>
+                                <div class="instructor-name">Tony Punch</div>
+                                <div class="duration">50 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-hiit">
+                                <div class="class-name">HIIT Blast</div>
+                                <div class="instructor-name">Marcus Steel</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                            <a href="contact.html" class="class-slot class-spin">
+                                <div class="class-name">Spin Fury</div>
+                                <div class="instructor-name">Jake Lightning</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-spin">
+                                <div class="class-name">Spin Fury</div>
+                                <div class="instructor-name">Jake Lightning</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-bootcamp">
+                                <div class="class-name">Bootcamp</div>
+                                <div class="instructor-name">Drill Sergeant</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <!-- 7:00 AM -->
+                    <tr data-time-slot="morning">
+                        <td class="time-slot">7:00 AM</td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-metabolic">
+                                <div class="class-name">Metabolic Melt</div>
+                                <div class="instructor-name">Blaze Storm</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-mma">
+                                <div class="class-name">MMA Condition</div>
+                                <div class="instructor-name">Cage Warrior</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-metabolic">
+                                <div class="class-name">Metabolic Melt</div>
+                                <div class="instructor-name">Blaze Storm</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-mma">
+                                <div class="class-name">MMA Condition</div>
+                                <div class="instructor-name">Cage Warrior</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-metabolic">
+                                <div class="class-name">Metabolic Melt</div>
+                                <div class="instructor-name">Blaze Storm</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-bootcamp">
+                                <div class="class-name">Bootcamp</div>
+                                <div class="instructor-name">Drill Sergeant</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-yoga">
+                                <div class="class-name">Power Yoga</div>
+                                <div class="instructor-name">Luna Peace</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <!-- 8:00 AM -->
+                    <tr data-time-slot="morning">
+                        <td class="time-slot">8:00 AM</td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-yoga">
+                                <div class="class-name">Power Yoga</div>
+                                <div class="instructor-name">Luna Peace</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-strength">
+                                <div class="class-name">Strength Dom</div>
+                                <div class="instructor-name">Rex Iron</div>
+                                <div class="duration">75 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-yoga">
+                                <div class="class-name">Power Yoga</div>
+                                <div class="instructor-name">Luna Peace</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-strength">
+                                <div class="class-name">Strength Dom</div>
+                                <div class="instructor-name">Rex Iron</div>
+                                <div class="duration">75 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-yoga">
+                                <div class="class-name">Power Yoga</div>
+                                <div class="instructor-name">Luna Peace</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-strength">
+                                <div class="class-name">Strength Dom</div>
+                                <div class="instructor-name">Rex Iron</div>
+                                <div class="duration">75 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-pilates">
+                                <div class="class-name">Pilates Core</div>
+                                <div class="instructor-name">Grace Flow</div>
+                                <div class="duration">50 min</div>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <!-- 9:00 AM -->
+                    <tr data-time-slot="morning">
+                        <td class="time-slot">9:00 AM</td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-pilates">
+                                <div class="class-name">Pilates Core</div>
+                                <div class="instructor-name">Grace Flow</div>
+                                <div class="duration">50 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-yoga">
+                                <div class="class-name">Power Yoga</div>
+                                <div class="instructor-name">Luna Peace</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-pilates">
+                                <div class="class-name">Pilates Core</div>
+                                <div class="instructor-name">Grace Flow</div>
+                                <div class="duration">50 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-yoga">
+                                <div class="class-name">Power Yoga</div>
+                                <div class="instructor-name">Luna Peace</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-pilates">
+                                <div class="class-name">Pilates Core</div>
+                                <div class="instructor-name">Grace Flow</div>
+                                <div class="duration">50 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-boxing">
+                                <div class="class-name">Boxing Mayhem</div>
+                                <div class="instructor-name">Tony Punch</div>
+                                <div class="duration">50 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-yoga">
+                                <div class="class-name">Power Yoga</div>
+                                <div class="instructor-name">Luna Peace</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <!-- 10:00 AM -->
+                    <tr data-time-slot="morning">
+                        <td class="time-slot">10:00 AM</td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-recovery">
+                                <div class="class-name">Recovery</div>
+                                <div class="instructor-name">Zen Master</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-recovery">
+                                <div class="class-name">Recovery</div>
+                                <div class="instructor-name">Zen Master</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-recovery">
+                                <div class="class-name">Recovery</div>
+                                <div class="instructor-name">Zen Master</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-recovery">
+                                <div class="class-name">Recovery</div>
+                                <div class="instructor-name">Zen Master</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-recovery">
+                                <div class="class-name">Recovery</div>
+                                <div class="instructor-name">Zen Master</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-mma">
+                                <div class="class-name">MMA Condition</div>
+                                <div class="instructor-name">Cage Warrior</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-recovery">
+                                <div class="class-name">Recovery</div>
+                                <div class="instructor-name">Zen Master</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <!-- 12:00 PM -->
+                    <tr data-time-slot="afternoon">
+                        <td class="time-slot">12:00 PM</td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-hiit">
+                                <div class="class-name">HIIT Blast</div>
+                                <div class="instructor-name">Marcus Steel</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-spin">
+                                <div class="class-name">Spin Fury</div>
+                                <div class="instructor-name">Jake Lightning</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-hiit">
+                                <div class="class-name">HIIT Blast</div>
+                                <div class="instructor-name">Marcus Steel</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-spin">
+                                <div class="class-name">Spin Fury</div>
+                                <div class="instructor-name">Jake Lightning</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-hiit">
+                                <div class="class-name">HIIT Blast</div>
+                                <div class="instructor-name">Marcus Steel</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-crossfit">
+                                <div class="class-name">CrossFit Fury</div>
+                                <div class="instructor-name">Sarah Rage</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                        </td>
+                        <td></td>
+                    </tr>
+
+                    <!-- 1:00 PM -->
+                    <tr data-time-slot="afternoon">
+                        <td class="time-slot">1:00 PM</td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-metabolic">
+                                <div class="class-name">Metabolic Melt</div>
+                                <div class="instructor-name">Blaze Storm</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-yoga">
+                                <div class="class-name">Power Yoga</div>
+                                <div class="instructor-name">Luna Peace</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-metabolic">
+                                <div class="class-name">Metabolic Melt</div>
+                                <div class="instructor-name">Blaze Storm</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-yoga">
+                                <div class="class-name">Power Yoga</div>
+                                <div class="instructor-name">Luna Peace</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-metabolic">
+                                <div class="class-name">Metabolic Melt</div>
+                                <div class="instructor-name">Blaze Storm</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td></td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-recovery">
+                                <div class="class-name">Recovery</div>
+                                <div class="instructor-name">Zen Master</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <!-- 5:00 PM -->
+                    <tr data-time-slot="evening">
+                        <td class="time-slot">5:00 PM</td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-crossfit">
+                                <div class="class-name">CrossFit Fury</div>
+                                <div class="instructor-name">Sarah Rage</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-crossfit">
+                                <div class="class-name">CrossFit Fury</div>
+                                <div class="instructor-name">Sarah Rage</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-crossfit">
+                                <div class="class-name">CrossFit Fury</div>
+                                <div class="instructor-name">Sarah Rage</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-crossfit">
+                                <div class="class-name">CrossFit Fury</div>
+                                <div class="instructor-name">Sarah Rage</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-crossfit">
+                                <div class="class-name">CrossFit Fury</div>
+                                <div class="instructor-name">Sarah Rage</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-crossfit">
+                                <div class="class-name">CrossFit Fury</div>
+                                <div class="instructor-name">Sarah Rage</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                        </td>
+                        <td></td>
+                    </tr>
+
+                    <!-- 5:30 PM -->
+                    <tr data-time-slot="evening">
+                        <td class="time-slot">5:30 PM</td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-pilates">
+                                <div class="class-name">Pilates Core</div>
+                                <div class="instructor-name">Grace Flow</div>
+                                <div class="duration">50 min</div>
+                            </a>
+                        </td>
+                        <td></td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-pilates">
+                                <div class="class-name">Pilates Core</div>
+                                <div class="instructor-name">Grace Flow</div>
+                                <div class="duration">50 min</div>
+                            </a>
+                        </td>
+                        <td></td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-pilates">
+                                <div class="class-name">Pilates Core</div>
+                                <div class="instructor-name">Grace Flow</div>
+                                <div class="duration">50 min</div>
+                            </a>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <!-- 6:00 PM -->
+                    <tr data-time-slot="evening">
+                        <td class="time-slot">6:00 PM</td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-strength">
+                                <div class="class-name">Strength Dom</div>
+                                <div class="instructor-name">Rex Iron</div>
+                                <div class="duration">75 min</div>
+                            </a>
+                            <a href="contact.html" class="class-slot class-yoga">
+                                <div class="class-name">Power Yoga</div>
+                                <div class="instructor-name">Luna Peace</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-strength">
+                                <div class="class-name">Strength Dom</div>
+                                <div class="instructor-name">Rex Iron</div>
+                                <div class="duration">75 min</div>
+                            </a>
+                            <a href="contact.html" class="class-slot class-yoga">
+                                <div class="class-name">Power Yoga</div>
+                                <div class="instructor-name">Luna Peace</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-strength">
+                                <div class="class-name">Strength Dom</div>
+                                <div class="instructor-name">Rex Iron</div>
+                                <div class="duration">75 min</div>
+                            </a>
+                            <a href="contact.html" class="class-slot class-yoga">
+                                <div class="class-name">Power Yoga</div>
+                                <div class="instructor-name">Luna Peace</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-strength">
+                                <div class="class-name">Strength Dom</div>
+                                <div class="instructor-name">Rex Iron</div>
+                                <div class="duration">75 min</div>
+                            </a>
+                            <a href="contact.html" class="class-slot class-yoga">
+                                <div class="class-name">Power Yoga</div>
+                                <div class="instructor-name">Luna Peace</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-strength">
+                                <div class="class-name">Strength Dom</div>
+                                <div class="instructor-name">Rex Iron</div>
+                                <div class="duration">75 min</div>
+                            </a>
+                            <a href="contact.html" class="class-slot class-yoga">
+                                <div class="class-name">Power Yoga</div>
+                                <div class="instructor-name">Luna Peace</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-yoga">
+                                <div class="class-name">Power Yoga</div>
+                                <div class="instructor-name">Luna Peace</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                        </td>
+                        <td></td>
+                    </tr>
+
+                    <!-- 6:30 PM -->
+                    <tr data-time-slot="evening">
+                        <td class="time-slot">6:30 PM</td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-hiit">
+                                <div class="class-name">HIIT Blast</div>
+                                <div class="instructor-name">Marcus Steel</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td></td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-hiit">
+                                <div class="class-name">HIIT Blast</div>
+                                <div class="instructor-name">Marcus Steel</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td></td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-hiit">
+                                <div class="class-name">HIIT Blast</div>
+                                <div class="instructor-name">Marcus Steel</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <!-- 7:00 PM -->
+                    <tr data-time-slot="evening">
+                        <td class="time-slot">7:00 PM</td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-crossfit">
+                                <div class="class-name">CrossFit Fury</div>
+                                <div class="instructor-name">Sarah Rage</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                            <a href="contact.html" class="class-slot class-spin">
+                                <div class="class-name">Spin Fury</div>
+                                <div class="instructor-name">Jake Lightning</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-crossfit">
+                                <div class="class-name">CrossFit Fury</div>
+                                <div class="instructor-name">Sarah Rage</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                            <a href="contact.html" class="class-slot class-mma">
+                                <div class="class-name">MMA Condition</div>
+                                <div class="instructor-name">Cage Warrior</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-crossfit">
+                                <div class="class-name">CrossFit Fury</div>
+                                <div class="instructor-name">Sarah Rage</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                            <a href="contact.html" class="class-slot class-spin">
+                                <div class="class-name">Spin Fury</div>
+                                <div class="instructor-name">Jake Lightning</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-crossfit">
+                                <div class="class-name">CrossFit Fury</div>
+                                <div class="instructor-name">Sarah Rage</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                            <a href="contact.html" class="class-slot class-mma">
+                                <div class="class-name">MMA Condition</div>
+                                <div class="instructor-name">Cage Warrior</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-crossfit">
+                                <div class="class-name">CrossFit Fury</div>
+                                <div class="instructor-name">Sarah Rage</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                            <a href="contact.html" class="class-slot class-spin">
+                                <div class="class-name">Spin Fury</div>
+                                <div class="instructor-name">Jake Lightning</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-crossfit">
+                                <div class="class-name">CrossFit Fury</div>
+                                <div class="instructor-name">Sarah Rage</div>
+                                <div class="duration">60 min</div>
+                            </a>
+                        </td>
+                        <td></td>
+                    </tr>
+
+                    <!-- 7:30 PM -->
+                    <tr data-time-slot="evening">
+                        <td class="time-slot">7:30 PM</td>
+                        <td></td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-boxing">
+                                <div class="class-name">Boxing Mayhem</div>
+                                <div class="instructor-name">Tony Punch</div>
+                                <div class="duration">50 min</div>
+                            </a>
+                        </td>
+                        <td></td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-boxing">
+                                <div class="class-name">Boxing Mayhem</div>
+                                <div class="instructor-name">Tony Punch</div>
+                                <div class="duration">50 min</div>
+                            </a>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <!-- 8:00 PM -->
+                    <tr data-time-slot="evening">
+                        <td class="time-slot">8:00 PM</td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-metabolic">
+                                <div class="class-name">Metabolic Melt</div>
+                                <div class="instructor-name">Blaze Storm</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td></td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-metabolic">
+                                <div class="class-name">Metabolic Melt</div>
+                                <div class="instructor-name">Blaze Storm</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td></td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-metabolic">
+                                <div class="class-name">Metabolic Melt</div>
+                                <div class="instructor-name">Blaze Storm</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <!-- 8:30 PM -->
+                    <tr data-time-slot="evening">
+                        <td class="time-slot">8:30 PM</td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-recovery">
+                                <div class="class-name">Recovery</div>
+                                <div class="instructor-name">Zen Master</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-recovery">
+                                <div class="class-name">Recovery</div>
+                                <div class="instructor-name">Zen Master</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-recovery">
+                                <div class="class-name">Recovery</div>
+                                <div class="instructor-name">Zen Master</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-recovery">
+                                <div class="class-name">Recovery</div>
+                                <div class="instructor-name">Zen Master</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-recovery">
+                                <div class="class-name">Recovery</div>
+                                <div class="instructor-name">Zen Master</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-recovery">
+                                <div class="class-name">Recovery</div>
+                                <div class="instructor-name">Zen Master</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="contact.html" class="class-slot class-recovery">
+                                <div class="class-name">Recovery</div>
+                                <div class="instructor-name">Zen Master</div>
+                                <div class="duration">45 min</div>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Mobile Schedule -->
+        <div class="mobile-schedule">
+            <!-- Monday -->
+            <div class="day-schedule">
+                <div class="day-header">MONDAY</div>
+                <div class="day-classes">
+                    <a href="contact.html" class="mobile-class-slot class-crossfit">
+                        <div class="mobile-class-header">
+                            <span class="mobile-class-time">5:00 AM</span>
+                            <span class="mobile-class-duration">60 min</span>
+                        </div>
+                        <div class="class-name">CrossFit Fury</div>
+                        <div class="instructor-name">Sarah Rage</div>
+                    </a>
+                    <a href="contact.html" class="mobile-class-slot class-hiit">
+                        <div class="mobile-class-header">
+                            <span class="mobile-class-time">6:00 AM</span>
+                            <span class="mobile-class-duration">45 min</span>
+                        </div>
+                        <div class="class-name">HIIT Blast</div>
+                        <div class="instructor-name">Marcus Steel</div>
+                    </a>
+                    <a href="contact.html" class="mobile-class-slot class-spin">
+                        <div class="mobile-class-header">
+                            <span class="mobile-class-time">6:00 AM</span>
+                            <span class="mobile-class-duration">45 min</span>
+                        </div>
+                        <div class="class-name">Spin Fury</div>
+                        <div class="instructor-name">Jake Lightning</div>
+                    </a>
+                    <!-- Continue with other classes... -->
+                </div>
+            </div>
+
+            <!-- Repeat for other days... -->
+            <div class="day-schedule">
+                <div class="day-header">TUESDAY</div>
+                <div class="day-classes">
+                    <a href="contact.html" class="mobile-class-slot class-strength">
+                        <div class="mobile-class-header">
+                            <span class="mobile-class-time">5:00 AM</span>
+                            <span class="mobile-class-duration">75 min</span>
+                        </div>
+                        <div class="class-name">Strength Domination</div>
+                        <div class="instructor-name">Rex Iron</div>
+                    </a>
+                    <!-- Add more Tuesday classes... -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Info -->
+    <section class="section" style="background: var(--dark-gray);">
+        <div class="section-header">
+            <h2 class="section-title">BOOKING INFORMATION</h2>
+            <p class="section-subtitle">Everything you need to know about reserving your spot</p>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+            <div class="card" style="padding: 2rem;">
+                <h3 style="color: var(--electric-lime); margin-bottom: 1rem;">📱 EASY BOOKING</h3>
+                <p>Reserve your spot through our mobile app, website, or at the front desk. Book up to 7 days in advance.</p>
+            </div>
+            
+            <div class="card" style="padding: 2rem;">
+                <h3 style="color: var(--electric-lime); margin-bottom: 1rem;">⏰ CANCELLATION POLICY</h3>
+                <p>Cancel up to 2 hours before class starts. Late cancellations or no-shows count toward your monthly limit.</p>
+            </div>
+            
+            <div class="card" style="padding: 2rem;">
+                <h3 style="color: var(--electric-lime); margin-bottom: 1rem;">🎯 CLASS LIMITS</h3>
+                <p>Most classes are capped at 20 participants to ensure personal attention and safety for all members.</p>
+            </div>
+            
+            <div class="card" style="padding: 2rem;">
+                <h3 style="color: var(--electric-lime); margin-bottom: 1rem;">🔥 WAITLIST AVAILABLE</h3>
+                <p>Popular classes fill up fast! Join the waitlist and we'll notify you immediately if a spot opens up.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" style="background: linear-gradient(135deg, var(--electric-lime) 0%, #d4ff48 100%); color: var(--jet-black); text-align: center;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="color: var(--jet-black); margin-bottom: 1rem;">READY TO BOOK YOUR FIRST CLASS?</h2>
+            <p class="text-large" style="margin-bottom: 2rem; font-weight: 600;">
+                Join thousands of members who've already started their transformation. Your strongest self awaits.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-red">START FREE TRIAL</a>
+                <a href="membership.html" class="btn" style="background: var(--jet-black); color: var(--electric-lime);">VIEW MEMBERSHIP</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>APEX ATHLETICS</h3>
+                <p>Where champions are forged and limits are shattered. Join the revolution.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Facebook"><i>📘</i></a>
+                    <a href="#" class="social-link" aria-label="Instagram"><i>📷</i></a>
+                    <a href="#" class="social-link" aria-label="Twitter"><i>🐦</i></a>
+                    <a href="#" class="social-link" aria-label="YouTube"><i>📺</i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>QUICK LINKS</h3>
+                <p><a href="classes.html">Classes</a></p>
+                <p><a href="trainers.html">Trainers</a></p>
+                <p><a href="membership.html">Membership</a></p>
+                <p><a href="schedule.html">Schedule</a></p>
+                <p><a href="contact.html">Contact</a></p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>CONTACT INFO</h3>
+                <p>📍 1234 Fitness Blvd, Fitness City, FC 12345</p>
+                <p>📞 <a href="tel:+15555273946">+1 (555) APEX-GYM</a></p>
+                <p>✉️ <a href="mailto:info@apexathletics.com">info@apexathletics.com</a></p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>HOURS</h3>
+                <p>Monday - Friday: 5:00 AM - 11:00 PM</p>
+                <p>Saturday: 6:00 AM - 10:00 PM</p>
+                <p>Sunday: 6:00 AM - 10:00 PM</p>
+                <p style="color: var(--electric-lime); font-weight: 600;">24/7 Access for Elite Members</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 APEX Athletics. All rights reserved. | <a href="#" style="color: var(--electric-lime);">Privacy Policy</a> | <a href="#" style="color: var(--electric-lime);">Terms of Service</a></p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.7;">Website designed by <strong>VantaWeb</strong> - Premium Web Design Solutions</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        // Time filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const timeFilters = document.querySelectorAll('.time-filter button');
+            const timeSlots = document.querySelectorAll('[data-time-slot]');
+            
+            timeFilters.forEach(filter => {
+                filter.addEventListener('click', () => {
+                    // Remove active class from all filters
+                    timeFilters.forEach(f => f.classList.remove('active'));
+                    // Add active class to clicked filter
+                    filter.classList.add('active');
+                    
+                    const filterValue = filter.getAttribute('data-time');
+                    
+                    timeSlots.forEach(slot => {
+                        if (filterValue === 'all' || slot.getAttribute('data-time-slot') === filterValue) {
+                            slot.style.display = 'table-row';
+                        } else {
+                            slot.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - APEX Athletics | Start Your Free Trial Today</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Contact APEX Athletics to start your free 3-day trial. Get directions, hours, and sign up for your fitness transformation journey today.">
+    <meta name="keywords" content="contact gym, free trial, fitness consultation, gym location, hours, phone number, fitness center contact">
+    <meta name="author" content="APEX Athletics">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Contact APEX Athletics - Start Your Free Trial">
+    <meta property="og:description" content="Contact us to start your free 3-day trial and begin your fitness transformation.">
+    <meta property="og:image" content="https://picsum.photos/1200/630?random=gym-contact">
+    <meta property="og:url" content="https://apexathletics.com/contact">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact APEX Athletics - Start Your Free Trial">
+    <meta name="twitter:description" content="Contact us to start your free 3-day trial today.">
+    <meta name="twitter:image" content="https://picsum.photos/1200/630?random=gym-contact">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💪</text></svg>">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+            align-items: start;
+        }
+        
+        .contact-form {
+            background: var(--dark-gray);
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            border: 2px solid transparent;
+            transition: var(--transition-smooth);
+        }
+        
+        .contact-form:hover {
+            border-color: var(--electric-lime);
+            box-shadow: 0 10px 30px var(--shadow-lime);
+        }
+        
+        .contact-info {
+            padding: 2rem 0;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+        
+        .contact-icon {
+            font-size: 1.8rem;
+            color: var(--electric-lime);
+            min-width: 40px;
+        }
+        
+        .contact-details h3 {
+            color: var(--electric-lime);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .contact-details p {
+            margin-bottom: 0.5rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .contact-details a {
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+        
+        .contact-details a:hover {
+            color: var(--electric-lime);
+        }
+        
+        .map-container {
+            background: var(--dark-gray);
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 2rem 0;
+            height: 300px;
+            position: relative;
+            border: 2px solid var(--electric-lime);
+        }
+        
+        .map-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background: linear-gradient(135deg, var(--dark-gray) 0%, var(--jet-black) 100%);
+            color: var(--electric-lime);
+        }
+        
+        .map-placeholder i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hours-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .hours-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+        }
+        
+        .hours-day {
+            font-weight: 600;
+        }
+        
+        .hours-time {
+            color: var(--electric-lime);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .form-full-width {
+            grid-column: 1 / -1;
+        }
+        
+        .trial-benefits {
+            background: rgba(196, 245, 56, 0.1);
+            border: 2px solid var(--electric-lime);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .benefit-icon {
+            color: var(--electric-lime);
+            font-size: 1.3rem;
+            min-width: 20px;
+        }
+        
+        .emergency-contact {
+            background: rgba(255, 51, 51, 0.1);
+            border: 2px solid var(--red-accent);
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1rem 0;
+            text-align: center;
+        }
+        
+        .emergency-contact h4 {
+            color: var(--red-accent);
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .hours-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-form {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="APEX Athletics Home">APEX</a>
+            
+            <nav class="nav-menu" role="navigation" aria-label="Main Navigation">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="classes.html" class="nav-link">Classes</a>
+                <a href="trainers.html" class="nav-link">Trainers</a>
+                <a href="membership.html" class="nav-link">Membership</a>
+                <a href="schedule.html" class="nav-link">Schedule</a>
+                <a href="contact.html" class="nav-link active" aria-current="page">Contact</a>
+            </nav>
+            
+            <button class="mobile-toggle" aria-label="Toggle mobile menu" aria-expanded="false">☰</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 50vh; background: linear-gradient(135deg, var(--jet-black) 0%, var(--dark-gray) 100%);">
+        <div class="hero-content">
+            <h1>START YOUR <span class="highlight">TRANSFORMATION</span></h1>
+            <p class="text-large">
+                Take the first step toward your strongest self. Your 3-day free trial awaits.
+            </p>
+        </div>
+    </section>
+
+    <!-- Trial Benefits Section -->
+    <section class="section">
+        <div class="trial-benefits">
+            <h2 style="color: var(--electric-lime); text-align: center; margin-bottom: 2rem;">🔥 FREE 3-DAY TRIAL INCLUDES 🔥</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                <div class="benefit-item">
+                    <div class="benefit-icon">✅</div>
+                    <div>
+                        <strong>Full Gym Access</strong><br>
+                        <span style="opacity: 0.8;">Use all equipment and facilities</span>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">✅</div>
+                    <div>
+                        <strong>3 Group Classes</strong><br>
+                        <span style="opacity: 0.8;">Any classes from our schedule</span>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">✅</div>
+                    <div>
+                        <strong>Fitness Assessment</strong><br>
+                        <span style="opacity: 0.8;">Personalized goal setting session</span>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">✅</div>
+                    <div>
+                        <strong>Nutrition Consultation</strong><br>
+                        <span style="opacity: 0.8;">Basic meal planning guidance</span>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">✅</div>
+                    <div>
+                        <strong>Personal Training Demo</strong><br>
+                        <span style="opacity: 0.8;">30-minute session with our trainers</span>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">✅</div>
+                    <div>
+                        <strong>Recovery Suite Access</strong><br>
+                        <span style="opacity: 0.8;">Sauna, showers, and amenities</span>
+                    </div>
+                </div>
+            </div>
+            
+            <p style="text-align: center; margin-top: 2rem; font-style: italic;">
+                <strong>No credit card required • No commitment • No pressure</strong>
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Grid -->
+    <section class="section">
+        <div class="contact-grid">
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h2 style="color: var(--electric-lime); margin-bottom: 1rem;">CLAIM YOUR FREE TRIAL</h2>
+                <p style="margin-bottom: 2rem; opacity: 0.9;">Fill out the form below and we'll contact you within 2 hours to schedule your visit.</p>
+                
+                <form id="trial-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName" class="form-label">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="lastName" class="form-label">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" class="form-input" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="age" class="form-label">Age</label>
+                        <select id="age" name="age" class="form-select">
+                            <option value="">Select Age Range</option>
+                            <option value="16-17">16-17 (Parental consent required)</option>
+                            <option value="18-25">18-25</option>
+                            <option value="26-35">26-35</option>
+                            <option value="36-45">36-45</option>
+                            <option value="46-55">46-55</option>
+                            <option value="56-65">56-65</option>
+                            <option value="65+">65+</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="fitnessLevel" class="form-label">Current Fitness Level</label>
+                        <select id="fitnessLevel" name="fitnessLevel" class="form-select">
+                            <option value="">Select Fitness Level</option>
+                            <option value="beginner">Beginner - Just starting out</option>
+                            <option value="intermediate">Intermediate - Some experience</option>
+                            <option value="advanced">Advanced - Regular exerciser</option>
+                            <option value="athlete">Athlete - Competitive level</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="goals" class="form-label">Fitness Goals</label>
+                        <textarea id="goals" name="goals" class="form-textarea" rows="4" placeholder="What do you want to achieve? (e.g., lose weight, build muscle, improve endurance, prepare for competition)"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="interests" class="form-label">Classes You're Interested In</label>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.5rem; margin-top: 0.5rem;">
+                            <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: 400; cursor: pointer;">
+                                <input type="checkbox" name="interests" value="hiit" style="accent-color: var(--electric-lime);">
+                                HIIT
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: 400; cursor: pointer;">
+                                <input type="checkbox" name="interests" value="crossfit" style="accent-color: var(--electric-lime);">
+                                CrossFit
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: 400; cursor: pointer;">
+                                <input type="checkbox" name="interests" value="boxing" style="accent-color: var(--electric-lime);">
+                                Boxing
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: 400; cursor: pointer;">
+                                <input type="checkbox" name="interests" value="yoga" style="accent-color: var(--electric-lime);">
+                                Yoga
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: 400; cursor: pointer;">
+                                <input type="checkbox" name="interests" value="spin" style="accent-color: var(--electric-lime);">
+                                Spin
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: 400; cursor: pointer;">
+                                <input type="checkbox" name="interests" value="strength" style="accent-color: var(--electric-lime);">
+                                Strength
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: 400; cursor: pointer;">
+                                <input type="checkbox" name="interests" value="pilates" style="accent-color: var(--electric-lime);">
+                                Pilates
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: 400; cursor: pointer;">
+                                <input type="checkbox" name="interests" value="mma" style="accent-color: var(--electric-lime);">
+                                MMA
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="preferredTime" class="form-label">Preferred Visit Time</label>
+                        <select id="preferredTime" name="preferredTime" class="form-select">
+                            <option value="">Select Preferred Time</option>
+                            <option value="morning">Morning (5AM - 12PM)</option>
+                            <option value="afternoon">Afternoon (12PM - 6PM)</option>
+                            <option value="evening">Evening (6PM - 11PM)</option>
+                            <option value="flexible">I'm flexible</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="heardAbout" class="form-label">How did you hear about us?</label>
+                        <select id="heardAbout" name="heardAbout" class="form-select">
+                            <option value="">Select One</option>
+                            <option value="google">Google Search</option>
+                            <option value="social">Social Media</option>
+                            <option value="friend">Friend/Family</option>
+                            <option value="advertisement">Advertisement</option>
+                            <option value="drove-by">Drove/Walked By</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: 400; cursor: pointer;">
+                            <input type="checkbox" name="terms" required style="accent-color: var(--electric-lime);">
+                            I agree to the <a href="#" style="color: var(--electric-lime); text-decoration: underline;">Terms of Service</a> and <a href="#" style="color: var(--electric-lime); text-decoration: underline;">Privacy Policy</a> *
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: 400; cursor: pointer;">
+                            <input type="checkbox" name="marketing" style="accent-color: var(--electric-lime);">
+                            Yes, I'd like to receive fitness tips, class updates, and special offers via email
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn" style="width: 100%; margin-top: 1rem; font-size: 1.1rem; padding: 1.2rem;">
+                        🔥 CLAIM MY FREE TRIAL 🔥
+                    </button>
+                    
+                    <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+                        We'll contact you within 2 hours to schedule your visit
+                    </p>
+                </form>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h2 style="color: var(--electric-lime); margin-bottom: 2rem;">GET IN TOUCH</h2>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-details">
+                        <h3>LOCATION</h3>
+                        <p>1234 Fitness Boulevard<br>Fitness City, FC 12345</p>
+                        <p><a href="https://maps.google.com" target="_blank">Get Directions</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-details">
+                        <h3>PHONE</h3>
+                        <p><a href="tel:+15555273946">+1 (555) APEX-GYM</a></p>
+                        <p><a href="tel:+15552739464">+1 (555) 273-9464</a></p>
+                        <p style="font-size: 0.9rem; opacity: 0.8;">Call or text anytime</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div class="contact-details">
+                        <h3>EMAIL</h3>
+                        <p><a href="mailto:info@apexathletics.com">info@apexathletics.com</a></p>
+                        <p><a href="mailto:training@apexathletics.com">training@apexathletics.com</a></p>
+                        <p style="font-size: 0.9rem; opacity: 0.8;">We respond within 2 hours</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">⏰</div>
+                    <div class="contact-details">
+                        <h3>GYM HOURS</h3>
+                        <div class="hours-grid">
+                            <div class="hours-item">
+                                <span class="hours-day">Monday - Friday</span>
+                                <span class="hours-time">5AM - 11PM</span>
+                            </div>
+                            <div class="hours-item">
+                                <span class="hours-day">Saturday</span>
+                                <span class="hours-time">6AM - 10PM</span>
+                            </div>
+                            <div class="hours-item">
+                                <span class="hours-day">Sunday</span>
+                                <span class="hours-time">6AM - 10PM</span>
+                            </div>
+                            <div class="hours-item" style="grid-column: 1 / -1;">
+                                <span style="color: var(--electric-lime); font-weight: 600;">Elite Members: 24/7 Access</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <div class="contact-details">
+                        <h3>FOLLOW US</h3>
+                        <div class="social-links" style="justify-content: flex-start;">
+                            <a href="#" class="social-link" aria-label="Facebook">📘</a>
+                            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                            <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                            <a href="#" class="social-link" aria-label="YouTube">📺</a>
+                            <a href="#" class="social-link" aria-label="TikTok">🎵</a>
+                        </div>
+                        <p style="margin-top: 0.5rem;">
+                            <a href="#">@ApexAthleticsGym</a>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="emergency-contact">
+                    <h4>🚨 EMERGENCY CONTACT</h4>
+                    <p>If you have a medical emergency at our facility:</p>
+                    <p><strong>Call 911 immediately</strong></p>
+                    <p>Then notify staff: <a href="tel:+15555273946" style="color: var(--red-accent);">(555) 273-9464</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="section" style="background: var(--dark-gray);">
+        <div class="section-header">
+            <h2 class="section-title">FIND US</h2>
+            <p class="section-subtitle">Located in the heart of Fitness City with easy parking and public transit access</p>
+        </div>
+        
+        <div class="map-container">
+            <div class="map-placeholder">
+                <i>🗺️</i>
+                <h3>INTERACTIVE MAP</h3>
+                <p>1234 Fitness Boulevard, Fitness City, FC 12345</p>
+                <a href="https://maps.google.com" target="_blank" class="btn btn-outline" style="margin-top: 1rem;">GET DIRECTIONS</a>
+            </div>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem;">
+            <div class="card" style="text-align: center; padding: 2rem;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">🚗</div>
+                <h3>FREE PARKING</h3>
+                <p>200+ parking spots including covered parking and electric vehicle charging stations.</p>
+            </div>
+            
+            <div class="card" style="text-align: center; padding: 2rem;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">🚌</div>
+                <h3>PUBLIC TRANSIT</h3>
+                <p>Metro Bus Routes 15, 22, and 45 stop directly in front of our facility. Light rail station 0.3 miles away.</p>
+            </div>
+            
+            <div class="card" style="text-align: center; padding: 2rem;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">🚴‍♂️</div>
+                <h3>BIKE FRIENDLY</h3>
+                <p>Secure bike racks and changing facilities available. Located on the Fitness City Bike Trail.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+        <div class="section-header">
+            <h2 class="section-title">TRIAL FAQ</h2>
+            <p class="section-subtitle">Common questions about your free trial</p>
+        </div>
+        
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    What should I bring for my trial?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    Just bring workout clothes, athletic shoes, and a water bottle! We provide towels, basic toiletries, and hair dryers. If you forget anything, we have a retail shop on-site.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Do I need to book classes in advance during my trial?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    We recommend booking classes in advance as they can fill up, especially popular evening slots. You can book through our app, website, or at the front desk when you arrive.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Will there be any pressure to join during my trial?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    Absolutely not! Our philosophy is to let our facility and community speak for itself. We'll answer any questions you have, but there's never any pressure to commit.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Can I extend my trial if I need more time to decide?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    We want you to be completely confident in your decision. If you need a few extra days, just speak with our membership team and we'll work something out.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    What if I have injuries or physical limitations?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    Our trainers are experienced with modifications and adaptations. During your fitness assessment, we'll discuss any limitations and create a safe, effective plan for you.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section" style="background: linear-gradient(135deg, var(--electric-lime) 0%, #d4ff48 100%); color: var(--jet-black); text-align: center;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="color: var(--jet-black); margin-bottom: 1rem;">YOUR TRANSFORMATION STARTS TODAY</h2>
+            <p class="text-large" style="margin-bottom: 2rem; font-weight: 600;">
+                Don't wait another day to become the person you're meant to be. Your free trial is waiting.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
+                <a href="#trial-form" class="btn btn-red">CLAIM FREE TRIAL</a>
+                <a href="tel:+15555273946" class="btn" style="background: var(--jet-black); color: var(--electric-lime);">CALL NOW</a>
+            </div>
+            <p style="font-size: 1rem; opacity: 0.8; margin-top: 2rem;">
+                💪 No credit card required • 🎯 No commitment • 🔥 No pressure • ⚡ Results guaranteed
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>APEX ATHLETICS</h3>
+                <p>Where champions are forged and limits are shattered. Join the revolution.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Facebook"><i>📘</i></a>
+                    <a href="#" class="social-link" aria-label="Instagram"><i>📷</i></a>
+                    <a href="#" class="social-link" aria-label="Twitter"><i>🐦</i></a>
+                    <a href="#" class="social-link" aria-label="YouTube"><i>📺</i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>QUICK LINKS</h3>
+                <p><a href="classes.html">Classes</a></p>
+                <p><a href="trainers.html">Trainers</a></p>
+                <p><a href="membership.html">Membership</a></p>
+                <p><a href="schedule.html">Schedule</a></p>
+                <p><a href="contact.html">Contact</a></p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>CONTACT INFO</h3>
+                <p>📍 1234 Fitness Blvd, Fitness City, FC 12345</p>
+                <p>📞 <a href="tel:+15555273946">+1 (555) APEX-GYM</a></p>
+                <p>✉️ <a href="mailto:info@apexathletics.com">info@apexathletics.com</a></p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>HOURS</h3>
+                <p>Monday - Friday: 5:00 AM - 11:00 PM</p>
+                <p>Saturday: 6:00 AM - 10:00 PM</p>
+                <p>Sunday: 6:00 AM - 10:00 PM</p>
+                <p style="color: var(--electric-lime); font-weight: 600;">24/7 Access for Elite Members</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 APEX Athletics. All rights reserved. | <a href="#" style="color: var(--electric-lime);">Privacy Policy</a> | <a href="#" style="color: var(--electric-lime);">Terms of Service</a></p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.7;">Website designed by <strong>VantaWeb</strong> - Premium Web Design Solutions</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

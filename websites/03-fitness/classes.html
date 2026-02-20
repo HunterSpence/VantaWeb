@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes - APEX Athletics | High-Intensity Fitness Training</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore our diverse range of high-intensity fitness classes. HIIT, CrossFit, Boxing, Yoga, Spin, Strength Training, Pilates, and MMA classes with expert instructors.">
+    <meta name="keywords" content="fitness classes, HIIT, CrossFit, boxing, yoga, spin class, strength training, pilates, MMA, group fitness">
+    <meta name="author" content="APEX Athletics">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Fitness Classes - APEX Athletics">
+    <meta property="og:description" content="High-intensity fitness classes designed to push your limits and deliver results.">
+    <meta property="og:image" content="https://picsum.photos/1200/630?random=fitness-classes">
+    <meta property="og:url" content="https://apexathletics.com/classes">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fitness Classes - APEX Athletics">
+    <meta name="twitter:description" content="High-intensity fitness classes designed to push your limits.">
+    <meta name="twitter:image" content="https://picsum.photos/1200/630?random=fitness-classes">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💪</text></svg>">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ExerciseGym",
+      "name": "APEX Athletics Classes",
+      "description": "High-intensity fitness classes including HIIT, CrossFit, Boxing, and more",
+      "provider": {
+        "@type": "HealthClub",
+        "name": "APEX Athletics"
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="APEX Athletics Home">APEX</a>
+            
+            <nav class="nav-menu" role="navigation" aria-label="Main Navigation">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="classes.html" class="nav-link active" aria-current="page">Classes</a>
+                <a href="trainers.html" class="nav-link">Trainers</a>
+                <a href="membership.html" class="nav-link">Membership</a>
+                <a href="schedule.html" class="nav-link">Schedule</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            
+            <button class="mobile-toggle" aria-label="Toggle mobile menu" aria-expanded="false">☰</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 60vh; background: linear-gradient(135deg, var(--jet-black) 0%, var(--dark-gray) 100%);">
+        <div class="hero-content">
+            <h1>DOMINATE YOUR <span class="highlight">LIMITS</span></h1>
+            <p class="text-large">
+                High-intensity classes designed to push boundaries, break barriers, and forge champions. 
+                Every workout is a declaration of war against mediocrity.
+            </p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="section" style="padding-top: 3rem; padding-bottom: 2rem;">
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">ALL CLASSES</button>
+            <button class="filter-btn" data-filter="strength">STRENGTH</button>
+            <button class="filter-btn" data-filter="cardio">CARDIO</button>
+            <button class="filter-btn" data-filter="combat">COMBAT</button>
+            <button class="filter-btn" data-filter="flexibility">FLEXIBILITY</button>
+            <button class="filter-btn" data-filter="functional">FUNCTIONAL</button>
+        </div>
+    </section>
+
+    <!-- Classes Grid -->
+    <section class="section" id="classes-grid">
+        <div class="card-grid">
+            <!-- HIIT Blast -->
+            <div class="card class-card strength cardio" id="hiit">
+                <div class="card-image" style="background-image: url('https://picsum.photos/400/250?random=hiit1');" aria-label="HIIT Blast class in action"></div>
+                <div class="card-content">
+                    <h3>HIIT BLAST</h3>
+                    <div class="intensity-bars" data-level="5" aria-label="Maximum intensity - 5 out of 5">
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                    </div>
+                    <p><strong>The ultimate calorie destroyer.</strong> 45 minutes of explosive intervals that will leave you breathless and craving more.</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; font-size: 0.9rem;">
+                        <div><strong>Duration:</strong> 45 min</div>
+                        <div><strong>Intensity:</strong> Maximum</div>
+                        <div><strong>Instructor:</strong> Marcus Steel</div>
+                        <div><strong>Equipment:</strong> Bodyweight + Weights</div>
+                    </div>
+                    <p style="color: var(--electric-lime); font-weight: 600; margin-bottom: 1rem;">
+                        🕒 Mon, Wed, Fri: 6:00 AM, 12:00 PM, 6:30 PM
+                    </p>
+                    <a href="contact.html" class="btn btn-outline">BOOK NOW</a>
+                </div>
+            </div>
+
+            <!-- CrossFit Fury -->
+            <div class="card class-card strength functional" id="crossfit">
+                <div class="card-image" style="background-image: url('https://picsum.photos/400/250?random=crossfit1');" aria-label="CrossFit Fury class"></div>
+                <div class="card-content">
+                    <h3>CROSSFIT FURY</h3>
+                    <div class="intensity-bars" data-level="5" aria-label="Maximum intensity - 5 out of 5">
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                    </div>
+                    <p><strong>Functional fitness meets raw power.</strong> Olympic lifts, gymnastics, and metabolic conditioning in one brutal workout.</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; font-size: 0.9rem;">
+                        <div><strong>Duration:</strong> 60 min</div>
+                        <div><strong>Intensity:</strong> Maximum</div>
+                        <div><strong>Instructor:</strong> Sarah Rage</div>
+                        <div><strong>Equipment:</strong> Barbells + Gymnastics</div>
+                    </div>
+                    <p style="color: var(--electric-lime); font-weight: 600; margin-bottom: 1rem;">
+                        🕒 Mon-Sat: 7:00 AM, 5:00 PM, 7:00 PM
+                    </p>
+                    <a href="contact.html" class="btn btn-outline">BOOK NOW</a>
+                </div>
+            </div>
+
+            <!-- Boxing Mayhem -->
+            <div class="card class-card combat cardio" id="boxing">
+                <div class="card-image" style="background-image: url('https://picsum.photos/400/250?random=boxing1');" aria-label="Boxing Mayhem class"></div>
+                <div class="card-content">
+                    <h3>BOXING MAYHEM</h3>
+                    <div class="intensity-bars" data-level="4" aria-label="High intensity - 4 out of 5">
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                    </div>
+                    <p><strong>Unleash your inner fighter.</strong> Heavy bag work, speed training, and combinations that build power and confidence.</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; font-size: 0.9rem;">
+                        <div><strong>Duration:</strong> 50 min</div>
+                        <div><strong>Intensity:</strong> High</div>
+                        <div><strong>Instructor:</strong> Tony Punch</div>
+                        <div><strong>Equipment:</strong> Gloves + Heavy Bags</div>
+                    </div>
+                    <p style="color: var(--electric-lime); font-weight: 600; margin-bottom: 1rem;">
+                        🕒 Tue, Thu: 6:30 AM, 7:30 PM | Sat: 10:00 AM
+                    </p>
+                    <a href="contact.html" class="btn btn-outline">BOOK NOW</a>
+                </div>
+            </div>
+
+            <!-- Power Yoga -->
+            <div class="card class-card flexibility">
+                <div class="card-image" style="background-image: url('https://picsum.photos/400/250?random=yoga1');" aria-label="Power Yoga class"></div>
+                <div class="card-content">
+                    <h3>POWER YOGA</h3>
+                    <div class="intensity-bars" data-level="3" aria-label="Moderate intensity - 3 out of 5">
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                    </div>
+                    <p><strong>Strength through serenity.</strong> Dynamic flows that build flexibility, core strength, and mental clarity.</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; font-size: 0.9rem;">
+                        <div><strong>Duration:</strong> 60 min</div>
+                        <div><strong>Intensity:</strong> Moderate</div>
+                        <div><strong>Instructor:</strong> Luna Peace</div>
+                        <div><strong>Equipment:</strong> Yoga Mats</div>
+                    </div>
+                    <p style="color: var(--electric-lime); font-weight: 600; margin-bottom: 1rem;">
+                        🕒 Daily: 8:00 AM, 6:00 PM | Sun: 9:00 AM
+                    </p>
+                    <a href="contact.html" class="btn btn-outline">BOOK NOW</a>
+                </div>
+            </div>
+
+            <!-- Spin Fury -->
+            <div class="card class-card cardio">
+                <div class="card-image" style="background-image: url('https://picsum.photos/400/250?random=spin1');" aria-label="Spin Fury class"></div>
+                <div class="card-content">
+                    <h3>SPIN FURY</h3>
+                    <div class="intensity-bars" data-level="4" aria-label="High intensity - 4 out of 5">
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                    </div>
+                    <p><strong>Ride into the storm.</strong> High-energy cycling with pounding music and motivational coaching that pushes limits.</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; font-size: 0.9rem;">
+                        <div><strong>Duration:</strong> 45 min</div>
+                        <div><strong>Intensity:</strong> High</div>
+                        <div><strong>Instructor:</strong> Jake Lightning</div>
+                        <div><strong>Equipment:</strong> Spin Bikes</div>
+                    </div>
+                    <p style="color: var(--electric-lime); font-weight: 600; margin-bottom: 1rem;">
+                        🕒 Mon-Fri: 6:00 AM, 12:30 PM, 7:00 PM
+                    </p>
+                    <a href="contact.html" class="btn btn-outline">BOOK NOW</a>
+                </div>
+            </div>
+
+            <!-- Strength Domination -->
+            <div class="card class-card strength">
+                <div class="card-image" style="background-image: url('https://picsum.photos/400/250?random=strength1');" aria-label="Strength Domination class"></div>
+                <div class="card-content">
+                    <h3>STRENGTH DOMINATION</h3>
+                    <div class="intensity-bars" data-level="4" aria-label="High intensity - 4 out of 5">
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                    </div>
+                    <p><strong>Build unstoppable power.</strong> Progressive strength training focused on compound movements and maximum gains.</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; font-size: 0.9rem;">
+                        <div><strong>Duration:</strong> 75 min</div>
+                        <div><strong>Intensity:</strong> High</div>
+                        <div><strong>Instructor:</strong> Rex Iron</div>
+                        <div><strong>Equipment:</strong> Barbells + Machines</div>
+                    </div>
+                    <p style="color: var(--electric-lime); font-weight: 600; margin-bottom: 1rem;">
+                        🕒 Tue, Thu, Sat: 8:00 AM, 6:00 PM
+                    </p>
+                    <a href="contact.html" class="btn btn-outline">BOOK NOW</a>
+                </div>
+            </div>
+
+            <!-- Pilates Core -->
+            <div class="card class-card flexibility strength">
+                <div class="card-image" style="background-image: url('https://picsum.photos/400/250?random=pilates1');" aria-label="Pilates Core class"></div>
+                <div class="card-content">
+                    <h3>PILATES CORE</h3>
+                    <div class="intensity-bars" data-level="3" aria-label="Moderate intensity - 3 out of 5">
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                    </div>
+                    <p><strong>Core strength redefined.</strong> Precise movements that sculpt your midsection and improve posture.</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; font-size: 0.9rem;">
+                        <div><strong>Duration:</strong> 50 min</div>
+                        <div><strong>Intensity:</strong> Moderate</div>
+                        <div><strong>Instructor:</strong> Grace Flow</div>
+                        <div><strong>Equipment:</strong> Reformers + Mats</div>
+                    </div>
+                    <p style="color: var(--electric-lime); font-weight: 600; margin-bottom: 1rem;">
+                        🕒 Mon, Wed, Fri: 9:00 AM, 5:30 PM
+                    </p>
+                    <a href="contact.html" class="btn btn-outline">BOOK NOW</a>
+                </div>
+            </div>
+
+            <!-- MMA Conditioning -->
+            <div class="card class-card combat functional">
+                <div class="card-image" style="background-image: url('https://picsum.photos/400/250?random=mma1');" aria-label="MMA Conditioning class"></div>
+                <div class="card-content">
+                    <h3>MMA CONDITIONING</h3>
+                    <div class="intensity-bars" data-level="5" aria-label="Maximum intensity - 5 out of 5">
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                    </div>
+                    <p><strong>Train like a fighter.</strong> Mixed martial arts conditioning that builds explosive power, endurance, and mental toughness.</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; font-size: 0.9rem;">
+                        <div><strong>Duration:</strong> 60 min</div>
+                        <div><strong>Intensity:</strong> Maximum</div>
+                        <div><strong>Instructor:</strong> Cage Warrior</div>
+                        <div><strong>Equipment:</strong> Pads + Bags</div>
+                    </div>
+                    <p style="color: var(--electric-lime); font-weight: 600; margin-bottom: 1rem;">
+                        🕒 Tue, Thu: 7:00 PM | Sat: 11:00 AM
+                    </p>
+                    <a href="contact.html" class="btn btn-outline">BOOK NOW</a>
+                </div>
+            </div>
+
+            <!-- Metabolic Meltdown -->
+            <div class="card class-card cardio functional">
+                <div class="card-image" style="background-image: url('https://picsum.photos/400/250?random=metabolic1');" aria-label="Metabolic Meltdown class"></div>
+                <div class="card-content">
+                    <h3>METABOLIC MELTDOWN</h3>
+                    <div class="intensity-bars" data-level="4" aria-label="High intensity - 4 out of 5">
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                    </div>
+                    <p><strong>Ignite your metabolism.</strong> Circuit training that combines strength and cardio for maximum calorie burn.</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; font-size: 0.9rem;">
+                        <div><strong>Duration:</strong> 45 min</div>
+                        <div><strong>Intensity:</strong> High</div>
+                        <div><strong>Instructor:</strong> Blaze Storm</div>
+                        <div><strong>Equipment:</strong> Mixed</div>
+                    </div>
+                    <p style="color: var(--electric-lime); font-weight: 600; margin-bottom: 1rem;">
+                        🕒 Mon, Wed, Fri: 7:00 AM, 1:00 PM, 8:00 PM
+                    </p>
+                    <a href="contact.html" class="btn btn-outline">BOOK NOW</a>
+                </div>
+            </div>
+
+            <!-- Recovery & Stretch -->
+            <div class="card class-card flexibility">
+                <div class="card-image" style="background-image: url('https://picsum.photos/400/250?random=stretch1');" aria-label="Recovery & Stretch class"></div>
+                <div class="card-content">
+                    <h3>RECOVERY & STRETCH</h3>
+                    <div class="intensity-bars" data-level="2" aria-label="Low intensity - 2 out of 5">
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                    </div>
+                    <p><strong>Rest to conquer.</strong> Active recovery focused on mobility, flexibility, and muscle restoration.</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; font-size: 0.9rem;">
+                        <div><strong>Duration:</strong> 45 min</div>
+                        <div><strong>Intensity:</strong> Low</div>
+                        <div><strong>Instructor:</strong> Zen Master</div>
+                        <div><strong>Equipment:</strong> Mats + Props</div>
+                    </div>
+                    <p style="color: var(--electric-lime); font-weight: 600; margin-bottom: 1rem;">
+                        🕒 Daily: 10:00 AM, 8:30 PM | Sun: 2:00 PM
+                    </p>
+                    <a href="contact.html" class="btn btn-outline">BOOK NOW</a>
+                </div>
+            </div>
+
+            <!-- Bootcamp Brutality -->
+            <div class="card class-card functional cardio">
+                <div class="card-image" style="background-image: url('https://picsum.photos/400/250?random=bootcamp1');" aria-label="Bootcamp Brutality class"></div>
+                <div class="card-content">
+                    <h3>BOOTCAMP BRUTALITY</h3>
+                    <div class="intensity-bars" data-level="5" aria-label="Maximum intensity - 5 out of 5">
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                        <div class="intensity-bar"></div>
+                    </div>
+                    <p><strong>Military-style conditioning.</strong> Outdoor bootcamp that pushes mental and physical boundaries to the limit.</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; font-size: 0.9rem;">
+                        <div><strong>Duration:</strong> 60 min</div>
+                        <div><strong>Intensity:</strong> Maximum</div>
+                        <div><strong>Instructor:</strong> Drill Sergeant</div>
+                        <div><strong>Equipment:</strong> Outdoor Obstacles</div>
+                    </div>
+                    <p style="color: var(--electric-lime); font-weight: 600; margin-bottom: 1rem;">
+                        🕒 Sat, Sun: 7:00 AM (Weather Permitting)
+                    </p>
+                    <a href="contact.html" class="btn btn-outline">BOOK NOW</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Class Benefits Section -->
+    <section class="section" style="background: var(--dark-gray);">
+        <div class="section-header">
+            <h2 class="section-title">WHY CHOOSE APEX CLASSES?</h2>
+            <p class="section-subtitle">Every class is designed to deliver maximum results in minimum time</p>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem;">
+            <div class="card" style="text-align: center; padding: 2rem;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">🎯</div>
+                <h3>EXPERT INSTRUCTION</h3>
+                <p>Certified trainers with years of experience guide every movement, ensuring perfect form and maximum safety.</p>
+            </div>
+            
+            <div class="card" style="text-align: center; padding: 2rem;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">🔥</div>
+                <h3>PROVEN RESULTS</h3>
+                <p>Science-based programming that delivers measurable improvements in strength, endurance, and body composition.</p>
+            </div>
+            
+            <div class="card" style="text-align: center; padding: 2rem;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">👥</div>
+                <h3>COMMUNITY SUPPORT</h3>
+                <p>Train alongside motivated individuals who push you to be your best. The energy is contagious, the results are real.</p>
+            </div>
+            
+            <div class="card" style="text-align: center; padding: 2rem;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">📈</div>
+                <h3>PROGRESSIVE SCALING</h3>
+                <p>Every exercise can be modified for beginners or intensified for athletes. Your fitness level is your starting point, not your limitation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" style="background: linear-gradient(135deg, var(--electric-lime) 0%, #d4ff48 100%); color: var(--jet-black); text-align: center;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="color: var(--jet-black); margin-bottom: 1rem;">READY TO UNLEASH YOUR POTENTIAL?</h2>
+            <p class="text-large" style="margin-bottom: 2rem; font-weight: 600;">
+                Try any class FREE for 3 days. No commitment, no pressure, just pure intensity.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-red">GET FREE TRIAL</a>
+                <a href="schedule.html" class="btn" style="background: var(--jet-black); color: var(--electric-lime);">VIEW SCHEDULE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>APEX ATHLETICS</h3>
+                <p>Where champions are forged and limits are shattered. Join the revolution.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Facebook"><i>📘</i></a>
+                    <a href="#" class="social-link" aria-label="Instagram"><i>📷</i></a>
+                    <a href="#" class="social-link" aria-label="Twitter"><i>🐦</i></a>
+                    <a href="#" class="social-link" aria-label="YouTube"><i>📺</i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>QUICK LINKS</h3>
+                <p><a href="classes.html">Classes</a></p>
+                <p><a href="trainers.html">Trainers</a></p>
+                <p><a href="membership.html">Membership</a></p>
+                <p><a href="schedule.html">Schedule</a></p>
+                <p><a href="contact.html">Contact</a></p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>CONTACT INFO</h3>
+                <p>📍 1234 Fitness Blvd, Fitness City, FC 12345</p>
+                <p>📞 <a href="tel:+15555273946">+1 (555) APEX-GYM</a></p>
+                <p>✉️ <a href="mailto:info@apexathletics.com">info@apexathletics.com</a></p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>HOURS</h3>
+                <p>Monday - Friday: 5:00 AM - 11:00 PM</p>
+                <p>Saturday: 6:00 AM - 10:00 PM</p>
+                <p>Sunday: 6:00 AM - 10:00 PM</p>
+                <p style="color: var(--electric-lime); font-weight: 600;">24/7 Access for Elite Members</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 APEX Athletics. All rights reserved. | <a href="#" style="color: var(--electric-lime);">Privacy Policy</a> | <a href="#" style="color: var(--electric-lime);">Terms of Service</a></p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.7;">Website designed by <strong>VantaWeb</strong> - Premium Web Design Solutions</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

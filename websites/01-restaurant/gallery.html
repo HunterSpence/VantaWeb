@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ember & Oak Gallery - Explore our stunning restaurant ambiance, exquisite dishes, and memorable dining experiences through our photo gallery.">
+    <meta name="keywords" content="gallery, photos, restaurant images, fine dining, atmosphere, dishes, Ember Oak">
+    <meta name="author" content="Ember & Oak Restaurant">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Gallery - Ember & Oak Restaurant">
+    <meta property="og:description" content="Explore our stunning restaurant ambiance and exquisite dishes through our photo gallery.">
+    <meta property="og:image" content="https://picsum.photos/1200/630?random=4">
+    <meta property="og:url" content="https://emberandoak.com/gallery.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>">
+    
+    <title>Gallery - Ember & Oak | Visual Journey Through Fine Dining</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Enhanced gallery-specific styles */
+        .gallery-masonry {
+            columns: 4;
+            column-gap: var(--spacing-md);
+            margin-top: var(--spacing-xl);
+        }
+        
+        .gallery-masonry .gallery-item {
+            break-inside: avoid;
+            margin-bottom: var(--spacing-md);
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+            display: inline-block;
+            width: 100%;
+        }
+        
+        .gallery-masonry .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-category {
+            margin-bottom: var(--spacing-xxl);
+        }
+        
+        .gallery-category h3 {
+            text-align: center;
+            color: var(--gold);
+            margin-bottom: var(--spacing-xl);
+            position: relative;
+        }
+        
+        .gallery-category h3::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--gold);
+        }
+        
+        @media (max-width: 1024px) {
+            .gallery-masonry {
+                columns: 3;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-masonry {
+                columns: 2;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .gallery-masonry {
+                columns: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main" class="sr-only">Skip to main content</a>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Ember &amp; Oak</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main" style="margin-top: 80px;">
+        <!-- Gallery Header -->
+        <section class="section bg-charcoal">
+            <div class="container text-center">
+                <div class="fade-in">
+                    <h1 style="margin-bottom: var(--spacing-md);">Visual Journey</h1>
+                    <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto; opacity: 0.9;">Step into our world of culinary artistry. Every image tells a story of passion, craftsmanship, and the magical transformation that happens when fire meets flavor.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Gallery -->
+        <section class="section">
+            <div class="container">
+                <div class="gallery-category fade-in">
+                    <h3>Culinary Masterpieces</h3>
+                    <div class="gallery-masonry">
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/400/600?random=30" alt="Flame-seared Wagyu steak with perfect char" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div style="font-size: 2rem; color: var(--gold);">🔍</div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/400/500?random=31" alt="Wood-fired Atlantic salmon with herbs" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div style="font-size: 2rem; color: var(--gold);">🔍</div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/400/700?random=32" alt="Ember-roasted duck breast presentation" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div style="font-size: 2rem; color: var(--gold);">🔍</div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/400/450?random=33" alt="Artisanal dessert with flame technique" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div style="font-size: 2rem; color: var(--gold);">🔍</div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/400/550?random=34" alt="Fresh ingredients and flame preparation" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div style="font-size: 2rem; color: var(--gold);">🔍</div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/400/650?random=35" alt="Elegant plating and garnish details" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div style="font-size: 2rem; color: var(--gold);">🔍</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Restaurant Atmosphere -->
+        <section class="section bg-burgundy">
+            <div class="container">
+                <div class="gallery-category fade-in">
+                    <h3>Intimate Atmosphere</h3>
+                    <div class="gallery-masonry">
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/400/500?random=40" alt="Candlelit dining room with warm ambiance" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div style="font-size: 2rem; color: var(--gold);">🔍</div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/400/650?random=41" alt="Elegant bar area with craft cocktails" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div style="font-size: 2rem; color: var(--gold);">🔍</div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/400/450?random=42" alt="Private dining booth setup" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div style="font-size: 2rem; color: var(--gold);">🔍</div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/400/600?random=43" alt="Open kitchen with flame grilling" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div style="font-size: 2rem; color: var(--gold);">🔍</div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/400/520?random=44" alt="Wine cellar and sommelier selection" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div style="font-size: 2rem; color: var(--gold);">🔍</div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/400/580?random=45" alt="Main dining area evening service" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div style="font-size: 2rem; color: var(--gold);">🔍</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Behind the Scenes -->
+        <section class="section">
+            <div class="container">
+                <div class="gallery-category fade-in">
+                    <h3>Behind the Flames</h3>
+                    <div class="gallery-masonry">
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/400/700?random=50" alt="Chef working with open flame" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div style="font-size: 2rem; color: var(--gold);">🔍</div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/400/450?random=51" alt="Fresh herb and ingredient preparation" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div style="font-size: 2rem; color: var(--gold);">🔍</div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/400/550?random=52" alt="Wood selection for flame grilling" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div style="font-size: 2rem; color: var(--gold);">🔍</div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/400/600?random=53" alt="Team of chefs in action" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div style="font-size: 2rem; color: var(--gold);">🔍</div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/400/480?random=54" alt="Artisanal bread making process" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div style="font-size: 2rem; color: var(--gold);">🔍</div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/400/650?random=55" alt="Dessert preparation and flame finishing" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div style="font-size: 2rem; color: var(--gold);">🔍</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Events -->
+        <section class="section bg-burgundy">
+            <div class="container">
+                <div class="gallery-category fade-in">
+                    <h3>Special Moments</h3>
+                    <p class="text-center" style="margin-bottom: var(--spacing-xl); opacity: 0.9; font-style: italic;">Celebrating life's most precious moments with culinary excellence</p>
+                    
+                    <div class="gallery-masonry">
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/400/500?random=60" alt="Anniversary celebration dinner setup" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div style="font-size: 2rem; color: var(--gold);">🔍</div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/400/650?random=61" alt="Private wine tasting event" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div style="font-size: 2rem; color: var(--gold);">🔍</div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/400/450?random=62" alt="Birthday celebration with dessert" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div style="font-size: 2rem; color: var(--gold);">🔍</div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/400/580?random=63" alt="Business dinner in private room" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div style="font-size: 2rem; color: var(--gold);">🔍</div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/400/520?random=64" alt="Chef's table experience" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div style="font-size: 2rem; color: var(--gold);">🔍</div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/400/600?random=65" alt="Seasonal menu tasting event" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div style="font-size: 2rem; color: var(--gold);">🔍</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Call to Action -->
+        <section class="section bg-charcoal text-center">
+            <div class="container fade-in">
+                <h2 style="margin-bottom: var(--spacing-md);">Ready to Create Your Own Memories?</h2>
+                <p style="font-size: 1.1rem; margin-bottom: var(--spacing-xl); opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto;">Join us for an unforgettable dining experience where every moment is crafted with passion and every dish tells a story.</p>
+                <div style="display: flex; gap: var(--spacing-md); justify-content: center; flex-wrap: wrap;">
+                    <a href="reservations.html" class="btn btn-primary">Reserve Your Table</a>
+                    <a href="menu.html" class="btn">View Our Menu</a>
+                    <a href="contact.html" class="btn">Plan Your Event</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instagram Integration -->
+        <section class="section">
+            <div class="container text-center">
+                <div class="fade-in">
+                    <h2 style="margin-bottom: var(--spacing-md);">Follow Our Journey</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: var(--spacing-xl); opacity: 0.9;">Stay connected with our daily culinary creations and behind-the-scenes moments</p>
+                    
+                    <div style="display: flex; justify-content: center; align-items: center; gap: var(--spacing-lg); flex-wrap: wrap;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: var(--spacing-sm);">📷</div>
+                            <h4 style="color: var(--gold); margin-bottom: var(--spacing-xs);">@emberandoak</h4>
+                            <p style="opacity: 0.8;">Follow us on Instagram</p>
+                        </div>
+                        
+                        <div style="text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: var(--spacing-sm);">📘</div>
+                            <h4 style="color: var(--gold); margin-bottom: var(--spacing-xs);">Ember & Oak</h4>
+                            <p style="opacity: 0.8;">Like us on Facebook</p>
+                        </div>
+                        
+                        <div style="text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: var(--spacing-sm);">🐦</div>
+                            <h4 style="color: var(--gold); margin-bottom: var(--spacing-xs);">@EmberOakNY</h4>
+                            <p style="opacity: 0.8;">Follow us on Twitter</p>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: var(--spacing-xl);">
+                        <p style="opacity: 0.8; font-style: italic;">#EmberAndOak #WhereFireMeetsFlavor #FineDining #NYC</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close" id="lightboxClose">&times;</span>
+            <img src="" alt="Gallery Image" id="lightboxImg">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Hours of Operation</h4>
+                    <p><strong>Monday - Thursday:</strong><br>5:00 PM - 10:00 PM</p>
+                    <p><strong>Friday - Saturday:</strong><br>5:00 PM - 11:00 PM</p>
+                    <p><strong>Sunday:</strong><br>5:00 PM - 9:00 PM</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Location & Contact</h4>
+                    <p>123 Culinary Boulevard<br>Downtown, NY 10001</p>
+                    <p>Phone: <a href="tel:+15550123">(555) 012-3456</a></p>
+                    <p>Email: <a href="mailto:reservations@emberandoak.com">reservations@emberandoak.com</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="TripAdvisor">🦉</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ember &amp; Oak Restaurant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

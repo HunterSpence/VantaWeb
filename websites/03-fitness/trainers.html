@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Trainers - APEX Athletics | Expert Fitness Professionals</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Meet our elite team of certified fitness trainers. Expert coaches specializing in HIIT, CrossFit, Boxing, Yoga, Strength Training, and personal fitness coaching.">
+    <meta name="keywords" content="personal trainers, fitness coaches, certified trainers, HIIT instructors, CrossFit coaches, boxing trainers, yoga instructors">
+    <meta name="author" content="APEX Athletics">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Elite Trainers - APEX Athletics">
+    <meta property="og:description" content="Meet our team of expert fitness professionals who will push you to greatness.">
+    <meta property="og:image" content="https://picsum.photos/1200/630?random=fitness-trainers">
+    <meta property="og:url" content="https://apexathletics.com/trainers">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Elite Trainers - APEX Athletics">
+    <meta name="twitter:description" content="Expert fitness professionals who will push you to greatness.">
+    <meta name="twitter:image" content="https://picsum.photos/1200/630?random=fitness-trainers">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💪</text></svg>">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .trainer-card {
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition-smooth);
+        }
+        
+        .trainer-card:hover .trainer-bio {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .trainer-bio {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(13, 13, 13, 0.95));
+            color: var(--white);
+            padding: 3rem 1.5rem 1.5rem;
+            opacity: 0;
+            transform: translateY(100%);
+            transition: var(--transition-smooth);
+        }
+        
+        .trainer-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+        }
+        
+        .specialties {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .specialty-tag {
+            background: var(--electric-lime);
+            color: var(--jet-black);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .certification-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(196, 245, 56, 0.1);
+            border: 1px solid var(--electric-lime);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            margin: 0.3rem;
+            font-size: 0.9rem;
+            color: var(--electric-lime);
+        }
+        
+        .social-handle {
+            color: var(--electric-lime);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition-smooth);
+        }
+        
+        .social-handle:hover {
+            color: var(--lime-hover);
+            text-shadow: 0 0 10px var(--lime-glow);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="APEX Athletics Home">APEX</a>
+            
+            <nav class="nav-menu" role="navigation" aria-label="Main Navigation">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="classes.html" class="nav-link">Classes</a>
+                <a href="trainers.html" class="nav-link active" aria-current="page">Trainers</a>
+                <a href="membership.html" class="nav-link">Membership</a>
+                <a href="schedule.html" class="nav-link">Schedule</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            
+            <button class="mobile-toggle" aria-label="Toggle mobile menu" aria-expanded="false">☰</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 60vh; background: linear-gradient(135deg, var(--jet-black) 0%, var(--dark-gray) 100%);">
+        <div class="hero-content">
+            <h1>ELITE <span class="highlight">TRAINERS</span></h1>
+            <p class="text-large">
+                Meet the champions who forge champions. Our elite team doesn't just teach fitness – 
+                they ignite transformation and unleash the warrior within.
+            </p>
+        </div>
+    </section>
+
+    <!-- Trainers Grid -->
+    <section class="section" id="trainers-grid">
+        <div class="section-header">
+            <h2 class="section-title">MEET THE LEGENDS</h2>
+            <p class="section-subtitle">
+                Each trainer brings years of expertise, unmatched passion, and a commitment to your success
+            </p>
+        </div>
+        
+        <div class="card-grid">
+            <!-- Marcus Steel -->
+            <div class="card trainer-card">
+                <div class="card-image" style="background-image: url('https://picsum.photos/400/500?random=trainer-marcus'); height: 400px;" aria-label="Marcus Steel, Head Trainer"></div>
+                <div class="card-content">
+                    <h3>MARCUS STEEL</h3>
+                    <p style="color: var(--electric-lime); font-weight: 600; margin-bottom: 1rem;">HEAD TRAINER & HIIT SPECIALIST</p>
+                    
+                    <div class="trainer-stats">
+                        <div><strong>Experience:</strong> 12 years</div>
+                        <div><strong>Clients Trained:</strong> 2000+</div>
+                        <div><strong>Competition Wins:</strong> 15</div>
+                        <div><strong>Transformation Rate:</strong> 97%</div>
+                    </div>
+                    
+                    <div class="specialties">
+                        <span class="specialty-tag">HIIT</span>
+                        <span class="specialty-tag">Strength</span>
+                        <span class="specialty-tag">Competition Prep</span>
+                    </div>
+                    
+                    <div style="margin: 1rem 0;">
+                        <div class="certification-badge">
+                            ✓ CrossFit Level 4 Trainer
+                        </div>
+                        <div class="certification-badge">
+                            ✓ NASM-CPT Certified
+                        </div>
+                        <div class="certification-badge">
+                            ✓ Precision Nutrition Coach
+                        </div>
+                    </div>
+                    
+                    <p style="font-style: italic; color: rgba(255,255,255,0.8); margin: 1rem 0;">
+                        "I don't train clients. I forge warriors. Every rep, every set, every drop of sweat is a step toward your ultimate self."
+                    </p>
+                    
+                    <p><strong>Instagram:</strong> <a href="#" class="social-handle">@MarcusSteel_Fit</a></p>
+                </div>
+                
+                <div class="trainer-bio">
+                    <p><strong>Background:</strong> Former Marine turned fitness warrior, Marcus brings military discipline to civilian fitness. He's transformed bodies and minds for over a decade.</p>
+                    <p><strong>Training Philosophy:</strong> "Pain is temporary, but quitting lasts forever. I'll push you past your breaking point to discover your true potential."</p>
+                </div>
+            </div>
+
+            <!-- Sarah Rage -->
+            <div class="card trainer-card">
+                <div class="card-image" style="background-image: url('https://picsum.photos/400/500?random=trainer-sarah'); height: 400px;" aria-label="Sarah Rage, CrossFit Coach"></div>
+                <div class="card-content">
+                    <h3>SARAH RAGE</h3>
+                    <p style="color: var(--electric-lime); font-weight: 600; margin-bottom: 1rem;">CROSSFIT COACH & OLYMPIC LIFTING EXPERT</p>
+                    
+                    <div class="trainer-stats">
+                        <div><strong>Experience:</strong> 8 years</div>
+                        <div><strong>Olympic Records:</strong> 3</div>
+                        <div><strong>CrossFit Games:</strong> 5x Qualifier</div>
+                        <div><strong>Athletes Coached:</strong> 500+</div>
+                    </div>
+                    
+                    <div class="specialties">
+                        <span class="specialty-tag">CrossFit</span>
+                        <span class="specialty-tag">Olympic Lifts</span>
+                        <span class="specialty-tag">Athletic Performance</span>
+                    </div>
+                    
+                    <div style="margin: 1rem 0;">
+                        <div class="certification-badge">
+                            ✓ CrossFit Level 3 Trainer
+                        </div>
+                        <div class="certification-badge">
+                            ✓ USAW Sports Performance Coach
+                        </div>
+                        <div class="certification-badge">
+                            ✓ FMS Level 2
+                        </div>
+                    </div>
+                    
+                    <p style="font-style: italic; color: rgba(255,255,255,0.8); margin: 1rem 0;">
+                        "Strength isn't just physical. It's mental, emotional, and spiritual. I'll help you discover all four."
+                    </p>
+                    
+                    <p><strong>Instagram:</strong> <a href="#" class="social-handle">@SarahRage_CF</a></p>
+                </div>
+                
+                <div class="trainer-bio">
+                    <p><strong>Background:</strong> Former Olympic weightlifter who transitioned to CrossFit and never looked back. Multiple-time Games qualifier with a passion for perfect technique.</p>
+                    <p><strong>Training Philosophy:</strong> "Technique before intensity. Master the movement, then we'll add the fire."</p>
+                </div>
+            </div>
+
+            <!-- Tony Punch -->
+            <div class="card trainer-card">
+                <div class="card-image" style="background-image: url('https://picsum.photos/400/500?random=trainer-tony'); height: 400px;" aria-label="Tony Punch, Boxing Instructor"></div>
+                <div class="card-content">
+                    <h3>TONY PUNCH</h3>
+                    <p style="color: var(--electric-lime); font-weight: 600; margin-bottom: 1rem;">BOXING INSTRUCTOR & COMBAT SPECIALIST</p>
+                    
+                    <div class="trainer-stats">
+                        <div><strong>Experience:</strong> 15 years</div>
+                        <div><strong>Pro Boxing Record:</strong> 22-3-1</div>
+                        <div><strong>Title Fights:</strong> 8</div>
+                        <div><strong>Fighters Trained:</strong> 150+</div>
+                    </div>
+                    
+                    <div class="specialties">
+                        <span class="specialty-tag">Boxing</span>
+                        <span class="specialty-tag">MMA Conditioning</span>
+                        <span class="specialty-tag">Self Defense</span>
+                    </div>
+                    
+                    <div style="margin: 1rem 0;">
+                        <div class="certification-badge">
+                            ✓ USA Boxing Certified Coach
+                        </div>
+                        <div class="certification-badge">
+                            ✓ ISSA-CFT Certified
+                        </div>
+                        <div class="certification-badge">
+                            ✓ Self Defense Instructor
+                        </div>
+                    </div>
+                    
+                    <p style="font-style: italic; color: rgba(255,255,255,0.8); margin: 1rem 0;">
+                        "Boxing isn't just about throwing punches. It's about finding your rhythm, your power, and your confidence."
+                    </p>
+                    
+                    <p><strong>Instagram:</strong> <a href="#" class="social-handle">@TonyPunch_Box</a></p>
+                </div>
+                
+                <div class="trainer-bio">
+                    <p><strong>Background:</strong> Professional boxer turned trainer, Tony brings ring experience and street wisdom to every session. He's coached everyone from beginners to champions.</p>
+                    <p><strong>Training Philosophy:</strong> "The fight is won in training. Show up ready to work, and I'll show you what you're made of."</p>
+                </div>
+            </div>
+
+            <!-- Luna Peace -->
+            <div class="card trainer-card">
+                <div class="card-image" style="background-image: url('https://picsum.photos/400/500?random=trainer-luna'); height: 400px;" aria-label="Luna Peace, Yoga Instructor"></div>
+                <div class="card-content">
+                    <h3>LUNA PEACE</h3>
+                    <p style="color: var(--electric-lime); font-weight: 600; margin-bottom: 1rem;">POWER YOGA MASTER & MINDFULNESS COACH</p>
+                    
+                    <div class="trainer-stats">
+                        <div><strong>Experience:</strong> 10 years</div>
+                        <div><strong>Yoga Certifications:</strong> 7</div>
+                        <div><strong>Retreats Led:</strong> 50+</div>
+                        <div><strong>Students:</strong> 3000+</div>
+                    </div>
+                    
+                    <div class="specialties">
+                        <span class="specialty-tag">Power Yoga</span>
+                        <span class="specialty-tag">Mindfulness</span>
+                        <span class="specialty-tag">Flexibility</span>
+                    </div>
+                    
+                    <div style="margin: 1rem 0;">
+                        <div class="certification-badge">
+                            ✓ RYT 500 Certified
+                        </div>
+                        <div class="certification-badge">
+                            ✓ Yin Yoga Specialist
+                        </div>
+                        <div class="certification-badge">
+                            ✓ Meditation Teacher
+                        </div>
+                    </div>
+                    
+                    <p style="font-style: italic; color: rgba(255,255,255,0.8); margin: 1rem 0;">
+                        "True strength comes from the union of body and mind. Find your center, and you'll find your power."
+                    </p>
+                    
+                    <p><strong>Instagram:</strong> <a href="#" class="social-handle">@LunaPeace_Yoga</a></p>
+                </div>
+                
+                <div class="trainer-bio">
+                    <p><strong>Background:</strong> Former high-stress executive who found salvation in yoga. Now she helps others discover the strength in stillness and power in presence.</p>
+                    <p><strong>Training Philosophy:</strong> "Yoga is not about touching your toes. It's about what you learn on the way down."</p>
+                </div>
+            </div>
+
+            <!-- Jake Lightning -->
+            <div class="card trainer-card">
+                <div class="card-image" style="background-image: url('https://picsum.photos/400/500?random=trainer-jake'); height: 400px;" aria-label="Jake Lightning, Spin Instructor"></div>
+                <div class="card-content">
+                    <h3>JAKE LIGHTNING</h3>
+                    <p style="color: var(--electric-lime); font-weight: 600; margin-bottom: 1rem;">SPIN MASTER & ENDURANCE SPECIALIST</p>
+                    
+                    <div class="trainer-stats">
+                        <div><strong>Experience:</strong> 7 years</div>
+                        <div><strong>Cycling Championships:</strong> 12</div>
+                        <div><strong>Classes Taught:</strong> 5000+</div>
+                        <div><strong>Miles Cycled:</strong> 100,000+</div>
+                    </div>
+                    
+                    <div class="specialties">
+                        <span class="specialty-tag">Spin</span>
+                        <span class="specialty-tag">Endurance</span>
+                        <span class="specialty-tag">Cardio Conditioning</span>
+                    </div>
+                    
+                    <div style="margin: 1rem 0;">
+                        <div class="certification-badge">
+                            ✓ Spinning Certified Instructor
+                        </div>
+                        <div class="certification-badge">
+                            ✓ ACSM-CPT Certified
+                        </div>
+                        <div class="certification-badge">
+                            ✓ Endurance Coach
+                        </div>
+                    </div>
+                    
+                    <p style="font-style: italic; color: rgba(255,255,255,0.8); margin: 1rem 0;">
+                        "When the music drops and the lights dim, that's when we find out who we really are. Ride with me into the storm."
+                    </p>
+                    
+                    <p><strong>Instagram:</strong> <a href="#" class="social-handle">@JakeLightning_Spin</a></p>
+                </div>
+                
+                <div class="trainer-bio">
+                    <p><strong>Background:</strong> Professional cyclist turned indoor cycling evangelist. Jake brings Tour de France intensity to every class with infectious energy.</p>
+                    <p><strong>Training Philosophy:</strong> "The bike doesn't lie. It will show you exactly who you are and who you can become."</p>
+                </div>
+            </div>
+
+            <!-- Rex Iron -->
+            <div class="card trainer-card">
+                <div class="card-image" style="background-image: url('https://picsum.photos/400/500?random=trainer-rex'); height: 400px;" aria-label="Rex Iron, Strength Coach"></div>
+                <div class="card-content">
+                    <h3>REX IRON</h3>
+                    <p style="color: var(--electric-lime); font-weight: 600; margin-bottom: 1rem;">STRENGTH COACH & POWERLIFTING CHAMPION</p>
+                    
+                    <div class="trainer-stats">
+                        <div><strong>Experience:</strong> 14 years</div>
+                        <div><strong>Powerlifting Records:</strong> 8</div>
+                        <div><strong>Max Deadlift:</strong> 700 lbs</div>
+                        <div><strong>Strength Athletes:</strong> 800+</div>
+                    </div>
+                    
+                    <div class="specialties">
+                        <span class="specialty-tag">Powerlifting</span>
+                        <span class="specialty-tag">Strength</span>
+                        <span class="specialty-tag">Muscle Building</span>
+                    </div>
+                    
+                    <div style="margin: 1rem 0;">
+                        <div class="certification-badge">
+                            ✓ NSCA-CSCS Certified
+                        </div>
+                        <div class="certification-badge">
+                            ✓ Powerlifting Coach
+                        </div>
+                        <div class="certification-badge">
+                            ✓ Sports Nutrition Specialist
+                        </div>
+                    </div>
+                    
+                    <p style="font-style: italic; color: rgba(255,255,255,0.8); margin: 1rem 0;">
+                        "Iron sharpens iron. Every rep under the bar is a conversation with your limits. Let's have that conversation."
+                    </p>
+                    
+                    <p><strong>Instagram:</strong> <a href="#" class="social-handle">@RexIron_Strength</a></p>
+                </div>
+                
+                <div class="trainer-bio">
+                    <p><strong>Background:</strong> National powerlifting champion who believes true strength comes from consistent effort over time. He's built champions one rep at a time.</p>
+                    <p><strong>Training Philosophy:</strong> "Strength isn't built in a day, but it's built every day. Show up, lift heavy, repeat."</p>
+                </div>
+            </div>
+
+            <!-- Grace Flow -->
+            <div class="card trainer-card">
+                <div class="card-image" style="background-image: url('https://picsum.photos/400/500?random=trainer-grace'); height: 400px;" aria-label="Grace Flow, Pilates Instructor"></div>
+                <div class="card-content">
+                    <h3>GRACE FLOW</h3>
+                    <p style="color: var(--electric-lime); font-weight: 600; margin-bottom: 1rem;">PILATES MASTER & CORE SPECIALIST</p>
+                    
+                    <div class="trainer-stats">
+                        <div><strong>Experience:</strong> 9 years</div>
+                        <div><strong>Pilates Certifications:</strong> 6</div>
+                        <div><strong>Rehab Cases:</strong> 1200+</div>
+                        <div><strong>Core Transformations:</strong> 2500+</div>
+                    </div>
+                    
+                    <div class="specialties">
+                        <span class="specialty-tag">Pilates</span>
+                        <span class="specialty-tag">Core Strength</span>
+                        <span class="specialty-tag">Rehabilitation</span>
+                    </div>
+                    
+                    <div style="margin: 1rem 0;">
+                        <div class="certification-badge">
+                            ✓ Comprehensive Pilates Certified
+                        </div>
+                        <div class="certification-badge">
+                            ✓ Physical Therapy Assistant
+                        </div>
+                        <div class="certification-badge">
+                            ✓ Corrective Exercise Specialist
+                        </div>
+                    </div>
+                    
+                    <p style="font-style: italic; color: rgba(255,255,255,0.8); margin: 1rem 0;">
+                        "Your core is your power center. Strengthen it, and you strengthen your entire life. Every movement begins here."
+                    </p>
+                    
+                    <p><strong>Instagram:</strong> <a href="#" class="social-handle">@GraceFlow_Pilates</a></p>
+                </div>
+                
+                <div class="trainer-bio">
+                    <p><strong>Background:</strong> Former dancer turned Pilates perfectionist. Grace combines artistic flow with scientific precision to create transformative core experiences.</p>
+                    <p><strong>Training Philosophy:</strong> "Pilates is not about perfection. It's about precision, control, and the journey toward your strongest self."</p>
+                </div>
+            </div>
+
+            <!-- Cage Warrior -->
+            <div class="card trainer-card">
+                <div class="card-image" style="background-image: url('https://picsum.photos/400/500?random=trainer-cage'); height: 400px;" aria-label="Cage Warrior, MMA Instructor"></div>
+                <div class="card-content">
+                    <h3>CAGE WARRIOR</h3>
+                    <p style="color: var(--electric-lime); font-weight: 600; margin-bottom: 1rem;">MMA CONDITIONING & COMBAT EXPERT</p>
+                    
+                    <div class="trainer-stats">
+                        <div><strong>Experience:</strong> 11 years</div>
+                        <div><strong>MMA Record:</strong> 18-4-0</div>
+                        <div><strong>Title Defenses:</strong> 5</div>
+                        <div><strong>Fighters Trained:</strong> 200+</div>
+                    </div>
+                    
+                    <div class="specialties">
+                        <span class="specialty-tag">MMA</span>
+                        <span class="specialty-tag">Combat Conditioning</span>
+                        <span class="specialty-tag">Mental Toughness</span>
+                    </div>
+                    
+                    <div style="margin: 1rem 0;">
+                        <div class="certification-badge">
+                            ✓ MMA Conditioning Coach
+                        </div>
+                        <div class="certification-badge">
+                            ✓ Brazilian Jiu-Jitsu Black Belt
+                        </div>
+                        <div class="certification-badge">
+                            ✓ Muay Thai Certified Instructor
+                        </div>
+                    </div>
+                    
+                    <p style="font-style: italic; color: rgba(255,255,255,0.8); margin: 1rem 0;">
+                        "The cage teaches you truth. There's nowhere to hide, no excuses to make. Just you versus your limits."
+                    </p>
+                    
+                    <p><strong>Instagram:</strong> <a href="#" class="social-handle">@CageWarrior_MMA</a></p>
+                </div>
+                
+                <div class="trainer-bio">
+                    <p><strong>Background:</strong> Professional MMA fighter turned conditioning specialist. Cage brings octagon intensity and warrior mindset to every training session.</p>
+                    <p><strong>Training Philosophy:</strong> "Train like your life depends on it, because your life does depend on it. Every session is preparation for battle."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Philosophy Section -->
+    <section class="section" style="background: var(--dark-gray);">
+        <div class="section-header">
+            <h2 class="section-title">THE APEX DIFFERENCE</h2>
+            <p class="section-subtitle">What sets our trainers apart from the rest</p>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+            <div class="card" style="text-align: center; padding: 2rem;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">🎓</div>
+                <h3>ELITE CREDENTIALS</h3>
+                <p>Every trainer holds multiple certifications from top organizations. We don't just talk the talk - we have the credentials to back it up.</p>
+            </div>
+            
+            <div class="card" style="text-align: center; padding: 2rem;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">🔥</div>
+                <h3>PROVEN RESULTS</h3>
+                <p>Our trainers have collectively transformed over 10,000 lives. Real people, real results, real transformations.</p>
+            </div>
+            
+            <div class="card" style="text-align: center; padding: 2rem;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">💡</div>
+                <h3>PERSONALIZED APPROACH</h3>
+                <p>No cookie-cutter programs here. Each trainer adapts their expertise to your unique goals, limitations, and aspirations.</p>
+            </div>
+            
+            <div class="card" style="text-align: center; padding: 2rem;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">🚀</div>
+                <h3>CONTINUOUS EVOLUTION</h3>
+                <p>Our team stays ahead of fitness trends through ongoing education, ensuring you always get cutting-edge training methods.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Training CTA -->
+    <section class="section" style="background: linear-gradient(135deg, var(--electric-lime) 0%, #d4ff48 100%); color: var(--jet-black); text-align: center;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="color: var(--jet-black); margin-bottom: 1rem;">READY FOR PERSONAL TRANSFORMATION?</h2>
+            <p class="text-large" style="margin-bottom: 2rem; font-weight: 600;">
+                Work one-on-one with our elite trainers. Personalized programs, dedicated attention, guaranteed results.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-red">BOOK PERSONAL TRAINING</a>
+                <a href="classes.html" class="btn" style="background: var(--jet-black); color: var(--electric-lime);">JOIN GROUP CLASSES</a>
+            </div>
+            <p style="margin-top: 2rem; font-size: 1rem; opacity: 0.8;">
+                💪 Free consultation included • 🎯 Customized workout plans • 📈 Progress tracking • 🍽️ Nutrition guidance
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>APEX ATHLETICS</h3>
+                <p>Where champions are forged and limits are shattered. Join the revolution.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Facebook"><i>📘</i></a>
+                    <a href="#" class="social-link" aria-label="Instagram"><i>📷</i></a>
+                    <a href="#" class="social-link" aria-label="Twitter"><i>🐦</i></a>
+                    <a href="#" class="social-link" aria-label="YouTube"><i>📺</i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>QUICK LINKS</h3>
+                <p><a href="classes.html">Classes</a></p>
+                <p><a href="trainers.html">Trainers</a></p>
+                <p><a href="membership.html">Membership</a></p>
+                <p><a href="schedule.html">Schedule</a></p>
+                <p><a href="contact.html">Contact</a></p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>CONTACT INFO</h3>
+                <p>📍 1234 Fitness Blvd, Fitness City, FC 12345</p>
+                <p>📞 <a href="tel:+15555273946">+1 (555) APEX-GYM</a></p>
+                <p>✉️ <a href="mailto:info@apexathletics.com">info@apexathletics.com</a></p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>HOURS</h3>
+                <p>Monday - Friday: 5:00 AM - 11:00 PM</p>
+                <p>Saturday: 6:00 AM - 10:00 PM</p>
+                <p>Sunday: 6:00 AM - 10:00 PM</p>
+                <p style="color: var(--electric-lime); font-weight: 600;">24/7 Access for Elite Members</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 APEX Athletics. All rights reserved. | <a href="#" style="color: var(--electric-lime);">Privacy Policy</a> | <a href="#" style="color: var(--electric-lime);">Terms of Service</a></p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.7;">Website designed by <strong>VantaWeb</strong> - Premium Web Design Solutions</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

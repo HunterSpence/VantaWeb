@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Property Listings | Meridian Properties NYC</title>
+    <meta name="description" content="Browse our exclusive collection of luxury properties in Manhattan, Brooklyn, and Queens. Penthouses, estates, condos, and townhouses from $800K to $10M+.">
+    <meta name="keywords" content="luxury properties NYC, Manhattan real estate, Brooklyn homes, Queens condos, luxury listings, penthouse for sale">
+    <meta name="author" content="Meridian Properties">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Luxury Property Listings | Meridian Properties NYC">
+    <meta property="og:description" content="Browse our exclusive collection of luxury properties in New York City. Find your perfect home today.">
+    <meta property="og:image" content="https://picsum.photos/1200/630?random=5&auto=format&fit=crop&w=1200&h=630">
+    <meta property="og:url" content="https://meridianproperties.com/listings">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Luxury Property Listings | Meridian Properties NYC">
+    <meta name="twitter:description" content="Browse our exclusive collection of luxury properties in New York City.">
+    <meta name="twitter:image" content="https://picsum.photos/1200/630?random=5&auto=format&fit=crop&w=1200&h=630">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏢</text></svg>">
+    
+    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans:wght@400&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Luxury Property Listings",
+        "description": "Exclusive luxury real estate listings in New York City",
+        "url": "https://meridianproperties.com/listings",
+        "numberOfItems": 12,
+        "itemListElement": [
+            {
+                "@type": "RealEstateListing",
+                "name": "Luxury Penthouse with City Views",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Manhattan",
+                    "addressRegion": "NY",
+                    "postalCode": "10016"
+                },
+                "offers": {
+                    "@type": "Offer",
+                    "price": "3250000",
+                    "priceCurrency": "USD"
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html" aria-label="Meridian Properties Home">
+                        Meridian <span>Properties</span>
+                    </a>
+                </div>
+                
+                <nav class="nav-main" role="navigation" aria-label="Main navigation">
+                    <a href="index.html">Home</a>
+                    <a href="listings.html" class="active">Listings</a>
+                    <a href="neighborhoods.html">Neighborhoods</a>
+                    <a href="agents.html">Our Agents</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="section-sm" style="background: linear-gradient(135deg, var(--color-charcoal), var(--color-sage)); color: var(--color-white); margin-top: 80px;">
+        <div class="container text-center">
+            <h1>Luxury Property Listings</h1>
+            <p class="text-large">Discover extraordinary homes in New York's most prestigious neighborhoods</p>
+        </div>
+    </section>
+
+    <!-- Listings Content -->
+    <section class="section" aria-labelledby="listings-heading">
+        <div class="container">
+            <!-- Results Summary -->
+            <div class="flex-between mb-lg" style="align-items: center; flex-wrap: wrap; gap: var(--spacing-sm);">
+                <div>
+                    <h2 id="listings-heading" class="sr-only">Property Listings</h2>
+                    <p><strong id="results-count">12</strong> luxury properties available</p>
+                </div>
+                <div class="flex gap-sm" style="align-items: center; flex-wrap: wrap;">
+                    <label for="sort-by">Sort by:</label>
+                    <select id="sort-by" name="sort" style="padding: var(--spacing-xs) var(--spacing-sm); border: 1px solid #ddd; border-radius: var(--border-radius);">
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="size-desc">Size: Largest First</option>
+                        <option value="newest">Newest Listings</option>
+                        <option value="beds-desc">Most Bedrooms</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Main Listings Layout -->
+            <div class="listings-layout">
+                <!-- Filter Sidebar -->
+                <aside class="filter-sidebar" role="complementary" aria-label="Property filters">
+                    <h3>Refine Your Search</h3>
+                    
+                    <form id="property-filters" role="search">
+                        <div class="filter-group">
+                            <h4>Price Range</h4>
+                            <select id="price-range" name="priceRange">
+                                <option value="all">Any Price</option>
+                                <option value="0-1000000">Under $1M</option>
+                                <option value="1000000-2000000">$1M - $2M</option>
+                                <option value="2000000-3000000">$2M - $3M</option>
+                                <option value="3000000-5000000">$3M - $5M</option>
+                                <option value="5000000-">Above $5M</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h4>Bedrooms</h4>
+                            <select id="bedrooms-filter" name="bedrooms">
+                                <option value="all">Any</option>
+                                <option value="1">1 Bedroom</option>
+                                <option value="2">2 Bedrooms</option>
+                                <option value="3">3 Bedrooms</option>
+                                <option value="4">4 Bedrooms</option>
+                                <option value="5">5+ Bedrooms</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h4>Location</h4>
+                            <select id="location-filter" name="location">
+                                <option value="all">All Areas</option>
+                                <option value="manhattan">Manhattan</option>
+                                <option value="brooklyn">Brooklyn</option>
+                                <option value="queens">Queens</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h4>Property Type</h4>
+                            <div class="filter-checkboxes">
+                                <div class="filter-checkbox">
+                                    <input type="radio" id="type-all" name="propertyType" value="all" checked>
+                                    <label for="type-all">All Types</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="radio" id="type-condo" name="propertyType" value="condo">
+                                    <label for="type-condo">Condominiums</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="radio" id="type-house" name="propertyType" value="house">
+                                    <label for="type-house">Houses</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="radio" id="type-townhouse" name="propertyType" value="townhouse">
+                                    <label for="type-townhouse">Townhouses</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="radio" id="type-loft" name="propertyType" value="loft">
+                                    <label for="type-loft">Lofts</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h4>Square Footage</h4>
+                            <select id="sqft-filter" name="sqft">
+                                <option value="all">Any Size</option>
+                                <option value="0-1000">Under 1,000 sqft</option>
+                                <option value="1000-1500">1,000 - 1,500 sqft</option>
+                                <option value="1500-2500">1,500 - 2,500 sqft</option>
+                                <option value="2500-4000">2,500 - 4,000 sqft</option>
+                                <option value="4000-">Above 4,000 sqft</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h4>Special Features</h4>
+                            <div class="filter-checkboxes">
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="feature-parking" name="features" value="parking">
+                                    <label for="feature-parking">Parking Included</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="feature-balcony" name="features" value="balcony">
+                                    <label for="feature-balcony">Balcony/Terrace</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="feature-elevator" name="features" value="elevator">
+                                    <label for="feature-elevator">Elevator</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="feature-gym" name="features" value="gym">
+                                    <label for="feature-gym">Fitness Center</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="feature-doorman" name="features" value="doorman">
+                                    <label for="feature-doorman">Doorman</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="reset" class="btn btn-secondary" style="width: 100%; margin-top: var(--spacing-md);">Clear All Filters</button>
+                    </form>
+                </aside>
+
+                <!-- Property Grid -->
+                <main class="property-listings-main" role="main">
+                    <div class="property-grid" role="list" aria-label="Property listings">
+                        <!-- Properties will be dynamically generated by JavaScript -->
+                    </div>
+                    
+                    <!-- Load More Button -->
+                    <div class="text-center pt-lg">
+                        <button class="btn btn-outline btn-lg" id="load-more-btn" style="display: none;">
+                            Load More Properties
+                        </button>
+                    </div>
+                    
+                    <!-- No Results Message -->
+                    <div id="no-results" class="text-center" style="display: none; padding: var(--spacing-xxl) 0;">
+                        <div style="font-size: 4rem; margin-bottom: var(--spacing-md); opacity: 0.5;">🏠</div>
+                        <h3>No Properties Match Your Criteria</h3>
+                        <p>Try adjusting your filters to see more listings.</p>
+                        <button class="btn btn-primary" onclick="document.getElementById('property-filters').reset(); MeridianApp.updateFilters(); MeridianApp.filterProperties();">
+                            Clear All Filters
+                        </button>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="section-sm" style="background: var(--color-cream);">
+        <div class="container text-center">
+            <h2>Stay Updated on New Listings</h2>
+            <p class="mb-lg">Be the first to know about exclusive properties in your desired neighborhoods.</p>
+            
+            <form class="flex gap-sm" style="max-width: 500px; margin: 0 auto; justify-content: center; flex-wrap: wrap;" onsubmit="return subscribeNewsletter(this)">
+                <input type="email" 
+                       placeholder="Enter your email address" 
+                       required 
+                       style="flex: 1; min-width: 250px; padding: var(--spacing-sm); border: 1px solid #ddd; border-radius: var(--border-radius); font-size: 1rem;">
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+            
+            <p class="text-small" style="margin-top: var(--spacing-sm); color: var(--color-mid-gray);">
+                No spam. Unsubscribe anytime. Privacy policy protected.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo" style="margin-bottom: var(--spacing-sm);">
+                        Meridian <span style="color: var(--color-gold);">Properties</span>
+                    </div>
+                    <p>Luxury real estate in Manhattan, Brooklyn, and Queens. Your extraordinary property awaits.</p>
+                    <div style="margin-top: var(--spacing-sm);">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram" style="margin-left: var(--spacing-sm);">📷</a>
+                        <a href="#" aria-label="Twitter" style="margin-left: var(--spacing-sm);">🐦</a>
+                        <a href="#" aria-label="LinkedIn" style="margin-left: var(--spacing-sm);">💼</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="listings.html">Browse Listings</a></li>
+                        <li><a href="neighborhoods.html">Neighborhoods</a></li>
+                        <li><a href="agents.html">Our Agents</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Property Types</h4>
+                    <ul>
+                        <li><a href="?type=condo">Luxury Condominiums</a></li>
+                        <li><a href="?type=house">Estate Houses</a></li>
+                        <li><a href="?type=townhouse">Historic Townhouses</a></li>
+                        <li><a href="?type=loft">Designer Lofts</a></li>
+                        <li><a href="?price=5000000-">Ultra-Luxury ($5M+)</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <address>
+                        <p>📍 123 Madison Avenue<br>
+                        Manhattan, NY 10016</p>
+                        <p>📞 <a href="tel:+12125550123">(212) 555-0123</a></p>
+                        <p>✉️ <a href="mailto:listings@meridianproperties.com">listings@meridianproperties.com</a></p>
+                    </address>
+                    
+                    <h5 style="margin-top: var(--spacing-sm);">Viewing Hours</h5>
+                    <p class="text-small">
+                        Mon-Fri: 9:00 AM - 7:00 PM<br>
+                        Sat-Sun: 10:00 AM - 6:00 PM<br>
+                        <em>Private viewings by appointment</em>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Meridian Properties. All rights reserved. | 
+                   <a href="#">Privacy Policy</a> | 
+                   <a href="#">Terms of Service</a> | 
+                   <a href="#">Fair Housing</a>
+                </p>
+                <p class="text-small" style="margin-top: var(--spacing-xs);">
+                    Licensed Real Estate Broker. Equal Housing Opportunity. All listings subject to prior sale.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    
+    <!-- Additional JavaScript for listings page -->
+    <script>
+        // Handle URL parameters for direct linking to filtered results
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            
+            // Set filters from URL parameters
+            if (urlParams.get('location')) {
+                const locationSelect = document.getElementById('location-filter');
+                if (locationSelect) locationSelect.value = urlParams.get('location');
+            }
+            
+            if (urlParams.get('price')) {
+                const priceSelect = document.getElementById('price-range');
+                if (priceSelect) priceSelect.value = urlParams.get('price');
+            }
+            
+            if (urlParams.get('bedrooms')) {
+                const bedroomsSelect = document.getElementById('bedrooms-filter');
+                if (bedroomsSelect) bedroomsSelect.value = urlParams.get('bedrooms');
+            }
+            
+            if (urlParams.get('type')) {
+                const typeRadio = document.getElementById(`type-${urlParams.get('type')}`);
+                if (typeRadio) typeRadio.checked = true;
+            }
+            
+            // Apply filters after a short delay to ensure everything is loaded
+            setTimeout(() => {
+                if (typeof MeridianApp !== 'undefined') {
+                    MeridianApp.updateFilters();
+                    MeridianApp.filterProperties();
+                }
+            }, 100);
+        });
+
+        // Update results count when properties are filtered
+        function updateResultsCount(count) {
+            const counter = document.getElementById('results-count');
+            if (counter) {
+                counter.textContent = count;
+            }
+            
+            // Show/hide no results message
+            const noResults = document.getElementById('no-results');
+            const propertyGrid = document.querySelector('.property-grid');
+            
+            if (count === 0) {
+                if (noResults) noResults.style.display = 'block';
+                if (propertyGrid) propertyGrid.style.display = 'none';
+            } else {
+                if (noResults) noResults.style.display = 'none';
+                if (propertyGrid) propertyGrid.style.display = 'grid';
+            }
+        }
+
+        // Sort functionality
+        document.getElementById('sort-by')?.addEventListener('change', function(e) {
+            const sortBy = e.target.value;
+            if (typeof MeridianApp !== 'undefined' && MeridianApp.state.filteredProperties) {
+                MeridianApp.sortProperties(sortBy);
+            }
+        });
+
+        // Add sorting method to MeridianApp
+        if (typeof MeridianApp !== 'undefined') {
+            MeridianApp.sortProperties = function(sortBy) {
+                const properties = [...this.state.filteredProperties];
+                
+                switch(sortBy) {
+                    case 'price-desc':
+                        properties.sort((a, b) => b.price - a.price);
+                        break;
+                    case 'price-asc':
+                        properties.sort((a, b) => a.price - b.price);
+                        break;
+                    case 'size-desc':
+                        properties.sort((a, b) => b.sqft - a.sqft);
+                        break;
+                    case 'beds-desc':
+                        properties.sort((a, b) => b.bedrooms - a.bedrooms);
+                        break;
+                    case 'newest':
+                        // For demo purposes, sort by ID (assuming higher ID = newer)
+                        properties.sort((a, b) => b.id - a.id);
+                        break;
+                    default:
+                        break;
+                }
+                
+                this.state.filteredProperties = properties;
+                this.renderProperties();
+            };
+
+            // Override the filter properties method to update count
+            const originalFilterProperties = MeridianApp.filterProperties;
+            MeridianApp.filterProperties = function() {
+                originalFilterProperties.call(this);
+                updateResultsCount(this.state.filteredProperties.length);
+            };
+        }
+    </script>
+    
+    <!-- Screen reader announcements for dynamic content -->
+    <div id="announcements" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>

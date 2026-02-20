@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reserve your table at Ember & Oak - Book online for an unforgettable fine dining experience. Available for dinner service Tuesday through Sunday.">
+    <meta name="keywords" content="reservations, booking, fine dining, table booking, Ember Oak, restaurant reservations">
+    <meta name="author" content="Ember & Oak Restaurant">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Reservations - Ember & Oak Restaurant">
+    <meta property="og:description" content="Reserve your table for an unforgettable fine dining experience at Ember & Oak.">
+    <meta property="og:image" content="https://picsum.photos/1200/630?random=3">
+    <meta property="og:url" content="https://emberandoak.com/reservations.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>">
+    
+    <title>Reservations - Ember & Oak | Book Your Table</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main" class="sr-only">Skip to main content</a>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Ember &amp; Oak</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main" style="margin-top: 80px;">
+        <!-- Reservations Header -->
+        <section class="section bg-charcoal">
+            <div class="container text-center">
+                <div class="fade-in">
+                    <h1 style="margin-bottom: var(--spacing-md);">Reserve Your Table</h1>
+                    <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto; opacity: 0.9;">Join us for an extraordinary culinary journey. We recommend booking at least one week in advance, especially for weekend evenings and special occasions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reservation Form Section -->
+        <section class="section">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 1fr 400px; gap: var(--spacing-xxl); align-items: start;">
+                    
+                    <!-- Reservation Form -->
+                    <div class="fade-in">
+                        <form id="reservationForm" style="background: rgba(92, 26, 26, 0.1); padding: var(--spacing-xxl); border: 1px solid rgba(201, 168, 76, 0.3); border-radius: 8px;">
+                            <h2 style="color: var(--gold); margin-bottom: var(--spacing-xl); text-align: center;">Make a Reservation</h2>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" required placeholder="(555) 123-4567">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="reservationDate">Preferred Date *</label>
+                                    <input type="date" id="reservationDate" name="reservationDate" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="reservationTime">Preferred Time *</label>
+                                    <select id="reservationTime" name="reservationTime" required>
+                                        <option value="">Select a time</option>
+                                        <option value="17:00">5:00 PM</option>
+                                        <option value="17:30">5:30 PM</option>
+                                        <option value="18:00">6:00 PM</option>
+                                        <option value="18:30">6:30 PM</option>
+                                        <option value="19:00">7:00 PM</option>
+                                        <option value="19:30">7:30 PM</option>
+                                        <option value="20:00">8:00 PM</option>
+                                        <option value="20:30">8:30 PM</option>
+                                        <option value="21:00">9:00 PM</option>
+                                        <option value="21:30">9:30 PM (Fri-Sat only)</option>
+                                        <option value="22:00">10:00 PM (Fri-Sat only)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="partySize">Party Size *</label>
+                                    <select id="partySize" name="partySize" required>
+                                        <option value="">Select party size</option>
+                                        <option value="1">1 Guest</option>
+                                        <option value="2">2 Guests</option>
+                                        <option value="3">3 Guests</option>
+                                        <option value="4">4 Guests</option>
+                                        <option value="5">5 Guests</option>
+                                        <option value="6">6 Guests</option>
+                                        <option value="7">7 Guests</option>
+                                        <option value="8">8 Guests</option>
+                                        <option value="9+">9+ Guests (Please call)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="occasion">Occasion (Optional)</label>
+                                    <select id="occasion" name="occasion">
+                                        <option value="">Select an occasion</option>
+                                        <option value="birthday">Birthday</option>
+                                        <option value="anniversary">Anniversary</option>
+                                        <option value="date-night">Date Night</option>
+                                        <option value="business">Business Dinner</option>
+                                        <option value="celebration">Celebration</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="seatingPreference">Seating Preference (Optional)</label>
+                                <select id="seatingPreference" name="seatingPreference">
+                                    <option value="">No preference</option>
+                                    <option value="main-dining">Main Dining Room</option>
+                                    <option value="intimate-booth">Intimate Booth</option>
+                                    <option value="bar-seating">Bar Seating</option>
+                                    <option value="private-corner">Private Corner</option>
+                                    <option value="window">Window Table</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="specialRequests">Special Requests or Dietary Restrictions</label>
+                                <textarea id="specialRequests" name="specialRequests" placeholder="Please let us know about any allergies, dietary restrictions, accessibility needs, or special requests to make your evening perfect..."></textarea>
+                            </div>
+                            
+                            <div style="background: rgba(201, 168, 76, 0.1); padding: var(--spacing-md); border-radius: 4px; margin: var(--spacing-md) 0;">
+                                <div style="display: flex; align-items: center; margin-bottom: var(--spacing-sm);">
+                                    <input type="checkbox" id="termsAgree" name="termsAgree" required style="width: auto; margin-right: var(--spacing-sm);">
+                                    <label for="termsAgree" style="margin-bottom: 0;">I agree to the cancellation policy *</label>
+                                </div>
+                                <p style="font-size: 0.9rem; opacity: 0.8; margin: 0;">We require 24-hour notice for cancellations. Same-day cancellations may incur a $25 per person fee.</p>
+                            </div>
+                            
+                            <div style="background: rgba(92, 26, 26, 0.2); padding: var(--spacing-md); border-radius: 4px; margin: var(--spacing-md) 0;">
+                                <div style="display: flex; align-items: center;">
+                                    <input type="checkbox" id="marketingConsent" name="marketingConsent" style="width: auto; margin-right: var(--spacing-sm);">
+                                    <label for="marketingConsent" style="margin-bottom: 0;">Subscribe to our newsletter for exclusive offers and events</label>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center" style="margin-top: var(--spacing-xl);">
+                                <button type="submit" class="btn btn-primary" style="padding: var(--spacing-md) var(--spacing-xxl); font-size: 1.1rem;">
+                                    Complete Reservation
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- Reservation Information Sidebar -->
+                    <div class="fade-in">
+                        <div style="background: rgba(92, 26, 26, 0.2); padding: var(--spacing-xl); border: 1px solid rgba(201, 168, 76, 0.3); border-radius: 8px; position: sticky; top: 100px;">
+                            <h3 style="color: var(--gold); margin-bottom: var(--spacing-md);">Reservation Information</h3>
+                            
+                            <div style="margin-bottom: var(--spacing-lg);">
+                                <h4 style="color: var(--cream); font-size: 1rem; margin-bottom: var(--spacing-sm);">📅 Availability</h4>
+                                <p style="font-size: 0.95rem; opacity: 0.9;">We accept reservations up to 30 days in advance. Walk-ins welcome based on availability.</p>
+                            </div>
+                            
+                            <div style="margin-bottom: var(--spacing-lg);">
+                                <h4 style="color: var(--cream); font-size: 1rem; margin-bottom: var(--spacing-sm);">⏰ Dining Times</h4>
+                                <p style="font-size: 0.95rem; opacity: 0.9; margin-bottom: var(--spacing-xs);"><strong>Dinner Service:</strong></p>
+                                <p style="font-size: 0.9rem; opacity: 0.8;">Monday-Thursday: 5:00 PM - 10:00 PM</p>
+                                <p style="font-size: 0.9rem; opacity: 0.8;">Friday-Saturday: 5:00 PM - 11:00 PM</p>
+                                <p style="font-size: 0.9rem; opacity: 0.8;">Sunday: 5:00 PM - 9:00 PM</p>
+                                <p style="font-size: 0.85rem; opacity: 0.7; margin-top: var(--spacing-xs);"><em>Kitchen closes 30 minutes before listed times</em></p>
+                            </div>
+                            
+                            <div style="margin-bottom: var(--spacing-lg);">
+                                <h4 style="color: var(--cream); font-size: 1rem; margin-bottom: var(--spacing-sm);">👥 Group Dining</h4>
+                                <p style="font-size: 0.95rem; opacity: 0.9;">Parties of 9 or more require advance coordination. Please call us directly at <a href="tel:+15550123" style="color: var(--gold);">(555) 012-3456</a>.</p>
+                            </div>
+                            
+                            <div style="margin-bottom: var(--spacing-lg);">
+                                <h4 style="color: var(--cream); font-size: 1rem; margin-bottom: var(--spacing-sm);">👔 Dress Code</h4>
+                                <p style="font-size: 0.95rem; opacity: 0.9;">We maintain an upscale casual to business casual atmosphere. We kindly ask that guests avoid athletic wear, flip-flops, and baseball caps.</p>
+                            </div>
+                            
+                            <div style="margin-bottom: var(--spacing-lg);">
+                                <h4 style="color: var(--cream); font-size: 1rem; margin-bottom: var(--spacing-sm);">🚗 Parking & Location</h4>
+                                <p style="font-size: 0.95rem; opacity: 0.9;">Complimentary valet parking available. We're located at 123 Culinary Boulevard, easily accessible via public transit.</p>
+                            </div>
+                            
+                            <div style="border-top: 1px solid rgba(201, 168, 76, 0.3); padding-top: var(--spacing-md);">
+                                <h4 style="color: var(--cream); font-size: 1rem; margin-bottom: var(--spacing-sm);">📞 Need Help?</h4>
+                                <p style="font-size: 0.95rem; opacity: 0.9;">For special requests, private events, or assistance with your reservation:</p>
+                                <p style="margin-top: var(--spacing-sm);">
+                                    <a href="tel:+15550123" class="btn" style="padding: var(--spacing-xs) var(--spacing-md); font-size: 0.9rem; display: inline-block;">Call (555) 012-3456</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Private Events Section -->
+        <section class="section bg-burgundy">
+            <div class="container text-center">
+                <div class="fade-in">
+                    <h2 style="margin-bottom: var(--spacing-md);">Private Events &amp; Special Occasions</h2>
+                    <p style="font-size: 1.1rem; max-width: 800px; margin: 0 auto var(--spacing-xl); opacity: 0.9;">Planning a special celebration? Our private dining spaces can accommodate intimate gatherings or larger events. From wine tastings to corporate dinners, we'll create an unforgettable experience tailored to your needs.</p>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-xl); margin-bottom: var(--spacing-xl);">
+                        <div style="text-align: center;">
+                            <h3 style="color: var(--gold); font-size: 1.3rem; margin-bottom: var(--spacing-sm);">🍷 Wine Dinners</h3>
+                            <p style="opacity: 0.9;">Multi-course paired dinners with our sommelier's selections</p>
+                        </div>
+                        
+                        <div style="text-align: center;">
+                            <h3 style="color: var(--gold); font-size: 1.3rem; margin-bottom: var(--spacing-sm);">🎂 Celebrations</h3>
+                            <p style="opacity: 0.9;">Birthdays, anniversaries, and milestone moments</p>
+                        </div>
+                        
+                        <div style="text-align: center;">
+                            <h3 style="color: var(--gold); font-size: 1.3rem; margin-bottom: var(--spacing-sm);">🤝 Corporate Events</h3>
+                            <p style="opacity: 0.9;">Business dinners and client entertainment</p>
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html" class="btn btn-primary">Inquire About Private Events</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials for Reservations -->
+        <section class="section bg-charcoal">
+            <div class="container">
+                <h2 class="section-title fade-in">What Makes Dining With Us Special</h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-xl); margin-top: var(--spacing-xl);">
+                    <div class="fade-in" style="text-align: center; padding: var(--spacing-lg);">
+                        <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">🔥</div>
+                        <h3 style="color: var(--gold); margin-bottom: var(--spacing-sm);">Flame-Kissed Excellence</h3>
+                        <p style="opacity: 0.9;">Every dish is prepared using our signature wood-fired techniques, creating flavors you won't find anywhere else.</p>
+                    </div>
+                    
+                    <div class="fade-in" style="text-align: center; padding: var(--spacing-lg);">
+                        <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">🕯️</div>
+                        <h3 style="color: var(--gold); margin-bottom: var(--spacing-sm);">Intimate Atmosphere</h3>
+                        <p style="opacity: 0.9;">Candlelit tables and sophisticated décor create the perfect ambiance for memorable evenings.</p>
+                    </div>
+                    
+                    <div class="fade-in" style="text-align: center; padding: var(--spacing-lg);">
+                        <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">👨‍🍳</div>
+                        <h3 style="color: var(--gold); margin-bottom: var(--spacing-sm);">Exceptional Service</h3>
+                        <p style="opacity: 0.9;">Our passionate team ensures every detail of your dining experience exceeds expectations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Hours of Operation</h4>
+                    <p><strong>Monday - Thursday:</strong><br>5:00 PM - 10:00 PM</p>
+                    <p><strong>Friday - Saturday:</strong><br>5:00 PM - 11:00 PM</p>
+                    <p><strong>Sunday:</strong><br>5:00 PM - 9:00 PM</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Location & Contact</h4>
+                    <p>123 Culinary Boulevard<br>Downtown, NY 10001</p>
+                    <p>Phone: <a href="tel:+15550123">(555) 012-3456</a></p>
+                    <p>Email: <a href="mailto:reservations@emberandoak.com">reservations@emberandoak.com</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="TripAdvisor">🦉</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ember &amp; Oak Restaurant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

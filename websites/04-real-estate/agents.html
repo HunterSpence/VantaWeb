@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Expert Real Estate Agents | Meridian Properties NYC</title>
+    <meta name="description" content="Meet our team of expert luxury real estate agents in NYC. Experienced professionals specializing in Manhattan, Brooklyn, and Queens premium properties.">
+    <meta name="keywords" content="NYC real estate agents, luxury property agents, Manhattan realtors, Brooklyn real estate, Queens property specialists">
+    <meta name="author" content="Meridian Properties">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Our Expert Real Estate Agents | Meridian Properties NYC">
+    <meta property="og:description" content="Meet our team of expert luxury real estate agents specializing in NYC premium properties.">
+    <meta property="og:image" content="https://picsum.photos/1200/630?random=40&auto=format&fit=crop&w=1200&h=630">
+    <meta property="og:url" content="https://meridianproperties.com/agents">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Our Expert Real Estate Agents | Meridian Properties NYC">
+    <meta name="twitter:description" content="Meet our team of expert luxury real estate agents specializing in NYC premium properties.">
+    <meta name="twitter:image" content="https://picsum.photos/1200/630?random=40&auto=format&fit=crop&w=1200&h=630">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏢</text></svg>">
+    
+    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans:wght@400&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Meridian Properties",
+        "url": "https://meridianproperties.com",
+        "employee": [
+            {
+                "@type": "Person",
+                "name": "Sarah Mitchell",
+                "jobTitle": "Senior Partner",
+                "telephone": "+1-212-555-0124",
+                "email": "sarah@meridianproperties.com",
+                "worksFor": {
+                    "@type": "Organization",
+                    "name": "Meridian Properties"
+                }
+            },
+            {
+                "@type": "Person",
+                "name": "Marcus Rodriguez",
+                "jobTitle": "Executive Agent",
+                "telephone": "+1-212-555-0125",
+                "email": "marcus@meridianproperties.com",
+                "worksFor": {
+                    "@type": "Organization",
+                    "name": "Meridian Properties"
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html" aria-label="Meridian Properties Home">
+                        Meridian <span>Properties</span>
+                    </a>
+                </div>
+                
+                <nav class="nav-main" role="navigation" aria-label="Main navigation">
+                    <a href="index.html">Home</a>
+                    <a href="listings.html">Listings</a>
+                    <a href="neighborhoods.html">Neighborhoods</a>
+                    <a href="agents.html" class="active">Our Agents</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="section-sm" style="background: linear-gradient(135deg, var(--color-charcoal), var(--color-sage)); color: var(--color-white); margin-top: 80px;">
+        <div class="container text-center">
+            <h1>Meet Our Expert Team</h1>
+            <p class="text-large">Experienced professionals dedicated to finding your extraordinary property</p>
+        </div>
+    </section>
+
+    <!-- Team Stats -->
+    <section class="section-sm" style="background: var(--color-cream);">
+        <div class="container">
+            <div class="grid grid-4 gap-lg text-center">
+                <div class="animate-on-scroll">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-gold); margin-bottom: var(--spacing-xs);">25+</div>
+                    <p>Years Combined Experience</p>
+                </div>
+                <div class="animate-on-scroll">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-gold); margin-bottom: var(--spacing-xs);">$8.2B</div>
+                    <p>Total Sales Volume</p>
+                </div>
+                <div class="animate-on-scroll">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-gold); margin-bottom: var(--spacing-xs);">850+</div>
+                    <p>Properties Sold</p>
+                </div>
+                <div class="animate-on-scroll">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-gold); margin-bottom: var(--spacing-xs);">98%</div>
+                    <p>Client Satisfaction Rate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agents Grid -->
+    <main class="section" role="main" aria-labelledby="agents-heading">
+        <div class="container">
+            <h2 id="agents-heading" class="text-center mb-xl">Our Luxury Real Estate Specialists</h2>
+            
+            <div class="grid grid-2 gap-xl">
+                <!-- Agent 1: Sarah Mitchell -->
+                <article class="agent-card-detailed animate-on-scroll" style="display: flex; gap: var(--spacing-lg); background: var(--color-white); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-md);">
+                    <div style="flex-shrink: 0;">
+                        <img src="https://picsum.photos/200/200?random=40&auto=format&fit=crop&w=200&h=200" 
+                             alt="Portrait of Sarah Mitchell, Senior Partner" 
+                             style="width: 180px; height: 180px; border-radius: var(--border-radius-lg); object-fit: cover;"
+                             loading="lazy">
+                    </div>
+                    <div style="flex: 1;">
+                        <h3>Sarah Mitchell</h3>
+                        <p class="text-gold" style="font-size: 1.125rem; margin-bottom: var(--spacing-sm);">Senior Partner</p>
+                        
+                        <div class="agent-stats" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-sm); margin: var(--spacing-md) 0; padding: var(--spacing-sm); background: var(--color-cream); border-radius: var(--border-radius);">
+                            <div class="text-center">
+                                <strong style="font-size: 1.25rem; color: var(--color-gold);">127</strong>
+                                <div class="text-small">Properties Sold</div>
+                            </div>
+                            <div class="text-center">
+                                <strong style="font-size: 1.25rem; color: var(--color-gold);">$2.8B</strong>
+                                <div class="text-small">Sales Volume</div>
+                            </div>
+                            <div class="text-center">
+                                <strong style="font-size: 1.25rem; color: var(--color-gold);">15</strong>
+                                <div class="text-small">Years Experience</div>
+                            </div>
+                        </div>
+                        
+                        <p style="margin-bottom: var(--spacing-sm);">
+                            Specializing in Manhattan's most prestigious penthouses and luxury condominiums, Sarah brings unparalleled expertise to every transaction. Her clients include Fortune 500 executives, celebrities, and international investors.
+                        </p>
+                        
+                        <div style="margin-bottom: var(--spacing-sm);">
+                            <strong>Specialties:</strong>
+                            <span class="text-small" style="color: var(--color-dark-gray);">Luxury Penthouses, High-Rise Condos, Investment Properties</span>
+                        </div>
+                        
+                        <div style="margin-bottom: var(--spacing-md);">
+                            <p class="text-small">📞 <a href="tel:+12125550124" style="color: var(--color-gold);">(212) 555-0124</a></p>
+                            <p class="text-small">✉️ <a href="mailto:sarah@meridianproperties.com" style="color: var(--color-gold);">sarah@meridianproperties.com</a></p>
+                        </div>
+                        
+                        <div class="flex gap-sm">
+                            <a href="tel:+12125550124" class="btn btn-primary btn-sm">Call Now</a>
+                            <button class="btn btn-outline btn-sm" onclick="openAgentModal('sarah')">View Full Bio</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Agent 2: Marcus Rodriguez -->
+                <article class="agent-card-detailed animate-on-scroll" style="display: flex; gap: var(--spacing-lg); background: var(--color-white); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-md);">
+                    <div style="flex-shrink: 0;">
+                        <img src="https://picsum.photos/200/200?random=41&auto=format&fit=crop&w=200&h=200" 
+                             alt="Portrait of Marcus Rodriguez, Executive Agent" 
+                             style="width: 180px; height: 180px; border-radius: var(--border-radius-lg); object-fit: cover;"
+                             loading="lazy">
+                    </div>
+                    <div style="flex: 1;">
+                        <h3>Marcus Rodriguez</h3>
+                        <p class="text-gold" style="font-size: 1.125rem; margin-bottom: var(--spacing-sm);">Executive Agent</p>
+                        
+                        <div class="agent-stats" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-sm); margin: var(--spacing-md) 0; padding: var(--spacing-sm); background: var(--color-cream); border-radius: var(--border-radius);">
+                            <div class="text-center">
+                                <strong style="font-size: 1.25rem; color: var(--color-gold);">89</strong>
+                                <div class="text-small">Properties Sold</div>
+                            </div>
+                            <div class="text-center">
+                                <strong style="font-size: 1.25rem; color: var(--color-gold);">$1.4B</strong>
+                                <div class="text-small">Sales Volume</div>
+                            </div>
+                            <div class="text-center">
+                                <strong style="font-size: 1.25rem; color: var(--color-gold);">12</strong>
+                                <div class="text-small">Years Experience</div>
+                            </div>
+                        </div>
+                        
+                        <p style="margin-bottom: var(--spacing-sm);">
+                            Brooklyn estates and waterfront properties specialist with a passion for historic architecture. Fluent in Spanish, Marcus serves a diverse clientele with personalized service and deep market knowledge.
+                        </p>
+                        
+                        <div style="margin-bottom: var(--spacing-sm);">
+                            <strong>Specialties:</strong>
+                            <span class="text-small" style="color: var(--color-dark-gray);">Brooklyn Estates, Waterfront Properties, Historic Homes</span>
+                        </div>
+                        
+                        <div style="margin-bottom: var(--spacing-md);">
+                            <p class="text-small">📞 <a href="tel:+12125550125" style="color: var(--color-gold);">(212) 555-0125</a></p>
+                            <p class="text-small">✉️ <a href="mailto:marcus@meridianproperties.com" style="color: var(--color-gold);">marcus@meridianproperties.com</a></p>
+                        </div>
+                        
+                        <div class="flex gap-sm">
+                            <a href="tel:+12125550125" class="btn btn-primary btn-sm">Call Now</a>
+                            <button class="btn btn-outline btn-sm" onclick="openAgentModal('marcus')">View Full Bio</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Agent 3: Emily Chen -->
+                <article class="agent-card-detailed animate-on-scroll" style="display: flex; gap: var(--spacing-lg); background: var(--color-white); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-md);">
+                    <div style="flex-shrink: 0;">
+                        <img src="https://picsum.photos/200/200?random=42&auto=format&fit=crop&w=200&h=200" 
+                             alt="Portrait of Emily Chen, Luxury Specialist" 
+                             style="width: 180px; height: 180px; border-radius: var(--border-radius-lg); object-fit: cover;"
+                             loading="lazy">
+                    </div>
+                    <div style="flex: 1;">
+                        <h3>Emily Chen</h3>
+                        <p class="text-gold" style="font-size: 1.125rem; margin-bottom: var(--spacing-sm);">Luxury Specialist</p>
+                        
+                        <div class="agent-stats" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-sm); margin: var(--spacing-md) 0; padding: var(--spacing-sm); background: var(--color-cream); border-radius: var(--border-radius);">
+                            <div class="text-center">
+                                <strong style="font-size: 1.25rem; color: var(--color-gold);">156</strong>
+                                <div class="text-small">Properties Sold</div>
+                            </div>
+                            <div class="text-center">
+                                <strong style="font-size: 1.25rem; color: var(--color-gold);">$987M</strong>
+                                <div class="text-small">Sales Volume</div>
+                            </div>
+                            <div class="text-center">
+                                <strong style="font-size: 1.25rem; color: var(--color-gold);">9</strong>
+                                <div class="text-small">Years Experience</div>
+                            </div>
+                        </div>
+                        
+                        <p style="margin-bottom: var(--spacing-sm);">
+                            Queens luxury homes and investment properties expert with an MBA in Real Estate Finance. Emily's analytical approach and market insights help clients make informed investment decisions.
+                        </p>
+                        
+                        <div style="margin-bottom: var(--spacing-sm);">
+                            <strong>Specialties:</strong>
+                            <span class="text-small" style="color: var(--color-dark-gray);">Investment Properties, Luxury Homes, Financial Analysis</span>
+                        </div>
+                        
+                        <div style="margin-bottom: var(--spacing-md);">
+                            <p class="text-small">📞 <a href="tel:+12125550126" style="color: var(--color-gold);">(212) 555-0126</a></p>
+                            <p class="text-small">✉️ <a href="mailto:emily@meridianproperties.com" style="color: var(--color-gold);">emily@meridianproperties.com</a></p>
+                        </div>
+                        
+                        <div class="flex gap-sm">
+                            <a href="tel:+12125550126" class="btn btn-primary btn-sm">Call Now</a>
+                            <button class="btn btn-outline btn-sm" onclick="openAgentModal('emily')">View Full Bio</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Agent 4: David Thompson -->
+                <article class="agent-card-detailed animate-on-scroll" style="display: flex; gap: var(--spacing-lg); background: var(--color-white); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-md);">
+                    <div style="flex-shrink: 0;">
+                        <img src="https://picsum.photos/200/200?random=43&auto=format&fit=crop&w=200&h=200" 
+                             alt="Portrait of David Thompson, Senior Associate" 
+                             style="width: 180px; height: 180px; border-radius: var(--border-radius-lg); object-fit: cover;"
+                             loading="lazy">
+                    </div>
+                    <div style="flex: 1;">
+                        <h3>David Thompson</h3>
+                        <p class="text-gold" style="font-size: 1.125rem; margin-bottom: var(--spacing-sm);">Senior Associate</p>
+                        
+                        <div class="agent-stats" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-sm); margin: var(--spacing-md) 0; padding: var(--spacing-sm); background: var(--color-cream); border-radius: var(--border-radius);">
+                            <div class="text-center">
+                                <strong style="font-size: 1.25rem; color: var(--color-gold);">203</strong>
+                                <div class="text-small">Properties Sold</div>
+                            </div>
+                            <div class="text-center">
+                                <strong style="font-size: 1.25rem; color: var(--color-gold);">$1.9B</strong>
+                                <div class="text-small">Sales Volume</div>
+                            </div>
+                            <div class="text-center">
+                                <strong style="font-size: 1.25rem; color: var(--color-gold);">18</strong>
+                                <div class="text-small">Years Experience</div>
+                            </div>
+                        </div>
+                        
+                        <p style="margin-bottom: var(--spacing-sm);">
+                            Veteran luxury real estate professional specializing in Manhattan's prestigious Upper East Side and Upper West Side. Former architect with an eye for exceptional properties and design excellence.
+                        </p>
+                        
+                        <div style="margin-bottom: var(--spacing-sm);">
+                            <strong>Specialties:</strong>
+                            <span class="text-small" style="color: var(--color-dark-gray);">Upper East/West Side, Architectural Properties, Design Consultation</span>
+                        </div>
+                        
+                        <div style="margin-bottom: var(--spacing-md);">
+                            <p class="text-small">📞 <a href="tel:+12125550127" style="color: var(--color-gold);">(212) 555-0127</a></p>
+                            <p class="text-small">✉️ <a href="mailto:david@meridianproperties.com" style="color: var(--color-gold);">david@meridianproperties.com</a></p>
+                        </div>
+                        
+                        <div class="flex gap-sm">
+                            <a href="tel:+12125550127" class="btn btn-primary btn-sm">Call Now</a>
+                            <button class="btn btn-outline btn-sm" onclick="openAgentModal('david')">View Full Bio</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Agent 5: Jessica Laurent -->
+                <article class="agent-card-detailed animate-on-scroll" style="display: flex; gap: var(--spacing-lg); background: var(--color-white); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-md);">
+                    <div style="flex-shrink: 0;">
+                        <img src="https://picsum.photos/200/200?random=44&auto=format&fit=crop&w=200&h=200" 
+                             alt="Portrait of Jessica Laurent, International Specialist" 
+                             style="width: 180px; height: 180px; border-radius: var(--border-radius-lg); object-fit: cover;"
+                             loading="lazy">
+                    </div>
+                    <div style="flex: 1;">
+                        <h3>Jessica Laurent</h3>
+                        <p class="text-gold" style="font-size: 1.125rem; margin-bottom: var(--spacing-sm);">International Specialist</p>
+                        
+                        <div class="agent-stats" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-sm); margin: var(--spacing-md) 0; padding: var(--spacing-sm); background: var(--color-cream); border-radius: var(--border-radius);">
+                            <div class="text-center">
+                                <strong style="font-size: 1.25rem; color: var(--color-gold);">78</strong>
+                                <div class="text-small">Properties Sold</div>
+                            </div>
+                            <div class="text-center">
+                                <strong style="font-size: 1.25rem; color: var(--color-gold);">$1.1B</strong>
+                                <div class="text-small">Sales Volume</div>
+                            </div>
+                            <div class="text-center">
+                                <strong style="font-size: 1.25rem; color: var(--color-gold);">11</strong>
+                                <div class="text-small">Years Experience</div>
+                            </div>
+                        </div>
+                        
+                        <p style="margin-bottom: var(--spacing-sm);">
+                            International luxury real estate specialist serving global clientele. Fluent in French and Mandarin, Jessica facilitates seamless transactions for international buyers and sellers seeking NYC luxury properties.
+                        </p>
+                        
+                        <div style="margin-bottom: var(--spacing-sm);">
+                            <strong>Specialties:</strong>
+                            <span class="text-small" style="color: var(--color-dark-gray);">International Sales, Luxury Condos, TriBeCa Properties</span>
+                        </div>
+                        
+                        <div style="margin-bottom: var(--spacing-md);">
+                            <p class="text-small">📞 <a href="tel:+12125550128" style="color: var(--color-gold);">(212) 555-0128</a></p>
+                            <p class="text-small">✉️ <a href="mailto:jessica@meridianproperties.com" style="color: var(--color-gold);">jessica@meridianproperties.com</a></p>
+                        </div>
+                        
+                        <div class="flex gap-sm">
+                            <a href="tel:+12125550128" class="btn btn-primary btn-sm">Call Now</a>
+                            <button class="btn btn-outline btn-sm" onclick="openAgentModal('jessica')">View Full Bio</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Agent 6: Michael Park -->
+                <article class="agent-card-detailed animate-on-scroll" style="display: flex; gap: var(--spacing-lg); background: var(--color-white); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-md);">
+                    <div style="flex-shrink: 0;">
+                        <img src="https://picsum.photos/200/200?random=45&auto=format&fit=crop&w=200&h=200" 
+                             alt="Portrait of Michael Park, Rising Star Agent" 
+                             style="width: 180px; height: 180px; border-radius: var(--border-radius-lg); object-fit: cover;"
+                             loading="lazy">
+                    </div>
+                    <div style="flex: 1;">
+                        <h3>Michael Park</h3>
+                        <p class="text-gold" style="font-size: 1.125rem; margin-bottom: var(--spacing-sm);">Rising Star Agent</p>
+                        
+                        <div class="agent-stats" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-sm); margin: var(--spacing-md) 0; padding: var(--spacing-sm); background: var(--color-cream); border-radius: var(--border-radius);">
+                            <div class="text-center">
+                                <strong style="font-size: 1.25rem; color: var(--color-gold);">142</strong>
+                                <div class="text-small">Properties Sold</div>
+                            </div>
+                            <div class="text-center">
+                                <strong style="font-size: 1.25rem; color: var(--color-gold);">$754M</strong>
+                                <div class="text-small">Sales Volume</div>
+                            </div>
+                            <div class="text-center">
+                                <strong style="font-size: 1.25rem; color: var(--color-gold);">6</strong>
+                                <div class="text-small">Years Experience</div>
+                            </div>
+                        </div>
+                        
+                        <p style="margin-bottom: var(--spacing-sm);">
+                            Dynamic young professional specializing in modern luxury developments and tech-savvy marketing. Michael brings fresh perspectives and cutting-edge technology to luxury real estate transactions.
+                        </p>
+                        
+                        <div style="margin-bottom: var(--spacing-sm);">
+                            <strong>Specialties:</strong>
+                            <span class="text-small" style="color: var(--color-dark-gray);">New Developments, Modern Lofts, Digital Marketing</span>
+                        </div>
+                        
+                        <div style="margin-bottom: var(--spacing-md);">
+                            <p class="text-small">📞 <a href="tel:+12125550129" style="color: var(--color-gold);">(212) 555-0129</a></p>
+                            <p class="text-small">✉️ <a href="mailto:michael@meridianproperties.com" style="color: var(--color-gold);">michael@meridianproperties.com</a></p>
+                        </div>
+                        
+                        <div class="flex gap-sm">
+                            <a href="tel:+12125550129" class="btn btn-primary btn-sm">Call Now</a>
+                            <button class="btn btn-outline btn-sm" onclick="openAgentModal('michael')">View Full Bio</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- Team Approach Section -->
+    <section class="section" style="background: var(--color-cream);" aria-labelledby="approach-heading">
+        <div class="container">
+            <h2 id="approach-heading" class="text-center mb-xl">Our Collaborative Approach</h2>
+            
+            <div class="grid grid-3 gap-lg text-center">
+                <div class="animate-on-scroll">
+                    <div style="font-size: 3rem; margin-bottom: var(--spacing-sm); color: var(--color-gold);" aria-hidden="true">🤝</div>
+                    <h3>Team Collaboration</h3>
+                    <p>Our agents work together, sharing expertise and resources to provide you with unparalleled service and market insights.</p>
+                </div>
+                
+                <div class="animate-on-scroll">
+                    <div style="font-size: 3rem; margin-bottom: var(--spacing-sm); color: var(--color-gold);" aria-hidden="true">📊</div>
+                    <h3>Market Intelligence</h3>
+                    <p>Combined decades of experience give us deep market knowledge and the ability to identify opportunities others miss.</p>
+                </div>
+                
+                <div class="animate-on-scroll">
+                    <div style="font-size: 3rem; margin-bottom: var(--spacing-sm); color: var(--color-gold);" aria-hidden="true">🎯</div>
+                    <h3>Personalized Service</h3>
+                    <p>Each agent brings unique specialties, ensuring you're matched with the perfect professional for your specific needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="section-sm">
+        <div class="container text-center">
+            <h2>Ready to Work with Our Team?</h2>
+            <p class="text-large mb-lg">Let us match you with the perfect agent for your luxury real estate needs.</p>
+            
+            <div class="flex-center gap-md" style="flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-primary btn-lg">Get Started Today</a>
+                <a href="listings.html" class="btn btn-outline btn-lg">Browse Our Listings</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agent Bio Modal (Hidden by default) -->
+    <div id="agent-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 2000; align-items: center; justify-content: center;" onclick="closeAgentModal()">
+        <div style="background: white; max-width: 800px; max-height: 90vh; overflow-y: auto; border-radius: var(--border-radius-lg); margin: var(--spacing-md);" onclick="event.stopPropagation()">
+            <div style="padding: var(--spacing-lg);">
+                <div class="flex-between mb-lg">
+                    <h2 id="modal-agent-name">Agent Name</h2>
+                    <button onclick="closeAgentModal()" style="background: none; border: none; font-size: 2rem; cursor: pointer;" aria-label="Close modal">&times;</button>
+                </div>
+                <div id="modal-agent-content">
+                    <!-- Content will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo" style="margin-bottom: var(--spacing-sm);">
+                        Meridian <span style="color: var(--color-gold);">Properties</span>
+                    </div>
+                    <p>Luxury real estate in Manhattan, Brooklyn, and Queens. Your extraordinary property awaits.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Our Team</h4>
+                    <p>📞 <a href="tel:+12125550123">(212) 555-0123</a><br>
+                    ✉️ <a href="mailto:team@meridianproperties.com">team@meridianproperties.com</a></p>
+                    <p style="margin-top: var(--spacing-sm);">
+                        <strong>Office Hours:</strong><br>
+                        Mon-Fri: 9:00 AM - 7:00 PM<br>
+                        Sat-Sun: 10:00 AM - 6:00 PM
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Our Specialties</h4>
+                    <ul>
+                        <li><a href="#">Luxury Penthouses</a></li>
+                        <li><a href="#">Estate Properties</a></li>
+                        <li><a href="#">Investment Properties</a></li>
+                        <li><a href="#">International Sales</a></li>
+                        <li><a href="#">New Developments</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Awards & Recognition</h4>
+                    <ul>
+                        <li>🏆 Top 1% NYC Agents (2024)</li>
+                        <li>🌟 Luxury Real Estate Award</li>
+                        <li>🥇 Client Choice Award</li>
+                        <li>💎 Million Dollar Guild</li>
+                        <li>🎖️ Professional Excellence</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Meridian Properties. All rights reserved. | 
+                   <a href="#">Privacy Policy</a> | 
+                   <a href="#">Terms of Service</a>
+                </p>
+                <p class="text-small" style="margin-top: var(--spacing-xs);">
+                    Licensed Real Estate Broker. Equal Housing Opportunity.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    
+    <!-- Agent Modal JavaScript -->
+    <script>
+        const agentBios = {
+            sarah: {
+                name: "Sarah Mitchell",
+                title: "Senior Partner",
+                fullBio: `
+                    <div style="display: flex; gap: var(--spacing-lg); margin-bottom: var(--spacing-lg);">
+                        <img src="https://picsum.photos/200/200?random=40&auto=format&fit=crop&w=200&h=200" 
+                             alt="Sarah Mitchell" 
+                             style="width: 200px; height: 200px; border-radius: var(--border-radius-lg); object-fit: cover; flex-shrink: 0;">
+                        <div>
+                            <h3>Sarah Mitchell</h3>
+                            <p class="text-gold" style="font-size: 1.25rem; margin-bottom: var(--spacing-sm);">Senior Partner</p>
+                            <p><strong>📞 (212) 555-0124</strong> | <strong>✉️ sarah@meridianproperties.com</strong></p>
+                            <div style="margin-top: var(--spacing-sm);">
+                                <span style="background: var(--color-gold); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.9rem; margin-right: 8px;">Luxury Penthouses</span>
+                                <span style="background: var(--color-sage); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.9rem; margin-right: 8px;">High-Rise Condos</span>
+                                <span style="background: var(--color-charcoal); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.9rem;">Investments</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4>About Sarah</h4>
+                    <p>Sarah Mitchell stands as one of Manhattan's most accomplished luxury real estate professionals, with over 15 years of experience selling some of the city's most prestigious properties. Her impressive portfolio includes record-breaking penthouse sales in TriBeCa, SoHo, and the Upper East Side.</p>
+                    
+                    <p>With an MBA from Columbia Business School and a background in investment banking, Sarah brings unparalleled financial acumen to every transaction. Her clients include Fortune 500 CEOs, Hollywood celebrities, and international business leaders who value her discretion, expertise, and results-driven approach.</p>
+                    
+                    <h4 style="margin-top: var(--spacing-lg);">Career Highlights</h4>
+                    <ul>
+                        <li>🏆 #1 Agent in Manhattan for luxury sales (2022, 2023)</li>
+                        <li>💰 $2.8 billion in total career sales volume</li>
+                        <li>🏢 Record sale: $45M penthouse in TriBeCa (2023)</li>
+                        <li>🌟 Top 1% of all NYC real estate professionals</li>
+                        <li>🎖️ Recipient of the Luxury Real Estate Excellence Award</li>
+                    </ul>
+                    
+                    <h4 style="margin-top: var(--spacing-lg);">Client Testimonial</h4>
+                    <blockquote style="border-left: 4px solid var(--color-gold); padding-left: var(--spacing-md); margin: var(--spacing-md) 0; font-style: italic; color: var(--color-dark-gray);">
+                        "Sarah's expertise and professionalism are extraordinary. She sold our $8M penthouse in just 3 weeks and helped us find our dream home in the Hamptons. Her attention to detail and market knowledge are unmatched."
+                        <footer style="margin-top: var(--spacing-sm); font-weight: 600;">— Robert & Catherine Williams</footer>
+                    </blockquote>
+                `
+            },
+            marcus: {
+                name: "Marcus Rodriguez",
+                title: "Executive Agent",
+                fullBio: `
+                    <div style="display: flex; gap: var(--spacing-lg); margin-bottom: var(--spacing-lg);">
+                        <img src="https://picsum.photos/200/200?random=41&auto=format&fit=crop&w=200&h=200" 
+                             alt="Marcus Rodriguez" 
+                             style="width: 200px; height: 200px; border-radius: var(--border-radius-lg); object-fit: cover; flex-shrink: 0;">
+                        <div>
+                            <h3>Marcus Rodriguez</h3>
+                            <p class="text-gold" style="font-size: 1.25rem; margin-bottom: var(--spacing-sm);">Executive Agent</p>
+                            <p><strong>📞 (212) 555-0125</strong> | <strong>✉️ marcus@meridianproperties.com</strong></p>
+                            <div style="margin-top: var(--spacing-sm);">
+                                <span style="background: var(--color-gold); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.9rem; margin-right: 8px;">Brooklyn Estates</span>
+                                <span style="background: var(--color-sage); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.9rem; margin-right: 8px;">Waterfront</span>
+                                <span style="background: var(--color-charcoal); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.9rem;">Historic Properties</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4>About Marcus</h4>
+                    <p>Marcus Rodriguez brings a unique blend of architectural knowledge and real estate expertise to Brooklyn's luxury market. With 12 years of experience and a passion for historic properties, Marcus has become the go-to agent for discerning clients seeking distinctive homes with character and craftsmanship.</p>
+                    
+                    <p>Born and raised in Brooklyn, Marcus has an intimate knowledge of the borough's diverse neighborhoods and their evolving luxury markets. His bilingual abilities (Spanish/English) allow him to serve Brooklyn's multicultural community with personalized attention and cultural sensitivity.</p>
+                    
+                    <h4 style="margin-top: var(--spacing-lg);">Specializations</h4>
+                    <ul>
+                        <li>🏛️ Historic Brownstones and Townhouses</li>
+                        <li>🌊 Waterfront Properties in Brooklyn Heights and DUMBO</li>
+                        <li>🏡 Luxury Family Estates in Park Slope and Cobble Hill</li>
+                        <li>🏗️ New Construction and Renovation Projects</li>
+                        <li>🌍 International Client Services (Spanish speaking)</li>
+                    </ul>
+                    
+                    <h4 style="margin-top: var(--spacing-lg);">Recent Achievement</h4>
+                    <blockquote style="border-left: 4px solid var(--color-gold); padding-left: var(--spacing-md); margin: var(--spacing-md) 0; font-style: italic; color: var(--color-dark-gray);">
+                        "Marcus helped us navigate the complex process of buying a historic brownstone. His knowledge of period architecture and renovation requirements was invaluable. We couldn't have found our perfect home without his expertise."
+                        <footer style="margin-top: var(--spacing-sm); font-weight: 600;">— The Patterson Family</footer>
+                    </blockquote>
+                `
+            },
+            emily: {
+                name: "Emily Chen",
+                title: "Luxury Specialist",
+                fullBio: `
+                    <div style="display: flex; gap: var(--spacing-lg); margin-bottom: var(--spacing-lg);">
+                        <img src="https://picsum.photos/200/200?random=42&auto=format&fit=crop&w=200&h=200" 
+                             alt="Emily Chen" 
+                             style="width: 200px; height: 200px; border-radius: var(--border-radius-lg); object-fit: cover; flex-shrink: 0;">
+                        <div>
+                            <h3>Emily Chen</h3>
+                            <p class="text-gold" style="font-size: 1.25rem; margin-bottom: var(--spacing-sm);">Luxury Specialist</p>
+                            <p><strong>📞 (212) 555-0126</strong> | <strong>✉️ emily@meridianproperties.com</strong></p>
+                            <div style="margin-top: var(--spacing-sm);">
+                                <span style="background: var(--color-gold); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.9rem; margin-right: 8px;">Investment Analysis</span>
+                                <span style="background: var(--color-sage); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.9rem; margin-right: 8px;">Queens Luxury</span>
+                                <span style="background: var(--color-charcoal); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.9rem;">Financial Planning</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4>About Emily</h4>
+                    <p>Emily Chen combines her MBA in Real Estate Finance with 9 years of hands-on market experience to provide clients with sophisticated investment analysis and strategic guidance. Her analytical approach and deep understanding of market trends make her the preferred choice for serious real estate investors.</p>
+                    
+                    <p>Specializing in Queens' emerging luxury markets, Emily has been instrumental in identifying undervalued neighborhoods before they became the next hot destinations. Her clients have consistently achieved above-market returns through her strategic recommendations.</p>
+                    
+                    <h4 style="margin-top: var(--spacing-lg);">Education & Credentials</h4>
+                    <ul>
+                        <li>🎓 MBA in Real Estate Finance, NYU Stern School of Business</li>
+                        <li>📊 Certified Investment Property Exchange Specialist</li>
+                        <li>🏆 Licensed Real Estate Appraiser</li>
+                        <li>📈 Member, National Association of Real Estate Investment Advisors</li>
+                    </ul>
+                    
+                    <h4 style="margin-top: var(--spacing-lg);">Investment Success Story</h4>
+                    <blockquote style="border-left: 4px solid var(--color-gold); padding-left: var(--spacing-md); margin: var(--spacing-md) 0; font-style: italic; color: var(--color-dark-gray);">
+                        "Emily's market analysis convinced us to invest in Long Island City before the luxury boom. Three years later, our portfolio has appreciated 40%. Her insights are worth their weight in gold."
+                        <footer style="margin-top: var(--spacing-sm); font-weight: 600;">— David & Maria Gonzalez</footer>
+                    </blockquote>
+                `
+            },
+            david: {
+                name: "David Thompson",
+                title: "Senior Associate",
+                fullBio: `
+                    <div style="display: flex; gap: var(--spacing-lg); margin-bottom: var(--spacing-lg);">
+                        <img src="https://picsum.photos/200/200?random=43&auto=format&fit=crop&w=200&h=200" 
+                             alt="David Thompson" 
+                             style="width: 200px; height: 200px; border-radius: var(--border-radius-lg); object-fit: cover; flex-shrink: 0;">
+                        <div>
+                            <h3>David Thompson</h3>
+                            <p class="text-gold" style="font-size: 1.25rem; margin-bottom: var(--spacing-sm);">Senior Associate</p>
+                            <p><strong>📞 (212) 555-0127</strong> | <strong>✉️ david@meridianproperties.com</strong></p>
+                            <div style="margin-top: var(--spacing-sm);">
+                                <span style="background: var(--color-gold); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.9rem; margin-right: 8px;">Upper East/West</span>
+                                <span style="background: var(--color-sage); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.9rem; margin-right: 8px;">Architecture</span>
+                                <span style="background: var(--color-charcoal); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.9rem;">Design Consultation</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4>About David</h4>
+                    <p>With 18 years in luxury real estate and a background as a licensed architect, David Thompson offers a unique perspective on Manhattan's most prestigious properties. His trained eye for design excellence and structural integrity provides clients with invaluable insights during the property selection process.</p>
+                    
+                    <p>David's extensive experience in Manhattan's Upper East Side and Upper West Side markets, combined with his architectural background, makes him the ideal agent for clients seeking properties with exceptional design pedigree and investment potential.</p>
+                    
+                    <h4 style="margin-top: var(--spacing-lg);">Professional Background</h4>
+                    <ul>
+                        <li>🏗️ Licensed Architect (Columbia University M.Arch)</li>
+                        <li>🏆 18 years luxury Manhattan real estate experience</li>
+                        <li>🎨 Former partner at prestigious architectural firm</li>
+                        <li>📐 Expertise in pre-war and contemporary luxury buildings</li>
+                        <li>🔍 Specialized in property condition assessments</li>
+                    </ul>
+                    
+                    <h4 style="margin-top: var(--spacing-lg);">Client Testimonial</h4>
+                    <blockquote style="border-left: 4px solid var(--color-gold); padding-left: var(--spacing-md); margin: var(--spacing-md) 0; font-style: italic; color: var(--color-dark-gray);">
+                        "David's architectural expertise saved us from making a costly mistake. He identified structural issues that other agents missed and helped us find a truly exceptional pre-war apartment with perfect bones."
+                        <footer style="margin-top: var(--spacing-sm); font-weight: 600;">— James & Jennifer Walsh</footer>
+                    </blockquote>
+                `
+            },
+            jessica: {
+                name: "Jessica Laurent",
+                title: "International Specialist",
+                fullBio: `
+                    <div style="display: flex; gap: var(--spacing-lg); margin-bottom: var(--spacing-lg);">
+                        <img src="https://picsum.photos/200/200?random=44&auto=format&fit=crop&w=200&h=200" 
+                             alt="Jessica Laurent" 
+                             style="width: 200px; height: 200px; border-radius: var(--border-radius-lg); object-fit: cover; flex-shrink: 0;">
+                        <div>
+                            <h3>Jessica Laurent</h3>
+                            <p class="text-gold" style="font-size: 1.25rem; margin-bottom: var(--spacing-sm);">International Specialist</p>
+                            <p><strong>📞 (212) 555-0128</strong> | <strong>✉️ jessica@meridianproperties.com</strong></p>
+                            <div style="margin-top: var(--spacing-sm);">
+                                <span style="background: var(--color-gold); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.9rem; margin-right: 8px;">International</span>
+                                <span style="background: var(--color-sage); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.9rem; margin-right: 8px;">Luxury Condos</span>
+                                <span style="background: var(--color-charcoal); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.9rem;">TriBeCa</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4>About Jessica</h4>
+                    <p>Jessica Laurent brings a global perspective to New York luxury real estate, specializing in serving international clients seeking prime Manhattan properties. Fluent in French and Mandarin, Jessica facilitates seamless transactions for global investors and relocating executives.</p>
+                    
+                    <p>With deep connections in the international business community and extensive knowledge of cross-border real estate regulations, Jessica has become the trusted advisor for foreign nationals investing in New York's luxury market.</p>
+                    
+                    <h4 style="margin-top: var(--spacing-lg);">Languages & Services</h4>
+                    <ul>
+                        <li>🌍 Fluent in English, French, and Mandarin Chinese</li>
+                        <li>🏦 International financing and banking relationships</li>
+                        <li>📋 EB-5 and foreign investor visa program expertise</li>
+                        <li>🗽 New York relocation and lifestyle consulting</li>
+                        <li>🤝 Global network of luxury real estate professionals</li>
+                    </ul>
+                    
+                    <h4 style="margin-top: var(--spacing-lg);">Success Story</h4>
+                    <blockquote style="border-left: 4px solid var(--color-gold); padding-left: var(--spacing-md); margin: var(--spacing-md) 0; font-style: italic; color: var(--color-dark-gray);">
+                        "Jessica made our move from Paris to New York effortless. She understood our needs, handled all the complex paperwork, and found us the perfect TriBeCa loft. Her cultural sensitivity and expertise were invaluable."
+                        <footer style="margin-top: var(--spacing-sm); font-weight: 600;">— Philippe & Amélie Dubois</footer>
+                    </blockquote>
+                `
+            },
+            michael: {
+                name: "Michael Park",
+                title: "Rising Star Agent",
+                fullBio: `
+                    <div style="display: flex; gap: var(--spacing-lg); margin-bottom: var(--spacing-lg);">
+                        <img src="https://picsum.photos/200/200?random=45&auto=format&fit=crop&w=200&h=200" 
+                             alt="Michael Park" 
+                             style="width: 200px; height: 200px; border-radius: var(--border-radius-lg); object-fit: cover; flex-shrink: 0;">
+                        <div>
+                            <h3>Michael Park</h3>
+                            <p class="text-gold" style="font-size: 1.25rem; margin-bottom: var(--spacing-sm);">Rising Star Agent</p>
+                            <p><strong>📞 (212) 555-0129</strong> | <strong>✉️ michael@meridianproperties.com</strong></p>
+                            <div style="margin-top: var(--spacing-sm);">
+                                <span style="background: var(--color-gold); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.9rem; margin-right: 8px;">New Developments</span>
+                                <span style="background: var(--color-sage); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.9rem; margin-right: 8px;">Modern Lofts</span>
+                                <span style="background: var(--color-charcoal); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.9rem;">Digital Marketing</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4>About Michael</h4>
+                    <p>Michael Park represents the new generation of luxury real estate professionals, combining traditional relationship-building skills with cutting-edge technology and marketing strategies. Despite his relative newcomer status, Michael has quickly established himself as a force in Manhattan's competitive luxury market.</p>
+                    
+                    <p>His fresh perspective and innovative approach to property marketing have attracted a young, dynamic clientele including tech entrepreneurs, creative professionals, and millennial executives seeking modern luxury living spaces.</p>
+                    
+                    <h4 style="margin-top: var(--spacing-lg);">Tech-Forward Approach</h4>
+                    <ul>
+                        <li>📱 Virtual and augmented reality property tours</li>
+                        <li>📊 Advanced data analytics and market insights</li>
+                        <li>🎥 Professional video marketing and drone photography</li>
+                        <li>💻 Social media and digital marketing expertise</li>
+                        <li>🚀 Specializes in new construction and modern developments</li>
+                    </ul>
+                    
+                    <h4 style="margin-top: var(--spacing-lg);">Rising Star Recognition</h4>
+                    <blockquote style="border-left: 4px solid var(--color-gold); padding-left: var(--spacing-md); margin: var(--spacing-md) 0; font-style: italic; color: var(--color-dark-gray);">
+                        "Michael's innovative marketing approach got our modern loft sold in record time. His virtual tour technology brought in serious buyers from around the world. He's definitely the future of real estate."
+                        <footer style="margin-top: var(--spacing-sm); font-weight: 600;">— Alex & Sarah Kim</footer>
+                    </blockquote>
+                `
+            }
+        };
+
+        function openAgentModal(agentKey) {
+            const modal = document.getElementById('agent-modal');
+            const nameEl = document.getElementById('modal-agent-name');
+            const contentEl = document.getElementById('modal-agent-content');
+            
+            const agent = agentBios[agentKey];
+            if (agent) {
+                nameEl.textContent = agent.name;
+                contentEl.innerHTML = agent.fullBio;
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            }
+        }
+
+        function closeAgentModal() {
+            const modal = document.getElementById('agent-modal');
+            modal.style.display = 'none';
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeAgentModal();
+            }
+        });
+    </script>
+</body>
+</html>
