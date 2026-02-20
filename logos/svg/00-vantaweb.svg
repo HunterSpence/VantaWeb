@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 160" fill="none">
+  <defs>
+    <!-- Primary gradient: deep violet → electric purple → cyan -->
+    <linearGradient id="vw-main" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="40%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <!-- Reverse gradient for accents -->
+    <linearGradient id="vw-rev" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <!-- Glow behind icon -->
+    <radialGradient id="vw-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.35"/>
+      <stop offset="70%" stop-color="#7c3aed" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Inner V glow -->
+    <filter id="vglow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+    </filter>
+    <filter id="bglow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="12"/>
+    </filter>
+    <!-- Clipping for the icon box -->
+    <clipPath id="icon-clip">
+      <rect x="14" y="14" width="132" height="132" rx="20"/>
+    </clipPath>
+  </defs>
+
+  <!-- === AMBIENT GLOW === -->
+  <ellipse cx="80" cy="80" rx="90" ry="90" fill="url(#vw-glow)" filter="url(#bglow)"/>
+
+  <!-- === ICON CONTAINER === -->
+  <g>
+    <!-- Outer box -->
+    <rect x="14" y="14" width="132" height="132" rx="20" fill="#08080f"/>
+    <rect x="14" y="14" width="132" height="132" rx="20" fill="none" stroke="url(#vw-main)" stroke-width="1.5" opacity="0.7"/>
+
+    <!-- Inner subtle grid lines for depth -->
+    <g clip-path="url(#icon-clip)" opacity="0.04" stroke="#a855f7" stroke-width="0.5">
+      <line x1="14" y1="50" x2="146" y2="50"/>
+      <line x1="14" y1="80" x2="146" y2="80"/>
+      <line x1="14" y1="110" x2="146" y2="110"/>
+      <line x1="50" y1="14" x2="50" y2="146"/>
+      <line x1="80" y1="14" x2="80" y2="146"/>
+      <line x1="110" y1="14" x2="110" y2="146"/>
+    </g>
+
+    <!-- V glow layer (behind) -->
+    <path d="M42 38 L80 118 L118 38" stroke="#a855f7" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none" filter="url(#vglow)" opacity="0.5"/>
+
+    <!-- The V — main stroke -->
+    <path d="M42 38 L80 118 L118 38" stroke="url(#vw-main)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+    <!-- Signal arcs from the V vertex (web/broadcast motif) -->
+    <path d="M62 88 Q80 108, 98 88" stroke="#06b6d4" stroke-width="1.5" fill="none" opacity="0.55"/>
+    <path d="M52 74 Q80 108, 108 74" stroke="#a855f7" stroke-width="1.2" fill="none" opacity="0.35"/>
+    <path d="M42 60 Q80 108, 118 60" stroke="#7c3aed" stroke-width="0.8" fill="none" opacity="0.2"/>
+
+    <!-- Vertex dot with glow -->
+    <circle cx="80" cy="118" r="5" fill="#06b6d4" opacity="0.3" filter="url(#vglow)"/>
+    <circle cx="80" cy="118" r="3" fill="#06b6d4"/>
+    <circle cx="80" cy="118" r="1.5" fill="#ffffff" opacity="0.8"/>
+
+    <!-- Top corner accent dots -->
+    <circle cx="42" cy="38" r="2" fill="#a855f7" opacity="0.6"/>
+    <circle cx="118" cy="38" r="2" fill="#06b6d4" opacity="0.6"/>
+  </g>
+
+  <!-- === WORDMARK === -->
+  <!-- VANTA — heavy weight, white -->
+  <text x="172" y="72" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="52" font-weight="800" fill="#ffffff" letter-spacing="8">VANTA</text>
+
+  <!-- Separator line with gradient -->
+  <line x1="172" y1="84" x2="460" y2="84" stroke="url(#vw-main)" stroke-width="1" opacity="0.3"/>
+
+  <!-- WEB — lighter weight, gradient -->
+  <text x="172" y="118" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="52" font-weight="300" fill="url(#vw-main)" letter-spacing="14">WEB</text>
+
+  <!-- Tagline -->
+  <text x="174" y="145" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" fill="#666666" letter-spacing="5.5">DARK · PREMIUM · DELIVERED</text>
+</svg>

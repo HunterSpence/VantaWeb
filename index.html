@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>VantaWeb - Premium Web Design Portfolio</title>
     <meta name="description" content="VantaWeb creates stunning, premium websites across 6+ industries. View our portfolio of restaurant, law firm, fitness, real estate, SaaS, and medical websites plus 20 custom logo designs.">
     <meta property="og:title" content="VantaWeb - Premium Web Design Portfolio">
@@ -12,15 +15,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=20260220043">
+    <style>
+        /* INLINE SAFETY NET — logos and buttons always visible regardless of cache */
+        .logo-item { display: block !important; visibility: visible !important; opacity: 1 !important; }
+        .logo-preview img { display: block !important; visibility: visible !important; }
+        .btn-code { display: none !important; } /* Source button NEVER shows */
+    </style>
 </head>
 <body>
     <!-- Hero Section -->
     <header class="hero">
         <div class="hero-content">
             <div class="logo">
-                <span class="logo-text">VantaWeb</span>
-                <span class="logo-tagline">Dark. Premium. Delivered.</span>
+                <img src="logos/svg/00-vantaweb.svg" alt="VantaWeb" class="hero-logo-img">
             </div>
             <h1 class="hero-title">Premium Web Design<br>That Converts</h1>
             <p class="hero-description">Showcasing 6 industry-specific websites + 20 custom logos.<br>Every pixel crafted to win clients and drive results.</p>
@@ -35,7 +43,7 @@
     <!-- Navigation -->
     <nav class="nav" id="nav">
         <div class="nav-container">
-            <div class="nav-logo">VantaWeb</div>
+            <div class="nav-logo"><img src="logos/svg/00-vantaweb.svg" alt="VantaWeb" class="nav-logo-img"></div>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#websites">Websites</a></li>
                 <li><a href="#logos">Logos</a></li>
@@ -60,13 +68,13 @@
             </div>
             
             <div class="websites-grid">
-                <div class="website-card" data-aos="fade-up">
+                <div class="website-card">
                     <div class="website-preview">
                         <img src="https://picsum.photos/800/600?random=1" alt="Ember & Oak Restaurant">
                         <div class="website-overlay">
                             <div class="website-links">
-                                <a href="websites/01-restaurant/" target="_blank" class="btn-view">View Live</a>
-                                <a href="https://github.com/HunterSpence/VantaWeb/tree/main/websites/01-restaurant" target="_blank" class="btn-code">Source</a>
+                                <a href="https://hunterspence.github.io/VantaWeb/websites/01-restaurant/" target="_blank" class="btn-view">View Live</a>
+
                             </div>
                         </div>
                     </div>
@@ -82,13 +90,13 @@
                     </div>
                 </div>
 
-                <div class="website-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="website-card">
                     <div class="website-preview">
                         <img src="https://picsum.photos/800/600?random=2" alt="Steele & Associates Law Firm">
                         <div class="website-overlay">
                             <div class="website-links">
-                                <a href="websites/02-law-firm/" target="_blank" class="btn-view">View Live</a>
-                                <a href="https://github.com/HunterSpence/VantaWeb/tree/main/websites/02-law-firm" target="_blank" class="btn-code">Source</a>
+                                <a href="https://hunterspence.github.io/VantaWeb/websites/02-law-firm/" target="_blank" class="btn-view">View Live</a>
+
                             </div>
                         </div>
                     </div>
@@ -104,13 +112,13 @@
                     </div>
                 </div>
 
-                <div class="website-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="website-card">
                     <div class="website-preview">
                         <img src="https://picsum.photos/800/600?random=3" alt="APEX Athletics Fitness">
                         <div class="website-overlay">
                             <div class="website-links">
-                                <a href="websites/03-fitness/" target="_blank" class="btn-view">View Live</a>
-                                <a href="https://github.com/HunterSpence/VantaWeb/tree/main/websites/03-fitness" target="_blank" class="btn-code">Source</a>
+                                <a href="https://hunterspence.github.io/VantaWeb/websites/03-fitness/" target="_blank" class="btn-view">View Live</a>
+
                             </div>
                         </div>
                     </div>
@@ -126,13 +134,13 @@
                     </div>
                 </div>
 
-                <div class="website-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="website-card">
                     <div class="website-preview">
                         <img src="https://picsum.photos/800/600?random=4" alt="Meridian Properties Real Estate">
                         <div class="website-overlay">
                             <div class="website-links">
-                                <a href="websites/04-real-estate/" target="_blank" class="btn-view">View Live</a>
-                                <a href="https://github.com/HunterSpence/VantaWeb/tree/main/websites/04-real-estate" target="_blank" class="btn-code">Source</a>
+                                <a href="https://hunterspence.github.io/VantaWeb/websites/04-real-estate/" target="_blank" class="btn-view">View Live</a>
+
                             </div>
                         </div>
                     </div>
@@ -148,13 +156,13 @@
                     </div>
                 </div>
 
-                <div class="website-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="website-card">
                     <div class="website-preview">
                         <img src="https://picsum.photos/800/600?random=5" alt="FlowStack SaaS">
                         <div class="website-overlay">
                             <div class="website-links">
-                                <a href="websites/05-saas-startup/" target="_blank" class="btn-view">View Live</a>
-                                <a href="https://github.com/HunterSpence/VantaWeb/tree/main/websites/05-saas-startup" target="_blank" class="btn-code">Source</a>
+                                <a href="https://hunterspence.github.io/VantaWeb/websites/05-saas-startup/" target="_blank" class="btn-view">View Live</a>
+
                             </div>
                         </div>
                     </div>
@@ -170,13 +178,13 @@
                     </div>
                 </div>
 
-                <div class="website-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="website-card">
                     <div class="website-preview">
                         <img src="https://picsum.photos/800/600?random=6" alt="Clarity Health Medical">
                         <div class="website-overlay">
                             <div class="website-links">
-                                <a href="websites/06-medical-clinic/" target="_blank" class="btn-view">View Live</a>
-                                <a href="https://github.com/HunterSpence/VantaWeb/tree/main/websites/06-medical-clinic" target="_blank" class="btn-code">Source</a>
+                                <a href="https://hunterspence.github.io/VantaWeb/websites/06-medical-clinic/" target="_blank" class="btn-view">View Live</a>
+
                             </div>
                         </div>
                     </div>
@@ -205,7 +213,146 @@
             </div>
             
             <div class="logos-grid" id="logos-grid">
-                <!-- Logos will be loaded by JavaScript -->
+                <div class="logo-item" data-logo-id="1">
+                    <div class="logo-preview">
+                        <img src="logos/svg/01-ember-oak.svg" alt="Ember & Oak" style="max-width:100%;max-height:100%;">
+                    </div>
+                    <div class="logo-name">Ember & Oak</div>
+                    <div class="logo-industry">Restaurant</div>
+                </div>
+                <div class="logo-item" data-logo-id="2">
+                    <div class="logo-preview">
+                        <img src="logos/svg/02-steele-associates.svg" alt="Steele & Associates" style="max-width:100%;max-height:100%;">
+                    </div>
+                    <div class="logo-name">Steele & Associates</div>
+                    <div class="logo-industry">Law</div>
+                </div>
+                <div class="logo-item" data-logo-id="3">
+                    <div class="logo-preview">
+                        <img src="logos/svg/03-apex-athletics.svg" alt="APEX Athletics" style="max-width:100%;max-height:100%;">
+                    </div>
+                    <div class="logo-name">APEX Athletics</div>
+                    <div class="logo-industry">Fitness</div>
+                </div>
+                <div class="logo-item" data-logo-id="4">
+                    <div class="logo-preview">
+                        <img src="logos/svg/04-meridian-properties.svg" alt="Meridian Properties" style="max-width:100%;max-height:100%;">
+                    </div>
+                    <div class="logo-name">Meridian Properties</div>
+                    <div class="logo-industry">Real Estate</div>
+                </div>
+                <div class="logo-item" data-logo-id="5">
+                    <div class="logo-preview">
+                        <img src="logos/svg/05-flowstack.svg" alt="FlowStack" style="max-width:100%;max-height:100%;">
+                    </div>
+                    <div class="logo-name">FlowStack</div>
+                    <div class="logo-industry">SaaS/Tech</div>
+                </div>
+                <div class="logo-item" data-logo-id="6">
+                    <div class="logo-preview">
+                        <img src="logos/svg/06-clarity-health.svg" alt="Clarity Health" style="max-width:100%;max-height:100%;">
+                    </div>
+                    <div class="logo-name">Clarity Health</div>
+                    <div class="logo-industry">Medical</div>
+                </div>
+                <div class="logo-item" data-logo-id="7">
+                    <div class="logo-preview">
+                        <img src="logos/svg/07-coastline-coffee.svg" alt="Coastline Coffee" style="max-width:100%;max-height:100%;">
+                    </div>
+                    <div class="logo-name">Coastline Coffee</div>
+                    <div class="logo-industry">Caf�</div>
+                </div>
+                <div class="logo-item" data-logo-id="8">
+                    <div class="logo-preview">
+                        <img src="logos/svg/08-truenorth-financial.svg" alt="TrueNorth Financial" style="max-width:100%;max-height:100%;">
+                    </div>
+                    <div class="logo-name">TrueNorth Financial</div>
+                    <div class="logo-industry">Finance</div>
+                </div>
+                <div class="logo-item" data-logo-id="9">
+                    <div class="logo-preview">
+                        <img src="logos/svg/09-pawprint-petcare.svg" alt="Pawprint Pet Care" style="max-width:100%;max-height:100%;">
+                    </div>
+                    <div class="logo-name">Pawprint Pet Care</div>
+                    <div class="logo-industry">Veterinary</div>
+                </div>
+                <div class="logo-item" data-logo-id="10">
+                    <div class="logo-preview">
+                        <img src="logos/svg/10-verde-landscaping.svg" alt="Verde Landscaping" style="max-width:100%;max-height:100%;">
+                    </div>
+                    <div class="logo-name">Verde Landscaping</div>
+                    <div class="logo-industry">Landscaping</div>
+                </div>
+                <div class="logo-item" data-logo-id="11">
+                    <div class="logo-preview">
+                        <img src="logos/svg/11-pixel-frame.svg" alt="Pixel & Frame" style="max-width:100%;max-height:100%;">
+                    </div>
+                    <div class="logo-name">Pixel & Frame</div>
+                    <div class="logo-industry">Photography</div>
+                </div>
+                <div class="logo-item" data-logo-id="12">
+                    <div class="logo-preview">
+                        <img src="logos/svg/12-summit-construction.svg" alt="Summit Construction" style="max-width:100%;max-height:100%;">
+                    </div>
+                    <div class="logo-name">Summit Construction</div>
+                    <div class="logo-industry">Construction</div>
+                </div>
+                <div class="logo-item" data-logo-id="13">
+                    <div class="logo-preview">
+                        <img src="logos/svg/13-bloom-boutique.svg" alt="Bloom Boutique" style="max-width:100%;max-height:100%;">
+                    </div>
+                    <div class="logo-name">Bloom Boutique</div>
+                    <div class="logo-industry">Fashion</div>
+                </div>
+                <div class="logo-item" data-logo-id="14">
+                    <div class="logo-preview">
+                        <img src="logos/svg/14-circuit-labs.svg" alt="Circuit Labs" style="max-width:100%;max-height:100%;">
+                    </div>
+                    <div class="logo-name">Circuit Labs</div>
+                    <div class="logo-industry">Electronics</div>
+                </div>
+                <div class="logo-item" data-logo-id="15">
+                    <div class="logo-preview">
+                        <img src="logos/svg/15-harbor-insurance.svg" alt="Harbor Insurance" style="max-width:100%;max-height:100%;">
+                    </div>
+                    <div class="logo-name">Harbor Insurance</div>
+                    <div class="logo-industry">Insurance</div>
+                </div>
+                <div class="logo-item" data-logo-id="16">
+                    <div class="logo-preview">
+                        <img src="logos/svg/16-wildcraft-brewing.svg" alt="Wildcraft Brewing" style="max-width:100%;max-height:100%;">
+                    </div>
+                    <div class="logo-name">Wildcraft Brewing</div>
+                    <div class="logo-industry">Brewery</div>
+                </div>
+                <div class="logo-item" data-logo-id="17">
+                    <div class="logo-preview">
+                        <img src="logos/svg/17-nimbus-cloud.svg" alt="Nimbus Cloud Services" style="max-width:100%;max-height:100%;">
+                    </div>
+                    <div class="logo-name">Nimbus Cloud Services</div>
+                    <div class="logo-industry">Cloud/IT</div>
+                </div>
+                <div class="logo-item" data-logo-id="18">
+                    <div class="logo-preview">
+                        <img src="logos/svg/18-sage-stone-spa.svg" alt="Sage & Stone Spa" style="max-width:100%;max-height:100%;">
+                    </div>
+                    <div class="logo-name">Sage & Stone Spa</div>
+                    <div class="logo-industry">Wellness</div>
+                </div>
+                <div class="logo-item" data-logo-id="19">
+                    <div class="logo-preview">
+                        <img src="logos/svg/19-atlas-logistics.svg" alt="Atlas Logistics" style="max-width:100%;max-height:100%;">
+                    </div>
+                    <div class="logo-name">Atlas Logistics</div>
+                    <div class="logo-industry">Shipping</div>
+                </div>
+                <div class="logo-item" data-logo-id="20">
+                    <div class="logo-preview">
+                        <img src="logos/svg/20-bright-minds-academy.svg" alt="Bright Minds Academy" style="max-width:100%;max-height:100%;">
+                    </div>
+                    <div class="logo-name">Bright Minds Academy</div>
+                    <div class="logo-industry">Education</div>
+                </div>
             </div>
         </div>
     </section>
@@ -219,42 +366,42 @@
             </div>
             
             <div class="services-grid">
-                <div class="service-card" data-aos="fade-up">
+                <div class="service-card">
                     <div class="service-icon">🌐</div>
                     <h3>Custom Websites</h3>
                     <p>Fully responsive, conversion-optimized websites tailored to your industry and brand.</p>
                     <div class="service-price">From $1,500</div>
                 </div>
 
-                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-card">
                     <div class="service-icon">🎨</div>
                     <h3>Logo Design</h3>
                     <p>Professional logo design with brand guidelines and multiple file formats.</p>
                     <div class="service-price">From $200</div>
                 </div>
 
-                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-card">
                     <div class="service-icon">📱</div>
                     <h3>Mobile-First Design</h3>
                     <p>Every site designed mobile-first for perfect performance on all devices.</p>
                     <div class="service-price">Included</div>
                 </div>
 
-                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-card">
                     <div class="service-icon">⚡</div>
                     <h3>Performance Optimization</h3>
                     <p>Lightning-fast loading times with optimized images and clean code.</p>
                     <div class="service-price">Included</div>
                 </div>
 
-                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="service-card">
                     <div class="service-icon">🔍</div>
                     <h3>SEO Ready</h3>
                     <p>SEO-optimized structure with proper meta tags and semantic markup.</p>
                     <div class="service-price">Included</div>
                 </div>
 
-                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="service-card">
                     <div class="service-icon">🛡️</div>
                     <h3>Ongoing Support</h3>
                     <p>Monthly maintenance and updates to keep your site running perfectly.</p>
@@ -315,8 +462,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <div class="footer-logo">VantaWeb</div>
-                    <p>Dark. Premium. Delivered.</p>
+                    <div class="footer-logo"><img src="logos/svg/00-vantaweb.svg" alt="VantaWeb" style="height:48px;width:auto;"></div>
                 </div>
                 <div class="footer-links">
                     <div class="footer-column">
@@ -331,18 +477,21 @@
                     </div>
                     <div class="footer-column">
                         <h4>Connect</h4>
-                        <a href="https://github.com/HunterSpence/VantaWeb" target="_blank">GitHub</a>
+                        <a href="#contact">Email Us</a>
                         <a href="#contact">Contact</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 VantaWeb. All rights reserved.</p>
-                <p>Designed & developed by Hunter Spencer</p>
+                <p>Designed & developed by Hunter Spence</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=20260220043"></script>
 </body>
 </html>
+
+
+
