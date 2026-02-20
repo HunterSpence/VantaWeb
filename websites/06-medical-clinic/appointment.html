@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - Clarity Health | Schedule Your Visit Online</title>
+    <meta name="description" content="Schedule your appointment at Clarity Health online. Choose your service, preferred doctor, and convenient time slot. Easy online booking system.">
+    <meta name="keywords" content="book appointment, schedule visit, online booking, medical appointment, dental appointment, doctor appointment">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Book Appointment - Clarity Health">
+    <meta property="og:description" content="Schedule your healthcare appointment online with our convenient booking system.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://clarityhealth.com/appointment">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1><a href="index.html">Clarity Health</a></h1>
+            </div>
+            
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="doctors.html" class="nav-link">Our Doctors</a>
+                <a href="patient-resources.html" class="nav-link">Patient Resources</a>
+                <a href="insurance.html" class="nav-link">Insurance</a>
+                <a href="appointment.html" class="nav-link nav-cta active" aria-current="page">Book Appointment</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Emergency Banner -->
+    <div class="emergency-banner" role="banner">
+        <div class="container">
+            <span class="emergency-icon" aria-hidden="true">🚨</span>
+            <span class="emergency-text">
+                <strong>24/7 Emergency Line:</strong> 
+                <a href="tel:911" class="emergency-link">Call 911</a> or 
+                <a href="tel:555-123-HELP" class="emergency-link">555-123-HELP</a>
+            </span>
+        </div>
+    </div>
+
+    <main id="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <div class="page-header-content">
+                    <h1>Book Your Appointment</h1>
+                    <p class="page-subtitle">Schedule your visit in three easy steps. Choose your service, select your preferred doctor and time, then provide your information.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Appointment Form Section -->
+        <section class="appointment-form-section">
+            <div class="container">
+                <!-- Progress Indicator -->
+                <div class="progress-indicator">
+                    <div class="progress-step active">
+                        <div class="progress-dot">1</div>
+                        <span class="progress-label">Service</span>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step">
+                        <div class="progress-dot">2</div>
+                        <span class="progress-label">Doctor & Time</span>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step">
+                        <div class="progress-dot">3</div>
+                        <span class="progress-label">Your Information</span>
+                    </div>
+                </div>
+
+                <!-- Appointment Form -->
+                <form id="appointment-form" class="appointment-form" novalidate>
+                    <!-- Step 1: Service Selection -->
+                    <div class="form-step active">
+                        <div class="step-header">
+                            <h2>Step 1: Choose Your Service</h2>
+                            <p>Select the type of care you need</p>
+                        </div>
+                        
+                        <div class="services-selection">
+                            <div class="service-option" data-service="general-medicine">
+                                <input type="radio" id="service-general" name="service" value="general-medicine" required>
+                                <label for="service-general" class="service-label">
+                                    <div class="service-option-icon">🩺</div>
+                                    <div class="service-option-info">
+                                        <h3>General Medicine</h3>
+                                        <p>Primary care, physical exams, chronic disease management</p>
+                                        <span class="service-duration">30-60 minutes</span>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="service-option" data-service="dental-care">
+                                <input type="radio" id="service-dental" name="service" value="dental-care" required>
+                                <label for="service-dental" class="service-label">
+                                    <div class="service-option-icon">🦷</div>
+                                    <div class="service-option-info">
+                                        <h3>Dental Care</h3>
+                                        <p>Cleanings, fillings, oral health checkups</p>
+                                        <span class="service-duration">45-90 minutes</span>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="service-option" data-service="pediatrics">
+                                <input type="radio" id="service-pediatrics" name="service" value="pediatrics" required>
+                                <label for="service-pediatrics" class="service-label">
+                                    <div class="service-option-icon">👶</div>
+                                    <div class="service-option-info">
+                                        <h3>Pediatrics</h3>
+                                        <p>Children's health, well-child visits, immunizations</p>
+                                        <span class="service-duration">30-45 minutes</span>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="service-option" data-service="womens-health">
+                                <input type="radio" id="service-womens" name="service" value="womens-health" required>
+                                <label for="service-womens" class="service-label">
+                                    <div class="service-option-icon">🌸</div>
+                                    <div class="service-option-info">
+                                        <h3>Women's Health</h3>
+                                        <p>Gynecological care, reproductive health</p>
+                                        <span class="service-duration">30-60 minutes</span>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="service-option" data-service="dermatology">
+                                <input type="radio" id="service-dermatology" name="service" value="dermatology" required>
+                                <label for="service-dermatology" class="service-label">
+                                    <div class="service-option-icon">🧴</div>
+                                    <div class="service-option-info">
+                                        <h3>Dermatology</h3>
+                                        <p>Skin conditions, screenings, cosmetic treatments</p>
+                                        <span class="service-duration">30-45 minutes</span>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="service-option" data-service="cardiology">
+                                <input type="radio" id="service-cardiology" name="service" value="cardiology" required>
+                                <label for="service-cardiology" class="service-label">
+                                    <div class="service-option-icon">❤️</div>
+                                    <div class="service-option-info">
+                                        <h3>Cardiology</h3>
+                                        <p>Heart health, cardiovascular screening</p>
+                                        <span class="service-duration">45-90 minutes</span>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="service-option" data-service="mental-health">
+                                <input type="radio" id="service-mental" name="service" value="mental-health" required>
+                                <label for="service-mental" class="service-label">
+                                    <div class="service-option-icon">🧠</div>
+                                    <div class="service-option-info">
+                                        <h3>Mental Health</h3>
+                                        <p>Counseling, therapy, mental wellness</p>
+                                        <span class="service-duration">45-60 minutes</span>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="service-option" data-service="physical-therapy">
+                                <input type="radio" id="service-pt" name="service" value="physical-therapy" required>
+                                <label for="service-pt" class="service-label">
+                                    <div class="service-option-icon">🏃</div>
+                                    <div class="service-option-info">
+                                        <h3>Physical Therapy</h3>
+                                        <p>Rehabilitation, movement therapy, pain management</p>
+                                        <span class="service-duration">45-60 minutes</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-error" id="service-error"></div>
+                    </div>
+
+                    <!-- Step 2: Doctor & Time Selection -->
+                    <div class="form-step">
+                        <div class="step-header">
+                            <h2>Step 2: Choose Doctor & Time</h2>
+                            <p>Select your preferred doctor and appointment time</p>
+                        </div>
+                        
+                        <div class="doctor-time-selection">
+                            <div class="selection-grid">
+                                <div class="doctor-selection">
+                                    <h3>Available Doctors</h3>
+                                    <div class="doctors-list" id="available-doctors">
+                                        <!-- Doctors will be populated based on service selection -->
+                                    </div>
+                                    <div class="form-error" id="doctor-error"></div>
+                                </div>
+                                
+                                <div class="time-selection">
+                                    <h3>Available Times</h3>
+                                    <div class="date-picker">
+                                        <label for="appointment-date" class="form-label">Select Date</label>
+                                        <input type="date" id="appointment-date" name="appointment-date" class="form-input" required min="">
+                                        <div class="form-error" id="date-error"></div>
+                                    </div>
+                                    
+                                    <div class="time-slots" id="time-slots">
+                                        <p class="time-placeholder">Select a date to view available times</p>
+                                    </div>
+                                    <div class="form-error" id="time-error"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Patient Information -->
+                    <div class="form-step">
+                        <div class="step-header">
+                            <h2>Step 3: Your Information</h2>
+                            <p>Please provide your contact and insurance information</p>
+                        </div>
+                        
+                        <div class="patient-info-grid">
+                            <div class="info-section">
+                                <h3>Personal Information</h3>
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="first-name" class="form-label">First Name *</label>
+                                        <input type="text" id="first-name" name="first-name" class="form-input" required>
+                                        <div class="form-error"></div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="last-name" class="form-label">Last Name *</label>
+                                        <input type="text" id="last-name" name="last-name" class="form-input" required>
+                                        <div class="form-error"></div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="email" class="form-label">Email Address *</label>
+                                        <input type="email" id="email" name="email" class="form-input" required>
+                                        <div class="form-error"></div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="phone" class="form-label">Phone Number *</label>
+                                        <input type="tel" id="phone" name="phone" class="form-input" required placeholder="(555) 123-4567">
+                                        <div class="form-error"></div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="dob" class="form-label">Date of Birth *</label>
+                                        <input type="date" id="dob" name="dob" class="form-input" required>
+                                        <div class="form-error"></div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="gender" class="form-label">Gender</label>
+                                        <select id="gender" name="gender" class="form-select">
+                                            <option value="">Select gender</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                            <option value="non-binary">Non-binary</option>
+                                            <option value="prefer-not-to-say">Prefer not to say</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="info-section">
+                                <h3>Insurance Information</h3>
+                                <div class="form-group">
+                                    <label for="insurance-company" class="form-label">Insurance Company</label>
+                                    <select id="insurance-company" name="insurance-company" class="form-select">
+                                        <option value="">Select your insurance (optional)</option>
+                                        <option value="aetna">Aetna</option>
+                                        <option value="anthem">Anthem</option>
+                                        <option value="bcbs">Blue Cross Blue Shield</option>
+                                        <option value="cigna">Cigna</option>
+                                        <option value="humana">Humana</option>
+                                        <option value="kaiser">Kaiser Permanente</option>
+                                        <option value="medicare">Medicare</option>
+                                        <option value="medicaid">Medicaid</option>
+                                        <option value="united">UnitedHealthcare</option>
+                                        <option value="self-pay">Self Pay</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="member-id" class="form-label">Member ID</label>
+                                    <input type="text" id="member-id" name="member-id" class="form-input" placeholder="Optional">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="patient-type" class="form-label">Patient Type *</label>
+                                    <select id="patient-type" name="patient-type" class="form-select" required>
+                                        <option value="">Select patient type</option>
+                                        <option value="new">New Patient</option>
+                                        <option value="existing">Existing Patient</option>
+                                    </select>
+                                    <div class="form-error"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="info-section full-width">
+                                <h3>Additional Information</h3>
+                                <div class="form-group">
+                                    <label for="reason" class="form-label">Reason for Visit</label>
+                                    <textarea id="reason" name="reason" class="form-textarea" rows="4" placeholder="Briefly describe the reason for your visit (optional)"></textarea>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="special-needs" class="form-label">Special Accommodations</label>
+                                    <textarea id="special-needs" name="special-needs" class="form-textarea" rows="3" placeholder="Any special accommodations or accessibility needs? (optional)"></textarea>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="checkbox-group">
+                                        <input type="checkbox" id="consent" name="consent" required>
+                                        <label for="consent" class="checkbox-label">
+                                            I consent to receive appointment reminders and healthcare communications via email and SMS *
+                                        </label>
+                                    </div>
+                                    <div class="form-error"></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="checkbox-group">
+                                        <input type="checkbox" id="privacy-policy" name="privacy-policy" required>
+                                        <label for="privacy-policy" class="checkbox-label">
+                                            I have read and agree to the <a href="#privacy" target="_blank">Privacy Policy</a> and <a href="#terms" target="_blank">Terms of Service</a> *
+                                        </label>
+                                    </div>
+                                    <div class="form-error"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form Navigation -->
+                    <div class="form-navigation">
+                        <div class="nav-left">
+                            <button type="button" class="btn btn-outline btn-prev" style="display: none;">Previous</button>
+                        </div>
+                        <div class="form-nav-buttons">
+                            <button type="button" class="btn btn-primary btn-next">Continue</button>
+                            <button type="submit" class="btn btn-primary" style="display: none;">Book Appointment</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Appointment Info -->
+        <section class="appointment-info">
+            <div class="container">
+                <div class="info-cards">
+                    <div class="info-card" data-animate>
+                        <div class="info-icon">⏰</div>
+                        <h3>Flexible Scheduling</h3>
+                        <p>We offer appointments Monday through Saturday with early morning and evening slots available.</p>
+                    </div>
+                    
+                    <div class="info-card" data-animate>
+                        <div class="info-icon">📋</div>
+                        <h3>New Patient Forms</h3>
+                        <p>Complete your forms online before your visit to save time. <a href="patient-resources.html#new-patient-forms">Download forms</a>.</p>
+                    </div>
+                    
+                    <div class="info-card" data-animate>
+                        <div class="info-icon">💳</div>
+                        <h3>Insurance Accepted</h3>
+                        <p>We accept most major insurance plans. <a href="insurance.html">Check if we accept your insurance</a>.</p>
+                    </div>
+                    
+                    <div class="info-card" data-animate>
+                        <div class="info-icon">📞</div>
+                        <h3>Need Help?</h3>
+                        <p>Call us at <a href="tel:555-123-4567">(555) 123-4567</a> if you need assistance with booking your appointment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Alternative -->
+        <section class="appointment-alternative">
+            <div class="container">
+                <div class="alternative-content">
+                    <h2>Prefer to Book by Phone?</h2>
+                    <p>Our friendly staff is ready to help you schedule your appointment and answer any questions.</p>
+                    
+                    <div class="contact-options">
+                        <div class="contact-option">
+                            <div class="contact-option-icon">📞</div>
+                            <div class="contact-option-info">
+                                <h4>Call to Schedule</h4>
+                                <p><strong><a href="tel:555-123-4567">(555) 123-4567</a></strong></p>
+                                <small>Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 3:00 PM</small>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-option">
+                            <div class="contact-option-icon">💬</div>
+                            <div class="contact-option-info">
+                                <h4>Online Chat</h4>
+                                <p><strong>Live Chat Available</strong></p>
+                                <small>Monday - Friday: 9:00 AM - 5:00 PM<br>Average response: 2 minutes</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Clarity Health</h3>
+                    <p>Your trusted healthcare partner, providing comprehensive medical and dental services with compassion and excellence.</p>
+                    <div class="footer-contact">
+                        <p><strong>📞 555-123-4567</strong></p>
+                        <p>📍 123 Healthcare Drive, Medical Center, NY 10001</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Book Appointment</h4>
+                    <ul>
+                        <li><a href="#appointment-form">Online Booking</a></li>
+                        <li><a href="tel:555-123-4567">Call (555) 123-4567</a></li>
+                        <li><a href="patient-resources.html#new-patient-forms">New Patient Forms</a></li>
+                        <li><a href="insurance.html">Insurance Information</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Patient Care</h4>
+                    <ul>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="doctors.html">Meet Our Doctors</a></li>
+                        <li><a href="patient-resources.html">Patient Resources</a></li>
+                        <li><a href="patient-resources.html#patient-portal">Patient Portal</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#location">Location & Hours</a></li>
+                        <li><a href="patient-resources.html#faq">FAQ</a></li>
+                        <li><a href="index.html#emergency">Emergency Care</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2024 Clarity Health. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Service</a>
+                        <a href="#hipaa">HIPAA Notice</a>
+                    </div>
+                </div>
+                <div class="footer-disclaimer">
+                    <p><small><strong>HIPAA Compliance:</strong> This website complies with HIPAA regulations. Patient information is protected and secure. For medical emergencies, call 911 immediately.</small></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
